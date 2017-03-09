@@ -1,0 +1,105 @@
+// Import GOV.UK elements from /govuk-modules/, this will import the frontend toolkit and some base styles.
+// Take a look in /govuk-modules/_govuk-elements.scss to see which files are imported.
+@import 'govuk-elements';
+
+// Take a look at in app/assets/sass/patterns/ to see which files are imported.
+@import 'patterns/check-your-answers';
+@import 'patterns/unbranded';
+
+// Related items
+// (These styles will be moved to GOV.UK elements, duplicating here for now.)
+.govuk-related-items {
+  margin-top: $gutter;
+  border-top: 10px solid $govuk-blue;
+  padding-top: 5px;
+
+  .heading-medium {
+    margin-top: 0.3em;
+    margin-bottom: 0.5em
+  }
+
+  li {
+    margin-bottom: 10px;
+    list-style-type: none;
+  }
+}
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+@import 'prototype-1';
+@import 'prototype-2';
+@import 'prototype-3';
+@import 'prototype-4';
+@import 'prototype-5';
+@import 'prototype-6';
+@import 'prototype-7';
+@import 'prototype-8';
+
+#content {
+  .alpha {
+    padding: 5px 2px 10px 2px;
+    color: $black;
+    font-size: 16px;
+    border-bottom: 2px solid $grey-3;
+    span {
+      background-color: $pink;
+      color: $white;
+      padding: 0px 3px 0px 3px;
+      margin-right: 10px;
+      font-size: inherit;
+      font-weight: bold;
+    }
+
+  }
+
+  #content {
+  .beta {
+    padding: 5px 2px 10px 2px;
+    color: $black;
+    font-size: 16px;
+    border-bottom: 2px solid $grey-3;
+    span {
+      background-color: $orange;
+      color: $white;
+      padding: 0px 3px 0px 3px;
+      margin-right: 10px;
+      font-size: inherit;
+      font-weight: bold;
+    }
+
+  }
+
+  .screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    top: -999px;
+    left: -999px;
+  }
+}
+
+@media (min-width: 641px) {
+  #content.prototype-2 .form-control,
+  #content.prototype-3 .form-control,
+  #content.prototype-4 .form-control,
+  #content.prototype-5 .form-control,
+  #content.prototype-6 .form-control,
+  #content.prototype-7 .form-control,
+  #content.prototype-8 .form-control{
+    width: 25%;
+  }
+}
+
+@media (max-width: 790px) {
+  #content.prototype-6 .dwp-respond span:first-child,
+  #content.prototype-6 .hearing-booked span:first-child,
+  #content.prototype-8 .dwp-respond,
+  #content.prototype-8 .hearing-booked {
+    white-space: normal;
+    left: calc(100% - 44px) !important;
+    text-align: center;
+  }
+}
+}
