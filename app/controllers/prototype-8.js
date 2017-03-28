@@ -3,6 +3,17 @@ var appealStatusService = serviceFactory.get('appealStatus');
 
 var controller = {
 
+    getAppealStatus: function (req, res) {
+        return appealStatusService.getAppealStatus(req)
+            .then(function (result, error) {
+                let data = result.body;
+                data.status = data.status.toLowerCase().split('_').join('');
+                res.render('prototype-beta-07/status-pb-' + req.query.pb, data);
+            }, function (error) {
+                res.send('HTTP '  + error.status + ': ' + error.message);
+            });
+    },
+
     validateCaseReference: function (req, res) {
         var reference = req.query.reference,
             surname = req.query.surname,
@@ -75,7 +86,11 @@ var controller = {
             .then(function (result, error) {
                 var data = result.body;
                 data.status = data.status.toLowerCase().split('_').join('');
-                res.render('prototype-8/status', data);
+                console.log(JSON.stringify(data, null, 2));
+                res.render('prototype-8/status-pb-one', data);
+                //res.render('prototype-8/status-pb-four', data);
+                //res.render('prototype-8/status-pb-seven', data);
+                //res.render('prototype-8/status-pb-ten', data);
             }, function (error) {
                 res.send('HTTP '  + error.status + ': ' + error.message);
             });

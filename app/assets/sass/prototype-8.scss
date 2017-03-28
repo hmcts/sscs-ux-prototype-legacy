@@ -1,12 +1,35 @@
 @import "_colours";
 
+@import 'progress-bar/one';
+@import 'progress-bar/four';
+@import 'progress-bar/seven';
+@import 'progress-bar/ten';
+
+@mixin wrap-dwp-and-hearing-booked-text {
+  .dwp-respond h4,
+  .hearing-booked h4 {
+    white-space: normal;
+    text-align: center;
+    width: 67px;
+    right: -13px !important;
+    top: 38px;
+  }
+}
+
+@mixin wrap-progress-bar-text {
+  @media (min-width: 640px) and (max-width: 800px) {
+    @include wrap-dwp-and-hearing-booked-text;
+  }
+  @media (min-width: 401px) and (max-width: 520px) {
+    @include wrap-dwp-and-hearing-booked-text;
+  }
+}
+
 #content.prototype-8 {
 
   .breadcrumbs {
     padding-top: 15px;
   }
-
-
 
   .divider {
     margin-top: 15px;
@@ -22,6 +45,24 @@
   .details .heading-medium {
     margin-top: 30px;
     margin-bottom: 0;
+  }
+
+  .progress-bar {
+
+    &.one {
+      @include design-one;
+    }
+    &.four {
+      @include design-four;
+    }
+    &.seven {
+      @include design-seven;
+    }
+    &.ten {
+      @include design-ten;
+    }
+
+    @include wrap-progress-bar-text;
   }
 
   .progress-container {
