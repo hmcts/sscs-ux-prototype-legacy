@@ -6,7 +6,7 @@ var controller = {
     getAppealStatus: function (req, res) {
         return appealStatusService.getAppealStatus(req)
             .then(function (result, error) {
-                let data = result.body;
+                var data = result.body;
                 data.status = data.status.toLowerCase().split('_').join('');
                 res.render('prototype-beta-07/status-pb-' + req.query.pb, data);
             }, function (error) {
