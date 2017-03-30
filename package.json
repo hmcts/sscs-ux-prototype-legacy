@@ -4,13 +4,14 @@
   "version": "3.0.0",
   "private": true,
   "engines": {
-    "node": ">=4.0 <5.0"
+    "node": ">=7.0"
   },
   "scripts": {
-    "start": "node start.js",
+    "start": "node server.js",
+    "dev": "grunt",
     "lint": "standard",
     "test": "mocha test --require test-config.js --reporter spec",
-    "setup": "grunt generate-assets"
+    "postinstall": "grunt generate-assets"
   },
   "dependencies": {
     "basic-auth": "^1.0.3",
