@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+status-pb-one.html{% extends "layout.html" %}
 
 {% block page_title %}
 Status - Appeal received (PHAR1-S)
@@ -18,7 +18,7 @@ Status - Appeal received (PHAR1-S)
     <div class="grid-row">
         <div class="column-two-thirds">
             <h1 class="heading-xlarge">
-                Your ESA benefit appeal
+                Your PIP benefit appeal
             </h1>
 
             <div class="details">
@@ -26,22 +26,33 @@ Status - Appeal received (PHAR1-S)
                 <h2 class="form-hint">Appeal reference number: SC012/34/56789</h2>
             </div>
             <div class="divider"></div>
-            <div class="progress-container">
-                <div class="ring active">
-                    <p class="appeal-received">Appeal</p>
-                </div>
-                <div class="leg foot {{ isActive('dwprespond', status ) }}">
-                    <p class="dwp-respond">DWP response</p>
-                </div>
-                <div class="leg foot {{ isActive('hearingbooked', status ) }}">
-                    <p class="hearing-booked">Hearing booked</p>
-                </div>
-                <div class="leg {{ isActive('hearing', status ) }}"></div>
-                <div class="ring {{ isActive('hearing', status ) }}">
-                    <p class="hearing">Hearing</p>
+
+            <section class="progress-bar four">
+
+                <div class="appeal-received {{ isActive('appeal', status ) }}">
+                    <div class="ring"></div>
+                    <h4 aria-hidden="true">Appeal</h4>
                 </div>
 
-            </div>
+                <div class="dwp-respond {{ isActive('dwprespond', status ) }}">
+                    <div class="leg"></div>
+                    <div class="ring"></div>
+                    <h4 aria-hidden="true">DWP response</h4>
+                </div>
+
+                <div class="hearing-booked {{ isActive('hearingbooked', status ) }}">
+                    <div class="leg"></div>
+                    <div class="ring"></div>
+                    <h4 aria-hidden="true">Hearing booked</h4>
+                </div>
+
+                <div class="hearing {{ isActive('hearing', status ) }}">
+                    <div class="leg"></div>
+                    <div class="ring"></div>
+                    <h4 aria-hidden="true">Hearing</h4>
+                </div>
+
+            </section>
 
         </div>
 

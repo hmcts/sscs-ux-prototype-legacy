@@ -179,14 +179,14 @@
 				"description": "You’ll be greeted by a tribunal clerk. They will take care of you at the hearing venue and answer any questions you may have. You’ll then sit in a waiting area until your hearing begins."
 			},
 			"theHearingRoom": {
-				"heading": "The Hearing Room",
+				"heading": "The Hearing room",
 				"description": "The tribunal clerk will take you into a room for your hearing. The judge will be sat behind a table and you’ll be invited to sit opposite him or her. If you have someone to support you or give evidence they will sit next to you."
 			},
 			"image": {
 				"description": "A typical tribunal hearing"
 			},
 			"peopleAtHearing": {
-				"heading": "The People at your hearing",
+				"heading": "The people at your hearing",
 				"description": [
 					"The judge runs the hearing. It’s their job to review the evidence and make a decision on your claim. They will not be dressed in a robe and wig, it’s not as formal as a court.",
 					"Depending on your type of appeal, there may other people who are helping the judge making a decision. For example a doctor or disability expert are present in a lot of Personal Independence Payment appeals.",
