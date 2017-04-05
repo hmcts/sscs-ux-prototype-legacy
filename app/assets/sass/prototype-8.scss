@@ -376,39 +376,3 @@ column-gap: 2em;
 
 }
 
-.pagination {
-  display: block;
-  margin: 4em 0 0 0;
-  border-bottom: 1px solid #bfc1c3;
-}
-
-li.previous {
-    float: left;
-    text-align: left;
-}
-
-li.next {
-    float: right;
-    text-align: right;
-    }
-
-
-}
-@media (min-width: 641px)
-static-d15b8fa….css:1
-.pagination li a .pagination-label {
-    font-size: 27px;
-    line-height: 1.25;
-}
-
-.pagination li 
-a.pagination-label {
-    font-family: "nta", Arial, sans-serif;
-    font-weight: 400;
-    text-transform: none;
-    font-size: 20px;
-    line-height: 1.11111;
-    margin-bottom: 0.1em;
-    display: block;
-}
- 
