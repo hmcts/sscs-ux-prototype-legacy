@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block page_title %}
-Hearing availability - GOV.UK
+Mobile phone number for text notifications - GOV.UK
 {% endblock %}
 {% block proposition_header %}
 <!-- blank to remove the proposition header -->
@@ -8,33 +8,37 @@ Hearing availability - GOV.UK
 {% block content %}
 <main id="content" class="prototype-8" role="main">
      {% include "includes/phase_banner_beta.html" %} 
-  
+ 
     <div class="grid-row">
         <div class="column-two-thirds">
-            <h1 class="heading-large">
-                Tell us when you can’t go to a hearing 
-            </h1>
 
-<p>Your hearing will be at least X weeks [data driven] from when you submit your appeal. </p>
-
-<p>Tell us any dates when you’re not available to attend. </p>
-
-<p>If your availability changes, you can call us later and change your hearing date.</p>
-
-<img src="/public/images/calendar-picker.png" width="60%">
             
 <form>
   <div class="form-group">
     <fieldset>
 
-      
+      <legend class="visually-hidden">Enter your mobile phone number</legend>
+        <label>
+            <h1 class="heading-large">
+                Enter your mobile phone number
+            </h1>
+    
+
+   <p>This is the number where the text messages will be sent. </p>  
+ 
+</label>
+<input class="form-control form-control-2-4" id="form-control-2-4" type="text">
 
     </fieldset>
 
   </div>
-  <a class="button" href="014-sms-sign-up">Continue</a>
+  <a class="button" href="016-sms-confirmation">Continue</a>
 
 </form>
+
+
+
+
             
         </div>
 
