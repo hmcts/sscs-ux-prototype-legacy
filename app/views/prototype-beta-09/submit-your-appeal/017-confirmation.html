@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Your new email address - GOV.UK
+{% endblock %}
+{% block proposition_header %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+{% block content %}
+<main id="content" class="prototype-8" role="main">
+ {% include "includes/phase_banner_beta.html" %} 
+ {% include "includes/breadcrumbs.html" %}
+ <div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="govuk-box-highlight">
+     <h1 class="bold-large">
+      Your appeal has been submitted
+    </h1>
+    <br/>
+  </div>
+  <br/>
+  <p>We’ll send a confirmation letter to you at the address you provided. </p>
+  <p><a href="">Track your appeal anytime</a> </p>
+</div>
+</div>
+<div class="prototype-nav">
+  <p><a href="../index">Index</a></p>
+</div>
+</main>
+{% endblock %}
