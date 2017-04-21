@@ -20,9 +20,9 @@ SSCS Protoypes - BS02
 			<li><a href="#error">Error pages</a></li>
 		</ul>
 		<hr>
-			
 
-		<h2 id="online" class="heading-small">Online status</h2>
+
+		<h2 id="online" class="heading-medium">Online status</h2>
 		<ol class="list list-number">
 			<li><a href="status?casenumber=SC012%2F34%2F56789&status=appeal">Appeal received (PHAR1-S)</a></li>
 			<li><a href="status-evidence-received-appeal">Appeal received with evidence received (PHAR2-S)</a></li>
@@ -37,25 +37,31 @@ SSCS Protoypes - BS02
 
 
 		<hr>
-		<h2 id="online-status-exceptions" class="heading-small">Online status - Exceptions</h2>
-		<ol class="list list-number">
-			<!--<li><a href="status-non-compliant">Appeal received - Non compliant (EXAR1-S)</a><span style="color: red; font-weight: normal; font-size: 19px;"> [**NEEDED?**]</span></li>-->
-<li><a href="status-dwp-response-overdue">DWP response overdue (EXRE3-S)</a></li>
+		<h2 id="online-status-exceptions" class="heading-medium">Online status - Exceptions</h2>
 
-		<li><a href="status-past-hearing-date">Past hearing booked date (EXRE1-S)</a></li>
+		<h3 class="heading-small">MVP only</h3>
+
+		<ol class="list list-number">
+			<li><a href="status-dwp-response-overdue">DWP response overdue (EXRE3-S)</a></li>
+			<li><a href="status-past-hearing-date">Past hearing booked date (EXRE1-S)</a></li>
+			<li><a href="status-postponed-generic">Postponed generic (EXRE?-?)</a></li>
+			<li><a href="status-adjourned-generic">Adjourned generic (EXRE?-?)</a></li>
+			<li><a href="status-hearing-booked-new">New hearing booked (EXNH1-S)</a></li>
+			<li><a href="status-revised">Lapsed / Revised (EXAL1-S)</a></li>
+			<li><a href="status-withdrawn">Withdrawn (EXAW1-S)</a></li>
+		</ol>
+
+		<h3 class="heading-small">Post MVP</h3>
+
+		<ol class="list list-number">
 
 			<li><a href="status-adjourned-medical-evidence-not-attended">Adjourned - medical evidence - Not attended (EXHA1-S)</a></li>
-			<li><a href="status-adjourned-medical-evidence">Adjourned - medical evidence- attended (EXHA2-S)</a></li>
-			
+			<li><a href="status-adjourned-medical-evidence">Adjourned - medical evidence- attended (EXHA2-S)</a></li>			
 			<li><a href="status-adjourned-medical-evidence-dwp">Adjourned - medical evidence DWP - Not attended (EXHA3-S)</a></li>
 			<li><a href="status-adjourned-medical-evidence-dwp">Adjourned - medical evidence DWP - attended (EXHA4-S)</a></li>
-			
-
 			<li><a href="status-adjourned-evidence-not-attended">Adjourned - further evidence - Not attended (EXHA5-S)</a></li>
 			<li><a href="status-adjourned-evidence">Adjourned - further evidence - Attended (EXHA6-S)</a></li>
-
 			<li><a href="status-adjourned-other">Adjourned other - Not attended (EXHA7-S)</a></li>
-
 			<li><a href="status-adjourned-other">Adjourned other - Attended (EXHA8-S)</a></li>
 
 			
@@ -68,12 +74,10 @@ SSCS Protoypes - BS02
 			<!--<li><a href="status-postponed-refused">Postponement - Refused (EXHP4-S)</a></li>-->
 			<li><a href="status-postponed-incomplete">Postponement - Incomplete tribunal or exclusion (EXHP6-S)</a></li>
 			<li><a href="status-postponed-listing-error">Postponement - Listing error (EXHP7-S)</a></li>
-			<li><a href="status-hearing-booked-new">New hearing booked (EXNH1-S)</a></li>
-			<li><a href="status-revised">Lapsed / Revised (EXAL1-S)</a></li>
-			<li><a href="status-withdrawn">Withdrawn (EXAW1-S)</a></li>
+
 		</ol>
 		<hr>
-		<h2 id="email" class="heading-small">Email</h2>
+		<h2 id="email" class="heading-medium">Email</h2>
 		<ol class="list list-number">
 			<li><a href="notifications/email-confirmation-supporter">Supporter subscription confirmation (**Add code**)</a></li>
 			<li><a href="notifications/email-appeal-received">Appeal received (PHAR1-E)</a></li>
@@ -86,23 +90,37 @@ SSCS Protoypes - BS02
 			<li><a href="notifications/email-hearing-reminder-1day">Hearing reminder - 1 day (PHHR2-E)</a></li>
 		</ol>
 		<hr>
-		<h2 id="email-exceptions" class="heading-small">Email - Exceptions</h2>
+
+
+		<h2 id="email-exceptions" class="heading-medium">Email - Exceptions</h2>
+		<h3 class="heading-small">MVP only</h3>
+
 		<ol class="list list-number">
-		
-	
-			<li><a href="notifications/email-adjourned-medical-evidence">Adjourned medical evidence - Attended (EXHA1-E)</a></li>
+			<li><a href="notifications/email-dwp-response-late">DWP response late (EXRE-E) </a></li>
+			<li><a href="notifications/email-postponed-generic">Postponement - Genric (EXR?-?) </a></li>
+			<li><a href="notifications/email-adjourned-generic">Adjourned - Generic (EXR?-?) </a></li>
+			<li><a href="notifications/email-hearing-booked-new">New hearing booked (EXNH1-E)</a></li>
+			<li><a href="notifications/email-revised">Revised/Lapsed (EXAL1-E</a></li>
+
+			<li><a href="notifications/email-withdrawn">Withdrawn (EXAW1-E)</a></li>
+
+		</ol>
+		<h3 class="heading-small">Post MVP</h3>
+		<ol class="list list-number">
+
+			<li><a href="notifications/email-adjourned-generic">Adjourned medical evidence - Attended (EXHA1-E)</a></li>
+
 			<li><a href="notifications/email-adjourned-medical-evidence-not-attended">Adjourned medical evidence - No Attended (EXHA2-E)</a></li>
 
 			<li><a href="notifications/email-adjourned-medical-evidence-dwp">Adjourned medical evidence - DWP - Attended (EXHA3-E)</a></li>
 			<li><a href="notifications/email-adjourned-medical-evidence-dwp-not-attended">Adjourned medical evidence - DWP - Not attended (EXHA4-E)</a></li>
-
 			<li><a href="notifications/email-adjourned-evidence">Adjourned further evidence - Attended (EXHA5-E)</a></li>
 			<li><a href="notifications/email-adjourned-evidence-not-attended">Adjourned further evidence - Not attended (EXHA6-E)</a></li>
 
 			<li><a href="notifications/email-adjourned-other">Adjourned other reason - Attended (EXHA7-E)</a></li>
 			<li><a href="notifications/email-adjourned-other-not-attended">Adjourned other reason - Not attended (EXHA8-E)</a></li>
 
-			<li><a href="notifications/email-hearing-booked-new">New hearing booked (EXNH1-E)</a></li>
+
 
 			<li><a href="notifications/email-postponed-appellant-request">Postponement - Appellant request (EXHP1-E)</a></li>
 
@@ -118,25 +136,21 @@ SSCS Protoypes - BS02
 
 			<li><a href="notifications/email-postponed-listing-error">Postponement - Listing error (EXHP7-E)</a></li>
 
-			<li><a href="notifications/email-revised">Revised/Lapsed (EXAL1-E</a></li>
-
-			<li><a href="notifications/email-withdrawn">Withdrawn (EXAW1-E)</a></li>
-			<li><a href="notifications/email-dwp-response-late">DWP response late (EXRE-E) </a></li>
 
 		</ol>
 		<hr>
-		<h2 id="sms" class="heading-small">SMS</h2>
+		<h2 id="sms" class="heading-medium">SMS</h2>
 		<ol class="list list-number">
-	<li><a href="notifications/sms-confirmation">Subscription confirmation (**Add code**)</a></li>
-	<li><a href="notifications/sms-confirmation-supporter">Subscription confirmation for a supporter (**Add code**)</a></li>
-	<li><a href="notifications/sms-evidence-reminder-not-sent">Evidence reminder - Haven't submitted evidence(PHER1-T)</a></li>
-	<li><a href="notifications/sms-evidence-reminder-sent">Evidence reminder - Already submitted evidence (PHER2-T)</a></li>
-	<li><a href="notifications/sms-evidence-received">Evidence received - (PHED1-T)</a></li>
-	<!--	<li><a href="notifications/sms-hearing-booked">Hearing booked</a></li> -->
-	<li><a href="notifications/sms-hearing-reminder-1wk">Hearing reminder - 1 week (PHHR1-T)</a></li>
-	<li><a href="notifications/sms-hearing-reminder-1day">Hearing reminder - 1 day (PHHR2-T)</a></li>
-</ol>
-<hr>
+			<li><a href="notifications/sms-confirmation">Subscription confirmation (**Add code**)</a></li>
+			<li><a href="notifications/sms-confirmation-supporter">Subscription confirmation for a supporter (**Add code**)</a></li>
+			<li><a href="notifications/sms-evidence-reminder-not-sent">Evidence reminder - Haven't submitted evidence(PHER1-T)</a></li>
+			<li><a href="notifications/sms-evidence-reminder-sent">Evidence reminder - Already submitted evidence (PHER2-T)</a></li>
+			<li><a href="notifications/sms-evidence-received">Evidence received - (PHED1-T)</a></li>
+			<!--	<li><a href="notifications/sms-hearing-booked">Hearing booked</a></li> -->
+			<li><a href="notifications/sms-hearing-reminder-1wk">Hearing reminder - 1 week (PHHR1-T)</a></li>
+			<li><a href="notifications/sms-hearing-reminder-1day">Hearing reminder - 1 day (PHHR2-T)</a></li>
+		</ol>
+		<hr>
 <!--	<h2 id="text-exceptions" class="heading-small">Text - Exceptions</h2>
 <ol class="list list-number">
 <li><a href="notifications/sms-adjourned-generic">Adjourned</a></li>
@@ -148,7 +162,7 @@ SSCS Protoypes - BS02
 <li><a href="notifications/sms-withdrawn">Withdrawn</a></li>
 </ol>
 <hr> -->
-<h2 id="support" class="heading-small">Hearing context and support content</h2>
+<h2 id="support" class="heading-medium">Hearing context and support content</h2>
 <ol class="list list-number">
 	<li><a href="check-your-hearing-details">Check your hearing details</a></li>
 	<li><a href="what-to-expect-at-your-hearing">What to expect at your hearing</a></li>
@@ -159,7 +173,7 @@ SSCS Protoypes - BS02
 
 </ol>
 <hr>
-<h2 id="register" class="heading-small">Manage notifications online</h2>
+<h2 id="register" class="heading-medium">Manage notifications online</h2>
 <ol class="list list-number">
 	<!--<li><a href="notifications-register/index">Register for notifications</a></li>-->
 	<li><a href="manage/manage-email-notifications">Update email address</a></li>
@@ -170,7 +184,7 @@ SSCS Protoypes - BS02
 	<li><a href="manage/manage-email-notifications-unsubscribe">Unsubscribe from emails</a></li>
 </ol>
 <hr/>
-<h2 id="error" class="heading-small">Error pages</h2>
+<h2 id="error" class="heading-medium">Error pages</h2>
 <ol class="list list-number">
 	<li><a href="error-pages/error-404">Page not found - 404</a></li>
 	<li><a href="error-pages/error-500">Service temorarily down - 500</a></li>
