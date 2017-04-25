@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block page_title %}
-Hearing availability - GOV.UK
+Your hearing - GOV.UK
 {% endblock %}
 {% block proposition_header %}
 <!-- blank to remove the proposition header -->
@@ -8,34 +8,40 @@ Hearing availability - GOV.UK
 {% block content %}
 <main id="content" class="prototype-8" role="main">
      {% include "includes/phase_banner_beta.html" %} 
-  
+ 
     <div class="grid-row">
         <div class="column-two-thirds">
             <h1 class="heading-large">
-                Tell us when you can’t go to a hearing 
+                Do you need us to make any arrangements for your hearing? 
             </h1>
 
-<p>Your hearing will be at least X weeks [data driven] from when you submit your appeal. </p>
 
-<p>Tell us any dates when you’re not available to attend. </p>
+<p>Such as an interpreter, hearing loop or disabled access.</p>
 
-<p>If your availability changes, you can call us later and change your hearing date.</p>
 
-<img src="/public/images/calendar-picker.png" width="60%">
             
 <form>
   <div class="form-group">
-    <fieldset>
 
-      
+      <label class="block-label selection-button-radio" for="radio-1">
+        <input id="radio-1" type="radio" name="radio-group" value="Yes">
+        Yes
+      </label>
+      <label class="block-label selection-button-radio" for="radio-2">
+        <input id="radio-2" type="radio" name="radio-group" value="No">
+        No
+      </label>
 
     </fieldset>
 
   </div>
-  <a class="button" href="016-check-your-answers">Continue</a>
+  <a class="button" href="015-hearing-arrangements">Continue</a>
 
 </form>
-            
+   
+<br/> 
+<br/>           
+
         </div>
 
     </div>
