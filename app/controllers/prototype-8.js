@@ -40,7 +40,7 @@ var controller = {
         if (req.body.radioGroup === 'arrangementsRequired') {
             res.render('prototype-beta-09/submit-your-appeal/015-hearing-arrangements');
         } else if (req.body.radioGroup === 'arrangementsNotRequired') {
-            res.render('prototype-beta-09/submit-your-appeal/017-check-your-answers');
+            res.render('prototype-beta-09/submit-your-appeal/016-hearing-dates');
         }
     },
 
