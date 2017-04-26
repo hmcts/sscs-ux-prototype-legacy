@@ -25,7 +25,7 @@ Your hearing - GOV.UK
 <!--<p> <a href="../what-to-expect-at-your-hearing">Find out more about what a hearing is like </a></p>-->
 
             
-<form>
+<form  action="/prototype-8/hearing" method="post">
   <div class="form-group">
 
   <p class="heading-medium">Do you want to go to your hearing?</p>
@@ -34,18 +34,18 @@ Your hearing - GOV.UK
       <legend class="visually-hidden">What do you want to do?</legend>
 
       <label class="block-label selection-button-radio" for="radio-1">
-        <input id="radio-1" type="radio" name="radio-group" value="Yes">
+        <input id="radio-1" type="radio" name="radioGroup" value="attend">
         Yes
       </label>
       <label class="block-label selection-button-radio" for="radio-2">
-        <input id="radio-2" type="radio" name="radio-group" value="No">
+        <input id="radio-2" type="radio" name="radioGroup" value="notAttend">
         No
       </label>
 
     </fieldset>
 
   </div>
-  <a class="button" href="014-hearing-arrangements-needed">Continue</a>
+  <input type="submit" class="button" value="Continue">
 
 </form>
    

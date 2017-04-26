@@ -23,21 +23,21 @@ Your representative - GOV.UK
 If you don’t have the details to hand, you can phone up and register a representative after you’ve submitted your appeal. 
 </div>
 <br/>
-<form>
+<form  action="/prototype-8/representative" method="post">
   <div class="form-group">
     <fieldset>
       <legend class="visually-hidden">Do you have someone who you’d like to be the representative on your appeal?</legend>
       <label class="block-label selection-button-radio" for="radio-1">
-        <input id="radio-1" type="radio" name="radio-group" value="yes">
+        <input id="radio-1" type="radio" name="radioGroup" value="rep">
         Yes
       </label>
       <label class="block-label selection-button-radio" for="radio-2">
-        <input id="radio-2" type="radio" name="radio-group" value="no">
+        <input id="radio-2" type="radio" name="radioGroup" value="noRep">
         No
       </label>
     </fieldset>
   </div>
-  <a class="button" href="009-reps-details">Continue</a>
+  <input type="submit" class="button" value="Continue">
 </form>
         </div>
     </div>

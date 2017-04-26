@@ -11,6 +11,39 @@ var controller = {
         }
     },
 
+        representative: function(req, res) {
+        if (req.body.radioGroup === 'rep') {
+            res.render('prototype-beta-09/submit-your-appeal/009-reps-details');
+        } else if (req.body.radioGroup === 'noRep') {
+            res.render('prototype-beta-09/submit-your-appeal/010-update-anyone-else');
+        }
+    },
+
+
+      supporter: function(req, res) {
+        if (req.body.radioGroup === 'yes') {
+            res.render('prototype-beta-09/submit-your-appeal/010-supporter-details');
+        } else if (req.body.radioGroup === 'no') {
+            res.render('prototype-beta-09/submit-your-appeal/011-why-are-you-appealing');
+        }
+    },
+
+      hearing: function(req, res) {
+        if (req.body.radioGroup === 'attend') {
+            res.render('prototype-beta-09/submit-your-appeal/014-hearing-arrangements-needed');
+        } else if (req.body.radioGroup === 'notAttend') {
+            res.render('prototype-beta-09/submit-your-appeal/013-hearing-not-attending');
+        }
+    },
+
+          arrangements: function(req, res) {
+        if (req.body.radioGroup === 'arrangementsRequired') {
+            res.render('prototype-beta-09/submit-your-appeal/015-hearing-arrangements');
+        } else if (req.body.radioGroup === 'arrangementsNotRequired') {
+            res.render('prototype-beta-09/submit-your-appeal/017-check-your-answers');
+        }
+    },
+
     getAppealStatus: function (req, res) {
         return appealStatusService.getAppealStatus(req)
             .then(function (result, error) {

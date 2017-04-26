@@ -38,5 +38,9 @@ router.get('/prototype-8/validatereference',   prototypeEightCtrl.validateRefere
 router.get('/prototype-8/validate-surname',   prototypeEightCtrl.validateSurname);
 router.get('/prototype-8/status',   prototypeEightCtrl.getAppealStatus);
 router.post('/prototype-8/appointee',   prototypeEightCtrl.appointee);
+router.post('/prototype-8/representative',   prototypeEightCtrl.representative);
+router.post('/prototype-8/supporter',   prototypeEightCtrl.supporter);
+router.post('/prototype-8/hearing',   prototypeEightCtrl.hearing);
+router.post('/prototype-8/arrangements',   prototypeEightCtrl.arrangements);
 
 module.exports = router;
