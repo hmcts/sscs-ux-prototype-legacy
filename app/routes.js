@@ -42,5 +42,8 @@ router.post('/prototype-10/representative',   prototypeEightCtrl.representative)
 router.post('/prototype-10/supporter',   prototypeEightCtrl.supporter);
 router.post('/prototype-10/hearing',   prototypeEightCtrl.hearing);
 router.post('/prototype-10/arrangements',   prototypeEightCtrl.arrangements);
+router.post('/prototype-10/mobile',   prototypeEightCtrl.mobile);
+
+
 
 module.exports = router;

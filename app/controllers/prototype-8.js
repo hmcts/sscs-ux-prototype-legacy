@@ -44,6 +44,15 @@ var controller = {
         }
     },
 
+          mobile: function(req, res) {
+        if (req.body.radioGroup === 'usemobile') {
+            res.render('prototype-beta-09/submit-your-appeal/015-hearing-arrangements');
+        } else if (req.body.radioGroup === 'nomobile') {
+            res.render('prototype-beta-09/submit-your-appeal/016-hearing-dates');
+        }
+    },
+
+
     getAppealStatus: function (req, res) {
         return appealStatusService.getAppealStatus(req)
             .then(function (result, error) {
