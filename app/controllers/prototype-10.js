@@ -7,7 +7,7 @@ var controller = {
         if (req.body.radioGroup === 'appointee') {
             res.render('prototype-beta-10/submit-your-appeal/004-appointee-details');
         } else if (req.body.radioGroup === 'nonAppointee') {
-            res.render('prototype-beta-10/submit-your-appeal/004-your-details');
+            res.render('prototype-beta-10/submit-your-appeal/003-mrn-date');
         }
     },
 
