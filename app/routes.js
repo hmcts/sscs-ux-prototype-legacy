@@ -10,6 +10,7 @@ var prototypeFiveCtrl = require('./controllers/prototype-5');
 var prototypeSixCtrl = require('./controllers/prototype-6');
 var prototypeSevenCtrl = require('./controllers/prototype-7');
 var prototypeEightCtrl = require('./controllers/prototype-10');
+var prototypeNineCtrl = require('./controllers/prototype-14');
 
 router.get('/', home.index);
 router.get('/prototype-1/status', prototypeOneCtrl.status);
@@ -45,5 +46,16 @@ router.post('/prototype-10/arrangements',   prototypeEightCtrl.arrangements);
 router.post('/prototype-10/mobile',   prototypeEightCtrl.mobile);
 
 
+router.get('/prototype-14/validate',   prototypeNineCtrl.validateCaseReference);
+router.get('/prototype-14/validatemulti',   prototypeNineCtrl.validateCaseReferenceMulti);
+router.get('/prototype-14/validatereference',   prototypeNineCtrl.validateReference);
+router.get('/prototype-14/validate-surname',   prototypeNineCtrl.validateSurname);
+router.get('/prototype-14/status',   prototypeNineCtrl.getAppealStatus);
+router.post('/prototype-14/appointee',   prototypeNineCtrl.appointee);
+router.post('/prototype-14/representative',   prototypeNineCtrl.representative);
+router.post('/prototype-14/supporter',   prototypeNineCtrl.supporter);
+router.post('/prototype-14/hearing',   prototypeNineCtrl.hearing);
+router.post('/prototype-14/arrangements',   prototypeNineCtrl.arrangements);
+router.post('/prototype-14/mobile',   prototypeNineCtrl.mobile);
 
 module.exports = router;

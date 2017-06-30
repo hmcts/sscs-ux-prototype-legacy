@@ -5,51 +5,51 @@ var controller = {
 
     appointee: function(req, res) {
         if (req.body.radioGroup === 'appointee') {
-            res.render('prototype-beta-10/submit-your-appeal/004-appointee-details');
+            res.render('prototype-beta-14/submit-your-appeal/004-appointee-details');
         } else if (req.body.radioGroup === 'nonAppointee') {
-            res.render('prototype-beta-10/submit-your-appeal/003-mrn-date');
+            res.render('prototype-beta-14/submit-your-appeal/003-mrn-date');
         }
     },
 
         representative: function(req, res) {
         if (req.body.radioGroup === 'rep') {
-            res.render('prototype-beta-10/submit-your-appeal/009-reps-details');
+            res.render('prototype-beta-14/submit-your-appeal/009-reps-details');
         } else if (req.body.radioGroup === 'noRep') {
-            res.render('prototype-beta-10/submit-your-appeal/010-update-anyone-else');
+            res.render('prototype-beta-14/submit-your-appeal/010-update-anyone-else');
         }
     },
 
 
       supporter: function(req, res) {
         if (req.body.radioGroup === 'yes') {
-            res.render('prototype-beta-10/submit-your-appeal/010-supporter-details');
+            res.render('prototype-beta-14/submit-your-appeal/010-supporter-details');
         } else if (req.body.radioGroup === 'no') {
-            res.render('prototype-beta-10/submit-your-appeal/grounds-for-appeal/page_1');
+            res.render('http://szo3n0.axshare.com/page_1');
         }
     },
 
       hearing: function(req, res) {
         if (req.body.radioGroup === 'attend') {
-            res.render('prototype-beta-10/submit-your-appeal/014-hearing-arrangements-needed');
+            res.render('prototype-beta-14/submit-your-appeal/014-hearing-arrangements-needed');
         } else if (req.body.radioGroup === 'notAttend') {
-            res.render('prototype-beta-10/submit-your-appeal/013-hearing-not-attending');
+            res.render('prototype-beta-14/submit-your-appeal/013-hearing-not-attending');
         }
     },
 
           arrangements: function(req, res) {
         if (req.body.radioGroup === 'arrangementsRequired') {
-            res.render('prototype-beta-10/submit-your-appeal/015-hearing-arrangements');
+            res.render('prototype-beta-14/submit-your-appeal/015-hearing-arrangements');
         } else if (req.body.radioGroup === 'arrangementsNotRequired') {
-            res.render('prototype-beta-10/submit-your-appeal/016-hearing-dates');
+            res.render('prototype-beta-14/submit-your-appeal/016-hearing-dates');
         }
     },
 
 
         mobile: function(req, res) {
         if (req.body.radioGroup === 'usemobile') {
-            res.render('prototype-beta-10/submit-your-appeal/007-sms-confirmation');
+            res.render('prototype-beta-14/submit-your-appeal/007-sms-confirmation');
         } else if (req.body.radioGroup === 'newmobile') {
-            res.render('prototype-beta-10/submit-your-appeal/006-sms-mobile-number');
+            res.render('prototype-beta-14/submit-your-appeal/006-sms-mobile-number');
         }
     },
 
@@ -90,7 +90,7 @@ var controller = {
         if(surname === 'wrong') {
             errors.nomatch.push("Your details don’t match our records.");
             errors.nomatch.push("Check any correspondence you’ve received about your appeal and enter them again.");
-            res.render('prototype-10/track-your-appeal-error-no-match', {
+            res.render('prototype-14/track-your-appeal-error-no-match', {
                 errorMessages: errors,
                 caseRefNumber: reference,
                 surname: surname
@@ -99,7 +99,7 @@ var controller = {
         }
 
         if(errors.reference.length || errors.surname.length) {
-            res.render('prototype-10/track-your-appeal-error', {
+            res.render('prototype-14/track-your-appeal-error', {
                 errorMessages: errors,
                 caseRefNumber: reference,
                 surname: surname
@@ -122,7 +122,7 @@ var controller = {
         }
 
         if(errors.reference.length || errors.surname.length) {
-            res.render('prototype-10/track-your-appeal-error', {
+            res.render('prototype-14/track-your-appeal-error', {
                 errorMessages: errors,
                 caseRefNumber: reference,
                 surname: surname
@@ -137,10 +137,10 @@ var controller = {
                 var data = result.body;
                 data.status = data.status.toLowerCase().split('_').join('');
                 console.log(JSON.stringify(data, null, 2));
-                res.render('prototype-10/status-pb-one', data);
-                //res.render('prototype-10/status-pb-four', data);
-                //res.render('prototype-10/status-pb-seven', data);
-                //res.render('prototype-10/status-pb-ten', data);
+                res.render('prototype-14/status-pb-one', data);
+                //res.render('prototype-14/status-pb-four', data);
+                //res.render('prototype-14/status-pb-seven', data);
+                //res.render('prototype-14/status-pb-ten', data);
             }, function (error) {
                 res.send('HTTP '  + error.status + ': ' + error.message);
             });
@@ -164,7 +164,7 @@ var controller = {
         if(caseRef1 === '' && caseRef2 === '' && caseRef3 === '') {
             errors.push("You have not entered an appeal reference number. Enter it to find your appeal.");
             errors.push("No appeal reference number entered.");
-            res.render('prototype-10/track-your-appeal-error-multi', {
+            res.render('prototype-14/track-your-appeal-error-multi', {
                 errorMessages: errors,
                 caseRefNumbers: [caseRef1, caseRef2, caseRef3]
             });
@@ -175,7 +175,7 @@ var controller = {
         if(!caseRef1RegExMatch || !caseRef2RegExMatch || !caseRef3RegExMatch) {
             errors.push("You’ve entered an invalid appeal reference number. Check it and enter it again.");
             errors.push("Invalid appeal reference number entered.");
-            res.render('prototype-10/track-your-appeal-error-multi', {
+            res.render('prototype-14/track-your-appeal-error-multi', {
                 errorMessages: errors,
                 caseRefNumbers: [caseRef1, caseRef2, caseRef3]
             });
@@ -188,7 +188,7 @@ var controller = {
             .then(function (result, error) {
                 var data = result.body;
                 data.status = data.status.toLowerCase().split('_').join('');
-                res.render('prototype-10/status', data);
+                res.render('prototype-14/status', data);
             }, function (error) {
                 res.send('HTTP '  + error.status + ': ' + error.message);
             });
@@ -212,14 +212,14 @@ var controller = {
         }
 
         if(errors.length) {
-            res.render('prototype-10/validate-reference-error', {
+            res.render('prototype-14/validate-reference-error', {
                 errors: errors,
                 reference: reference
             });
             return;
         }
 
-        res.render('prototype-10/validate-surname');
+        res.render('prototype-14/validate-surname');
     },
 
     validateSurname: function(req, res) {
@@ -239,7 +239,7 @@ var controller = {
         }
 
         if(errors.length) {
-            res.render('prototype-10/validate-surname-error', {
+            res.render('prototype-14/validate-surname-error', {
                 errors: errors,
                 reference: reference,
                 surname: surname
@@ -254,7 +254,7 @@ var controller = {
             .then(function (result, error) {
                 var data = result.body;
                 data.status = data.status.toLowerCase().split('_').join('');
-                res.render('prototype-10/status', data);
+                res.render('prototype-14/status', data);
             }, function (error) {
                 res.send('HTTP '  + error.status + ': ' + error.message);
             });
