@@ -8,7 +8,7 @@ Are you an appointee? - GOV.UK
 {% block content %}
 <main id="content" class="prototype-8" role="main">
     {% include "includes/phase_banner_beta.html" %}
-       {% include "includes/back.html" %}
+    {% include "includes/back.html" %}
 
     <div class="grid-row">
         <div class="column-two-thirds">
@@ -16,7 +16,7 @@ Are you an appointee? - GOV.UK
                 Shall we send them to the number you provided earlier? 
             </h1>
 
-           
+            
             <form  action="/prototype-14/mobile" method="post">
 
                 <div class="form-group">
@@ -24,17 +24,20 @@ Are you an appointee? - GOV.UK
                     <fieldset>
 
                         <legend class="visually-hidden">Shall we send them to the number you provided earlier? </legend>
-
-                        <label class="block-label selection-button-radio" for="radio-1">
+                        <div class="multiple-choice">
+                         
                             <input id="radio-1" type="radio" name="radioGroup" value="usemobile">
-                            Yes, send them to <span style="font-weight: bold">0797 243 8178</span>
-                        </label>
-
-                        <label class="block-label selection-button-radio" for="radio-2">
+                            <label  for="radio-1">
+                                Yes, send them to <span style="font-weight: bold">0797 243 8178</span>
+                            </label>
+                        </div>
+                        <div class="multiple-choice">
+                            
                             <input id="radio-2" type="radio" name="radioGroup" value="newmobile">
-                            No, send them to a different number
-                        </label>
-
+                            <label  for="radio-2">
+                                No, send them to a different number
+                            </label>
+                        </div>
                     </fieldset>
 
                 </div>
@@ -47,7 +50,7 @@ Are you an appointee? - GOV.UK
 
     </div>
 
-   
+    
 
 
 </main>

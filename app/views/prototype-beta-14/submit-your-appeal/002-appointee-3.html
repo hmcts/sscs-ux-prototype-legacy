@@ -8,7 +8,7 @@ Are you an appointee? - GOV.UK
 {% block content %}
 <main id="content" class="prototype-8" role="main">
     {% include "includes/phase_banner_beta.html" %}
-       {% include "includes/back.html" %}
+    {% include "includes/back.html" %}
 
     <div class="grid-row">
         <div class="column-two-thirds">
@@ -21,32 +21,33 @@ Are you an appointee? - GOV.UK
             
             <form  action="/prototype-14/appointee" method="post">
 
+
                 <div class="form-group">
                     <fieldset>
 
                       <legend class="visually-hidden">Where do you live?</legend>
 
                       <div class="multiple-choice">
-                        <input id="radio-1" type="radio" name="radioGroup" value="appointee">
-                        <label for="radio-1">Yes</label>
+                        <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+                        <label for="radio-1">Northern Ireland</label>
                     </div>
                     <div class="multiple-choice">
-                        <input id="radio-2" type="radio" name="radioGroup" value="nonAppointee">
-                        <label for="radio-2">No</label>
+                        <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+                        <label for="radio-2">Isle of Man or the Channel Islands</label>
                     </div>
 
                 </fieldset>
             </div>
 
-                <input type="submit" class="button" value="Continue">
+            <input type="submit" class="button" value="Continue">
 
-            </form>
-
-        </div>
+        </form>
 
     </div>
 
-    
+</div>
+
+
 
 
 </main>
