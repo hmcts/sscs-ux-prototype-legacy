@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block page_title %}
+No MRN - GOV.UK
+{% endblock %}
+{% block proposition_header %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+{% block content %}
+<main id="content" class="prototype-8" role="main">
+ {% include "includes/phase_banner_beta.html" %} 
+ {% include "includes/back.html" %}
+
+ <div class="grid-row">
+  <div class="column-two-thirds">
+  
+    <h1 class="heading-large">
+      Why you don’t have a Mandatory Reconsideration Notice?
+    </h1>
+    <p>You can still appeal if you can show that you have asked DWP to reconsider their decision.</p>
+    <form>
+      <div class="form-group">
+        <fieldset>
+        </fieldset>
+      </div>  <a class="button" href="#">Continue</a>
+    </form>
+    <br/>
+    <p><a href="#">I haven’t contacted DWP about their decision</a></p>
+  </div>
+</div>
+</main>
+{% endblock %}
