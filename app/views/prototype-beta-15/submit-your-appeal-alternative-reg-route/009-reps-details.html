@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block page_title %}
-Your details - GOV.UK
+Your representatives details - GOV.UK
 {% endblock %}
 {% block proposition_header %}
 <!-- blank to remove the proposition header -->
@@ -13,14 +13,14 @@ Your details - GOV.UK
  <div class="grid-row">
   <div class="column-two-thirds">
     <h1 class="heading-large">
-      Enter your details
+      Enter their details
     </h1>
-    <p>We’ll use these to send you information about your appeal.</p>
+    <p>If your representative is from a national organisation, provide contact details of the local office dealing with your appeal. You can find these details on any letter you’ve received from them, or their website. </p>
     <form>
   
         <fieldset>
     <div class="form-group">
-          <!-- Firstname, surname -->
+          <!-- Firstname, Lastname -->
           <label class="form-label" for="first-name">
             First name
           </label>
@@ -28,18 +28,18 @@ Your details - GOV.UK
           </div>
 
     <div class="form-group">
-          <label class="form-label" for="Last name">
+          <label class="form-label" for="lastname">
             Last name(s) 
           </label>
           <input class="form-control form-control-3-4" id="form-control-3-4" type="text">
           </div>
 
-          <!-- National insurance number --> 
+          <!-- Name of the organisation --> 
      <div class="form-group">
-          <label class="form-label" for="ni-number">
-            National Insurance number
+          <label class="form-label" for="organisation">
+            Organisation (if they work for one)
           </label>
-          <input class="form-control form-control-1-4" id="form-control-3-4" type="text">  
+          <input class="form-control form-control-3-4" id="form-control-3-4" type="text">  
 </div>
 
           <!-- Address --> 
@@ -59,31 +59,33 @@ Your details - GOV.UK
           </label>
           <input class="form-control form-control-1-4" id="form-control-3-4" type="text">
           </div> 
-  <!-- Phone number --> 
+          <!-- Phone number --> 
                <div class="form-group">
 
           <label class="form-label" for="phone-number">
             Phone number
           </label>
           <input class="form-control form-control-2-4" id="form-control-3-4" type="text"> 
- </div>
-          
-         
+          </div>
+          <!-- Email address --> 
                <div class="form-group">
 
           <label class="form-label" for="form-control-1-4">
-            Email address (optional)
-          
-         <span class="form-hint">We’ll use this to email you updates about your appeal</span></label>
+            Email address
+          </label>
           <input class="form-control form-control-3-4" id="form-control-3-4" type="text"> 
-          </div> 
+          </div>
 
-        
-         
+
         </fieldset>
-      <a class="button" href="005-sms-sign-up">Continue</a>
+      <a class="button" href="http://szo3n0.axshare.com/grounds-for-appeal-001.html">Continue</a>
     </form>
+<br/>
+<p><a href="../prototype-beta-15/submit-your-appeal/009-no-reps-details"> I don’t have their details to hand</a></p>
+
+
   </div>
+
 </div>
 
 </main>
