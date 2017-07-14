@@ -47,9 +47,9 @@ var controller = {
 
         mobile: function(req, res) {
         if (req.body.radioGroup === 'usemobile') {
-            res.render('prototype-beta-10/submit-your-appeal/007-sms-confirmation');
+            res.render('prototype-beta-14/submit-your-appeal/007-sms-confirmation');
         } else if (req.body.radioGroup === 'newmobile') {
-            res.render('prototype-beta-10/submit-your-appeal/006-sms-mobile-number');
+            res.render('prototype-beta-14/submit-your-appeal/006-sms-mobile-number');
         }
     },
 

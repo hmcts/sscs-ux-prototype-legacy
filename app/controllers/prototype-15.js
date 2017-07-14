@@ -15,7 +15,7 @@ var controller = {
         if (req.body.radioGroup === 'rep') {
             res.render('prototype-beta-15/submit-your-appeal/009-reps-details');
         } else if (req.body.radioGroup === 'noRep') {
-            res.render('prototype-beta-15/submit-your-appeal/010-update-anyone-else');
+            res.render('prototype-beta-15/submit-your-appeal/011-why-are-you-appealing');
         }
     },
 
@@ -49,7 +49,29 @@ var controller = {
         if (req.body.radioGroup === 'usemobile') {
             res.render('prototype-beta-15/submit-your-appeal/007-sms-confirmation');
         } else if (req.body.radioGroup === 'newmobile') {
-            res.render('prototype-beta-15/submit-your-appeal/006-sms-mobile-number');
+            res.render('prototype-beta-15/submit-your-appeal/006-enter-mobile-number');
+        }
+    },
+
+        mobileboth: function(req, res) {
+        if (req.body.radioGroup === 'usemobileboth') {
+            res.render('prototype-beta-15/submit-your-appeal/007-sms-email-confirmation');
+        } else if (req.body.radioGroup === 'newmobileboth') {
+            res.render('prototype-beta-15/submit-your-appeal/006-enter-mobile-number-both');
+        }
+    },
+
+            notifications: function(req, res) {
+        if (req.body.radioGroup === 'email') {
+            res.render('prototype-beta-15/submit-your-appeal/006-enter-email');
+        } else if (req.body.radioGroup === 'text') {
+            res.render('prototype-beta-15/submit-your-appeal/006-mobile-number-provided');
+        
+        } else if (req.body.radioGroup === 'both') {
+            res.render('prototype-beta-15/submit-your-appeal/006-enter-email-both');
+        
+        } else if (req.body.radioGroup === 'neither') {
+            res.render('prototype-beta-15/submit-your-appeal/008-representative');
         }
     },
 

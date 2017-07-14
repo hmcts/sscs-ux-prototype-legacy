@@ -7,16 +7,17 @@ Text reminders confirmation - GOV.UK
 {% endblock %}
 {% block content %}
 <main id="content" class="prototype-8" role="main">
-     {% include "includes/phase_banner_beta.html" %} 
-        {% include "includes/back.html" %}
+ {% include "includes/phase_banner_beta.html" %} 
+ {% include "includes/back.html" %}
 
-    <div class="grid-row">
-
+ <div class="grid-row">
         <div class="column-full">
 
-         <h1 class="heading-large">You’re signed up for text message notifications </h1>
+    <h1 class="heading-large">You’re signed up for email and text message notifications </h1>
     
-     <table class="demo">
+
+
+    <table class="demo">
       <thead>
         <tr>
           <th></th>
@@ -26,7 +27,10 @@ Text reminders confirmation - GOV.UK
       </thead>
       <tbody>
 
-  
+        <td>Emails will be sent to</td>
+        <td><span style="font-weight: bold">[email address]</span></td>
+        <td><a href="#">Change</a></td>
+      </tr>
       <tr>
         <td>Text messages will be sent to</td>
         <td><span style="font-weight: bold">[phone number]</span></td>
@@ -42,16 +46,13 @@ Text reminders confirmation - GOV.UK
       <p>You’ll get your first message after you’ve submitted your appeal.</p>
       <br/>
 
-
-  <a class="button" href="../prototype-beta-15/submit-your-appeal/008-representative">Continue</a>
-
+      <a class="button" href="008-representative">Continue</a>
 
 
-            
-</div>
+
     </div>
-    
 
+  </div>
 
 
 </main>

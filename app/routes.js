@@ -70,5 +70,8 @@ router.post('/prototype-15/supporter',   prototypeNineCtrl.supporter);
 router.post('/prototype-15/hearing',   prototypeNineCtrl.hearing);
 router.post('/prototype-15/arrangements',   prototypeNineCtrl.arrangements);
 router.post('/prototype-15/mobile',   prototypeNineCtrl.mobile);
+router.post('/prototype-15/mobileboth',   prototypeNineCtrl.mobileboth);
+
+router.post('/prototype-15/notifications',   prototypeNineCtrl.notifications);
 
 module.exports = router;
