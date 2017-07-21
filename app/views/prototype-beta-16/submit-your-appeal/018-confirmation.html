@@ -8,7 +8,7 @@ Appeal confirmation - GOV.UK
 {% block content %}
 <main id="content" class="prototype-8" role="main">
  {% include "includes/phase_banner_beta.html" %} 
-       {% include "includes/back.html" %}
+ {% include "includes/back.html" %}
  <div class="grid-row">
   <div class="column-two-thirds">
     <div class="govuk-box-highlight">
@@ -16,22 +16,26 @@ Appeal confirmation - GOV.UK
       Your appeal has been submitted
     </h1>
     <br/>
-    <p>We’ve sent a confirmation to your email address</p>
- 
+    <p>We’ve sent you a confirmation email and text message. </p>
+
+    <p>[If rep] We’ll also send a confirmation to your representative.</p>
+
   </div>
 
-<p><a href="">Download a PDF of your appeal submission</a></p>
+  <p><a href="/public/images/ESA-benefit-appeal-SSCS.pdf">View, save or print a copy of your appeal</a></p>
 
-  <br/>
+<br/>
+  <div class="panel panel-border-wide">
 
+    <p>The tribunal may contact you to ask some additional questions. It’s important you check your emails and post and reply as soon as possible. This can help you get a quicker decision on your appeal.</p>  
 
- 
+  </div>
 
-<p>The tribunal may contact you to ask some additional questions. It’s important you check your emails and post and reply as soon as possible. This can help you get a quicker decision on your appeal.</p> 
+<br/>
 
-<p>You can <a href="https://track-your-appeal.herokuapp.com/prototype-beta-16/status?casenumber=SC012%2F34%2F56789&status=appeal">track your appeal online</a>.</p>
+  <p>You can <a href="https://track-your-appeal.herokuapp.com/prototype-beta-16/status?casenumber=SC012%2F34%2F56789&status=appeal">track your appeal online</a>.</p>
 
-<!-- <p>We’ll email you a link so you can track your appeal anytime.</p>-->
+  <!-- <p>We’ll email you a link so you can track your appeal anytime.</p>-->
 
 <!--<span style="color: red; font-weight: normal; font-size: 19px;">[If just email]</span>
 
@@ -50,6 +54,6 @@ Appeal confirmation - GOV.UK
   <p>You can <a href="https://track-your-appeal.herokuapp.com/prototype-beta-09/status?casenumber=SC012%2F34%2F56789&status=appeal">track your appeal</a> anytime.</p> -->
 </div>
 </div>
-          
+
 </main>
 {% endblock %}
