@@ -13,6 +13,8 @@ var prototypeEightCtrl = require('./controllers/prototype-10');
 var prototypeNineCtrl = require('./controllers/prototype-14');
 var prototypeTenCtrl = require('./controllers/prototype-15');
 var prototypeElevenCtrl = require('./controllers/prototype-16');
+var prototypeTwelveCtrl = require('./controllers/prototype-17');
+
 
 
 router.get('/', home.index);
@@ -90,5 +92,20 @@ router.post('/prototype-16/mobile',   prototypeElevenCtrl.mobile);
 router.post('/prototype-16/mobileboth',   prototypeElevenCtrl.mobileboth);
 router.post('/prototype-16/notifications',   prototypeElevenCtrl.notifications);
 router.post('/prototype-16/mrnDate',   prototypeElevenCtrl.mrnDate);
+
+router.get('/prototype-17/validate',   prototypeTwelveCtrl.validateCaseReference);
+router.get('/prototype-17/validatemulti',   prototypeTwelveCtrl.validateCaseReferenceMulti);
+router.get('/prototype-17/validatereference',   prototypeTwelveCtrl.validateReference);
+router.get('/prototype-17/validate-surname',   prototypeTwelveCtrl.validateSurname);
+router.get('/prototype-17/status',   prototypeTwelveCtrl.getAppealStatus);
+router.post('/prototype-17/appointee',   prototypeTwelveCtrl.appointee);
+router.post('/prototype-17/representative',   prototypeTwelveCtrl.representative);
+router.post('/prototype-17/supporter',   prototypeTwelveCtrl.supporter);
+router.post('/prototype-17/hearing',   prototypeTwelveCtrl.hearing);
+router.post('/prototype-17/arrangements',   prototypeTwelveCtrl.arrangements);
+router.post('/prototype-17/mobile',   prototypeTwelveCtrl.mobile);
+router.post('/prototype-17/mobileboth',   prototypeTwelveCtrl.mobileboth);
+router.post('/prototype-17/notifications',   prototypeTwelveCtrl.notifications);
+router.post('/prototype-17/mrnDate',   prototypeTwelveCtrl.mrnDate);
 
 module.exports = router;
