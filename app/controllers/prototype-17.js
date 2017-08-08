@@ -21,13 +21,7 @@ var controller = {
     },
 
 
-    supporter: function(req, res) {
-        if (req.body.radioGroup === 'yes') {
-            res.render('prototype-beta-17/submit-your-appeal/010-supporter-details');
-        } else if (req.body.radioGroup === 'no') {
-            res.render('http://szo3n0.axshare.com/page_1');
-        }
-    },
+   
 
     hearing: function(req, res) {
         if (req.body.radioGroup === 'attend') {

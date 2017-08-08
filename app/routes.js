@@ -13,6 +13,7 @@ var prototypeEightCtrl = require('./controllers/prototype-10');
 var prototypeNineCtrl = require('./controllers/prototype-14');
 var prototypeTenCtrl = require('./controllers/prototype-15');
 var prototypeElevenCtrl = require('./controllers/prototype-16');
+var prototypeElevenCtrl = require('./controllers/prototype-16');
 var prototypeTwelveCtrl = require('./controllers/prototype-17');
 
 
@@ -100,7 +101,6 @@ router.get('/prototype-17/validate-surname',   prototypeTwelveCtrl.validateSurna
 router.get('/prototype-17/status',   prototypeTwelveCtrl.getAppealStatus);
 router.post('/prototype-17/appointee',   prototypeTwelveCtrl.appointee);
 router.post('/prototype-17/representative',   prototypeTwelveCtrl.representative);
-router.post('/prototype-17/supporter',   prototypeTwelveCtrl.supporter);
 router.post('/prototype-17/hearing',   prototypeTwelveCtrl.hearing);
 router.post('/prototype-17/arrangements',   prototypeTwelveCtrl.arrangements);
 router.post('/prototype-17/mobile',   prototypeTwelveCtrl.mobile);
