@@ -33,9 +33,9 @@ var controller = {
 
     arrangements: function(req, res) {
         if (req.body.radioGroup === 'arrangementsRequired') {
-            res.render('prototype-beta-17/submit-your-appeal/017-hearing-arrangements');
+            res.render('prototype-beta-17/submit-your-appeal/015-hearing-arrangements');
         } else if (req.body.radioGroup === 'arrangementsNotRequired') {
-            res.render('prototype-beta-17/submit-your-appeal/017-hearing-dates');
+            res.render('prototype-beta-17/submit-your-appeal/016-hearing-dates');
         }
     },
 
