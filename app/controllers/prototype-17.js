@@ -56,6 +56,16 @@ var controller = {
         }
     },
 
+
+   checkdate: function(req, res) {
+        if (req.body.radioGroup === 'correctdate') {
+            res.render('prototype-beta-17/submit-your-appeal/003-3-why-appeal-late-1month');
+        } else if (req.body.radioGroup === 'wrongdate') {
+            res.render('prototype-beta-17/submit-your-appeal/003-mrn-date');
+        }
+    },
+
+
     notifications: function(req, res) {
         if (req.body.radioGroup === 'email') {
             res.render('prototype-beta-17/submit-your-appeal/006-enter-email');
@@ -88,7 +98,7 @@ var controller = {
         }
 
         if (DateUtils.isGreaterThanAMonth(mDate) && DateUtils.isLessThanOrEqualToThirteenMonths(mDate)) {
-            res.render('prototype-beta-17/submit-your-appeal/003-3-why-appeal-late-1month');
+            res.render('prototype-beta-17/submit-your-appeal/003-0-check-mrn-date');
             return;
         }
 

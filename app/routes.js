@@ -107,5 +107,6 @@ router.post('/prototype-17/mobile',   prototypeTwelveCtrl.mobile);
 router.post('/prototype-17/mobileboth',   prototypeTwelveCtrl.mobileboth);
 router.post('/prototype-17/notifications',   prototypeTwelveCtrl.notifications);
 router.post('/prototype-17/mrnDate',   prototypeTwelveCtrl.mrnDate);
+router.post('/prototype-17/checkdate',   prototypeTwelveCtrl.checkdate);
 
 module.exports = router;
