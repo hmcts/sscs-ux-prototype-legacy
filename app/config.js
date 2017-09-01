@@ -20,7 +20,7 @@ function stringToBool(s) {
 module.exports = {
 
   // Service name used in header. Eg: 'Renew your passport'
-  serviceName: 'Track my appeal for Social Security and Child Support',
+  serviceName: 'Appeal a benefit decision',
 
   // Default port that prototype runs on
   port: '3000',
