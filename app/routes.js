@@ -123,5 +123,6 @@ router.post('/prototype-18/mobileboth',   prototypeThirteenCtrl.mobileboth);
 router.post('/prototype-18/notifications',   prototypeThirteenCtrl.notifications);
 router.post('/prototype-18/mrnDate',   prototypeThirteenCtrl.mrnDate);
 router.post('/prototype-18/checkdate',   prototypeThirteenCtrl.checkdate);
+router.post('/prototype-18/availability',   prototypeThirteenCtrl.availability);
 
 module.exports = router;
