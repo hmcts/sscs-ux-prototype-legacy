@@ -6,7 +6,7 @@ var controller = {
 
     appointee: function(req, res) {
         if (req.body.radioGroup === 'appointee') {
-            res.render('prototype-beta-20/submit-your-appeal/004-their-details-appointee');
+            res.render('prototype-beta-20/submit-your-appeal/004-your-details-appointee');
         } else if (req.body.radioGroup === 'nonAppointee') {
             res.render('prototype-beta-20/submit-your-appeal/004-your-details');
         }

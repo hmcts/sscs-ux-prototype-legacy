@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block page_title %}
-Check benefit appeal answers - Appeal a benefit decision - GOV.UK 
+Check benefit appeal answers (appointee) - Appeal a benefit decision - GOV.UK 
 {% endblock %}
 {% block content %}
 <main id="content" class="prototype-8" role="main">
@@ -56,7 +56,7 @@ Check benefit appeal answers - Appeal a benefit decision - GOV.UK
             Are you an appointee?
           </dt>
           <dd class="cya-answer">
-            No
+            Yes
           </dd>
           <dd class="cya-change">
             <a href="004-appointee">
@@ -71,23 +71,47 @@ Check benefit appeal answers - Appeal a benefit decision - GOV.UK
         <div class="lineheight">
           <dt class="cya-question">
             <p class="pbold">Name </p>
-            <p class="pbold">National Insurance number</p>
             <p class="pbold">Address<br/><br/><br/></p>
             <p class="pbold">Email</p>
             <p class="pbold">Phone number</p>
           </dt>
           <dd class="cya-answer">
-           <p> Your Name</p>
-           <p> QQ 12 34 56 </p>
+           <p> Your name</p>
            <p> 122 Breach Street<br/>
             Newcastle<br/>
             NE1 2HB<br/></p>
            <p> your.name@gmail.com</p>
-           <p> 0121 460 2033</p>
+           <p> 0191 460 2033</p>
           </dd>
           <dd class="cya-change">
-            <a href="004-your-details">
+            <a href="004-your-details-appointee">
               Change<span class="visually-hidden"> your details</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <!-- Their details -->
+      <h2 class="heading-medium">Their details</h2>
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div class="lineheight">
+          <dt class="cya-question">
+            <p class="pbold">Name </p>
+            <p class="pbold">National Insurance number</p>
+            <p class="pbold">Address<br/><br/><br/></p>
+            
+          </dt>
+          <dd class="cya-answer">
+           <p> Their name</p>
+           <p> QQ 12 34 56 </p>
+           <p> 122 Breach Street<br/>
+            Newcastle<br/>
+            NE1 2HB<br/></p>
+           
+          </dd>
+          <dd class="cya-change">
+            <a href="004-their-details-appointee">
+              Change<span class="visually-hidden"> their details</span>
             </a>
           </dd>
         </div>
