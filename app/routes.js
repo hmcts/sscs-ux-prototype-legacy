@@ -16,7 +16,7 @@ var prototypeElevenCtrl = require('./controllers/prototype-16');
 var prototypeElevenCtrl = require('./controllers/prototype-16');
 var prototypeTwelveCtrl = require('./controllers/prototype-17');
 var prototypeThirteenCtrl = require('./controllers/prototype-18');
-
+var prototypeFourteenCtrl = require('./controllers/prototype-20');
 
 router.get('/', home.index);
 router.get('/prototype-1/status', prototypeOneCtrl.status);
@@ -124,5 +124,21 @@ router.post('/prototype-18/notifications',   prototypeThirteenCtrl.notifications
 router.post('/prototype-18/mrnDate',   prototypeThirteenCtrl.mrnDate);
 router.post('/prototype-18/checkdate',   prototypeThirteenCtrl.checkdate);
 router.post('/prototype-18/availability',   prototypeThirteenCtrl.availability);
+
+router.get('/prototype-20/validate',   prototypeThirteenCtrl.validateCaseReference);
+router.get('/prototype-20/validatemulti',   prototypeThirteenCtrl.validateCaseReferenceMulti);
+router.get('/prototype-20/validatereference',   prototypeThirteenCtrl.validateReference);
+router.get('/prototype-20/validate-surname',   prototypeThirteenCtrl.validateSurname);
+router.get('/prototype-20/status',   prototypeThirteenCtrl.getAppealStatus);
+router.post('/prototype-20/appointee',   prototypeThirteenCtrl.appointee);
+router.post('/prototype-20/representative',   prototypeThirteenCtrl.representative);
+router.post('/prototype-20/hearing',   prototypeThirteenCtrl.hearing);
+router.post('/prototype-20/arrangements',   prototypeThirteenCtrl.arrangements);
+router.post('/prototype-20/mobile',   prototypeThirteenCtrl.mobile);
+router.post('/prototype-20/mobileboth',   prototypeThirteenCtrl.mobileboth);
+router.post('/prototype-20/notifications',   prototypeThirteenCtrl.notifications);
+router.post('/prototype-20/mrnDate',   prototypeThirteenCtrl.mrnDate);
+router.post('/prototype-20/checkdate',   prototypeThirteenCtrl.checkdate);
+router.post('/prototype-20/availability',   prototypeThirteenCtrl.availability);
 
 module.exports = router;
