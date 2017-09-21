@@ -20,6 +20,13 @@ var controller = {
         }
     },
 
+  representativeApp: function(req, res) {
+        if (req.body.radioGroup === 'repApp') {
+            res.render('prototype-beta-20/submit-your-appeal/009-reps-details-appointee');
+        } else if (req.body.radioGroup === 'noRepApp') {
+            res.render('prototype-beta-20/submit-your-appeal/011-why-are-you-appealing-appointee');
+        }
+    },
 
 
     hearing: function(req, res) {
@@ -52,6 +59,14 @@ var controller = {
             res.render('prototype-beta-20/submit-your-appeal/007-sms-confirmation');
         } else if (req.body.radioGroup === 'newmobile') {
             res.render('prototype-beta-20/submit-your-appeal/006-enter-mobile-number');
+        }
+    },
+
+    mobileApp: function(req, res) {
+        if (req.body.radioGroup === 'usemobileApp') {
+            res.render('prototype-beta-20/submit-your-appeal/007-sms-confirmation-appointee');
+        } else if (req.body.radioGroup === 'newmobileApp') {
+            res.render('prototype-beta-20/submit-your-appeal/006-enter-mobile-number-appointee');
         }
     },
 
