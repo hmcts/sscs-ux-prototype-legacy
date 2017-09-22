@@ -134,7 +134,9 @@ router.post('/prototype-20/appointee',   prototypeFourteenCtrl.appointee);
 router.post('/prototype-20/representative',   prototypeFourteenCtrl.representative);
 router.post('/prototype-20/representative-app',   prototypeFourteenCtrl.representativeApp);
 router.post('/prototype-20/hearing',   prototypeFourteenCtrl.hearing);
+router.post('/prototype-20/hearing-app',   prototypeFourteenCtrl.hearingApp);
 router.post('/prototype-20/arrangements',   prototypeFourteenCtrl.arrangements);
+router.post('/prototype-20/arrangements-app',   prototypeFourteenCtrl.arrangementsApp);
 router.post('/prototype-20/mobile',   prototypeFourteenCtrl.mobile);
 router.post('/prototype-20/mobile-app',   prototypeFourteenCtrl.mobileApp);
 router.post('/prototype-20/mobileboth',   prototypeFourteenCtrl.mobileboth);
@@ -142,5 +144,6 @@ router.post('/prototype-20/notifications',   prototypeFourteenCtrl.notifications
 router.post('/prototype-20/mrnDate',   prototypeFourteenCtrl.mrnDate);
 router.post('/prototype-20/checkdate',   prototypeFourteenCtrl.checkdate);
 router.post('/prototype-20/availability',   prototypeFourteenCtrl.availability);
+router.post('/prototype-20/availability-app',   prototypeFourteenCtrl.availabilityApp);
 
 module.exports = router;

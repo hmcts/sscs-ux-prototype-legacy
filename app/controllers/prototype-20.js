@@ -37,11 +37,27 @@ var controller = {
         }
     },
 
+    hearingApp: function(req, res) {
+        if (req.body.radioGroup === 'attendApp') {
+            res.render('prototype-beta-20/submit-your-appeal/014-hearing-arrangements-needed-appointee');
+        } else if (req.body.radioGroup === 'notAttendApp') {
+            res.render('prototype-beta-20/submit-your-appeal/013-hearing-not-attending-appointee');
+        }
+    },
+
     arrangements: function(req, res) {
         if (req.body.radioGroup === 'arrangementsRequired') {
             res.render('prototype-beta-20/submit-your-appeal/015-hearing-arrangements');
         } else if (req.body.radioGroup === 'arrangementsNotRequired') {
             res.render('prototype-beta-20/submit-your-appeal/016-hearing-availability');
+        }
+    },
+
+    arrangementsApp: function(req, res) {
+        if (req.body.radioGroup === 'arrangementsRequiredApp') {
+            res.render('prototype-beta-20/submit-your-appeal/015-hearing-arrangements-appointee');
+        } else if (req.body.radioGroup === 'arrangementsNotRequiredApp') {
+            res.render('prototype-beta-20/submit-your-appeal/016-hearing-availability-appointee');
         }
     },
 
@@ -53,6 +69,15 @@ var controller = {
             res.render('prototype-beta-20/submit-your-appeal/017-check-your-answers');
         }
     },
+
+    availabilityApp: function(req, res) {
+        if (req.body.radioGroup === 'datesYesApp') {
+            res.render('prototype-beta-20/submit-your-appeal/016-hearing-dates-appointee');
+        } else if (req.body.radioGroup === 'datesNoApp') {
+            res.render('prototype-beta-20/submit-your-appeal/017-check-your-answers-appointee');
+        }
+    },
+
 
     mobile: function(req, res) {
         if (req.body.radioGroup === 'usemobile') {

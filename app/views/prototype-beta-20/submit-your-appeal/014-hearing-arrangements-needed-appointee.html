@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block page_title %}
-Hearing arrangements confirm - Appeal a benefit decision - GOV.UK
+Hearing arrangements confirm (appointee) - Appeal a benefit decision - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -19,17 +19,17 @@ Hearing arrangements confirm - Appeal a benefit decision - GOV.UK
 
 
             
-<form  action="/prototype-20/arrangements" method="post">
+<form  action="/prototype-20/arrangements-app" method="post">
   <div class="form-group">
 
    <div class="multiple-choice">
-        <input id="radio-1" type="radio" name="radioGroup" value="arrangementsRequired">
+        <input id="radio-1" type="radio" name="radioGroup" value="arrangementsRequiredApp">
          <label for="radio-1">
         Yes
       </label>
       </div>
       <div class="multiple-choice">
-        <input id="radio-2" type="radio" name="radioGroup" value="arrangementsNotRequired">
+        <input id="radio-2" type="radio" name="radioGroup" value="arrangementsNotRequiredApp">
         <label for="radio-2">
         No
       </label>

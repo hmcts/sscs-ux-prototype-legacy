@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block page_title %}
-Your hearing - Appeal a benefit decision - GOV.UK
+Your hearing (appointee) - Appeal a benefit decision - GOV.UK
 {% endblock %}
 {% block content %}
 <main id="content" class="prototype-8" role="main">
@@ -18,19 +18,19 @@ Your hearing - Appeal a benefit decision - GOV.UK
 <p>We can also make arrangements so the hearing caters for any needs you or the person you are appointed to represent has. 
  
     </p>
-    <form  action="/prototype-20/hearing" method="post">
+    <form  action="/prototype-20/hearing-app" method="post">
       <div class="form-group">
         <p class="heading-medium">Do you want to attend the hearing?</p>
         <fieldset>
           <legend class="visually-hidden">What do you want to do?</legend>
           <div class="multiple-choice">
-            <input id="radio-1" type="radio" name="radioGroup" value="attend">
+            <input id="radio-1" type="radio" name="radioGroup" value="attendApp">
             <label for="radio-1">
               Yes
             </label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-2" type="radio" name="radioGroup" value="notAttend">
+            <input id="radio-2" type="radio" name="radioGroup" value="notAttendApp">
             <label for="radio-2">
               No
             </label>
