@@ -132,7 +132,7 @@ var controller = {
         if (req.body.radioGroup === 'diffAddress') {
             res.render('prototype-beta-20/submit-your-appeal/004-their-address-appointee');
         } else if (req.body.radioGroup === 'sameAddress') {
-            res.render('prototype-beta-20/submit-your-appeal/005-sms-sign-up-appointee');
+            res.render('prototype-beta-20/submit-your-appeal/005-sms-sign-up-address-same-appointee');
         }
     },
 
