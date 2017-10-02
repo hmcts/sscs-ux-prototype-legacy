@@ -145,5 +145,6 @@ router.post('/prototype-20/mrnDate',   prototypeFourteenCtrl.mrnDate);
 router.post('/prototype-20/checkdate',   prototypeFourteenCtrl.checkdate);
 router.post('/prototype-20/availability',   prototypeFourteenCtrl.availability);
 router.post('/prototype-20/availability-app',   prototypeFourteenCtrl.availabilityApp);
+router.post('/prototype-20/address-app',   prototypeFourteenCtrl.addressApp);
 
 module.exports = router;

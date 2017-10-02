@@ -127,6 +127,16 @@ var controller = {
         }
     },
 
+
+        addressApp: function(req, res) {
+        if (req.body.radioGroup === 'diffAddress') {
+            res.render('prototype-beta-20/submit-your-appeal/004-their-address-appointee');
+        } else if (req.body.radioGroup === 'sameAddress') {
+            res.render('prototype-beta-20/submit-your-appeal/005-sms-signup-appointee');
+        }
+    },
+
+
     // The class above has a dependency on moment.js which makes our life easier when dealing with dates. 
 // To create a moment object from user input (e.g. MRN date) you would do the following:
 
