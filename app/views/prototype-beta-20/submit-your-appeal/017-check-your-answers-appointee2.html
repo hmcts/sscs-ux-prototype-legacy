@@ -1,0 +1,186 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Check benefit appeal answers (appointee) - Appeal a benefit decision - GOV.UK 
+{% endblock %}
+{% block content %}
+<main id="content" class="prototype-8" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+      <h1 class="heading-large">
+        Check your appeal
+      </h1>
+
+
+      <!-- Benefit type -->
+      <h2 class="heading-medium">Benefit</h2>
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question">
+            Name of benefit
+          </dt>
+          <dd class="cya-answer">
+            Personal Independence Payment (PIP)
+          </dd>
+          <dd class="cya-change">
+            <a href="001-benefit-type">
+              Change<span class="visually-hidden"> name of benefit</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+
+            <!-- Mandatory Reconsideration Notice (MRN) -->
+      <h2 class="heading-medium">Mandatory Reconsideration Notice (MRN)</h2>
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question">
+            Date sent
+          </dt>
+          <dd class="cya-answer">
+            2 September 2017
+          </dd>
+          <dd class="cya-change">
+            <a href="003-mrn-date">
+              Change<span class="visually-hidden"> date MRN Sent</span>
+            </a>
+          </dd>
+        </div>
+
+
+      </dl>
+
+
+
+
+
+   <!-- Appointee -->
+      <h2 class="heading-medium">Appointee</h2>
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question">
+            Are you an appointee?
+          </dt>
+          <dd class="cya-answer">
+            Yes
+          </dd>
+          <dd class="cya-change">
+            <a href="004-appointee">
+              Change<span class="visually-hidden"> appointee</span>
+            </a>
+          </dd>
+        </div>
+
+
+               <div>
+          <dt class="cya-question">
+            Name
+          </dt>
+          <dd class="cya-answer">
+            Appointee name
+          </dd>
+          <dd class="cya-change">
+            <a href="003-mrn-date">
+              Change<span class="visually-hidden"> appointee name</span>
+            </a>
+          </dd>
+        </div>
+
+               <div>
+          <dt class="cya-question">
+            Date of birth
+          </dt>
+          <dd class="cya-answer">
+            12.03.1971
+          </dd>
+          <dd class="cya-change">
+            <a href="003-mrn-date">
+              Change<span class="visually-hidden"> appointee date of birth</span>
+            </a>
+          </dd>
+        </div>
+
+
+               <div>
+          <dt class="cya-question">
+            National insurance number
+          </dt>
+          <dd class="cya-answer">
+            NP 27 28 67
+          </dd>
+          <dd class="cya-change">
+            <a href="003-mrn-date">
+              Change<span class="visually-hidden"> appointee National Insurance number</span>
+            </a>
+          </dd>
+        </div>
+
+
+         <div>
+          <dt class="cya-question">
+            Your address
+          </dt>
+          <dd class="cya-answer">
+
+           <p>122 Breach Street<br/>
+            Newcastle<br/>
+            NE1 2HB<br/></p>
+          </dd>
+          <dd class="cya-change">
+            <a href="003-mrn-date">
+              Change<span class="visually-hidden"> appointee address</span>
+            </a>
+          </dd>
+        </div>
+
+               <div>
+          <dt class="cya-question">
+            Email
+          </dt>
+          <dd class="cya-answer">
+            appointee.name@gmail.com
+          </dd>
+          <dd class="cya-change">
+            <a href="003-mrn-date">
+              Change<span class="visually-hidden"> appointee email address</span>
+            </a>
+          </dd>
+        </div>
+
+               <div>
+          <dt class="cya-question">
+            Phone number
+          </dt>
+          <dd class="cya-answer">
+            0797 243 8179
+          </dd>
+          <dd class="cya-change">
+            <a href="003-mrn-date">
+              Change<span class="visually-hidden"> phone number</span>
+            </a>
+          </dd>
+        </div>
+
+
+      </dl>
+
+
+
+
+
+      <br/>
+      <h2 class="heading-medium">Sign and submit </h2>
+      <p>The information I have provided in this appeal is accurate, to the best of my knowledge. </p>
+      <p>[if chosen rep] I give permission for the tribunal to correspond with my named representative about my appeal.</p>
+      <div class="form-group">
+        <h3 class="heading-small">
+          Enter your name
+          <span class="form-hint">This should be the name of the appointee</span></h3>
+          <input class="form-control form-control-2-4" id="form-control-3-4" type="text"> 
+        </div>
+        <div class="form-group">
+          <a class="button" href="018-confirmation-appointee">Submit your appeal</a>
+        </div>
+      </div>
+    </main>
+    {% endblock %}
