@@ -2,10 +2,21 @@
 {% block content %}
 <main id="content" class="prototype-8" role="main">
   <div class="grid-row">
-    <div class="column-full">
-<div style="margin: 60px 0px 60px 0px;"> <img src="/public/images/hmcts-logo-black.png" height="80" ></div>
+        <div class="column-one-half">
 
-<h1 class="heading-xlarge">Appeal a PIP benefit decision</h1>
+<div style="margin: 60px 0px 30px 0px;"> <img src="/public/images/hmcts-logo-black.png" height="100" ></div>
+</div>
+    <div class="column-one-half">
+      <aside style="margin-top: 60px; font-size: 16px;">
+        <span style="font-weight: bold;">Appeal submitted:</span> 14 October 2017
+</aside>
+</div>  
+</div>
+
+<div class="grid-row">
+    <div class="column-full">
+<h1 class="heading-large">Appeal a PIP benefit decision</h1>
+
       <!-- Benefit type -->
       <h2 class="heading-medium">1. Benefit</h2>
       <dl class="govuk-check-your-answers cya-questions-short">
@@ -310,15 +321,17 @@
   </dl>
   <br/>
   <!-- <h2 class="heading-medium">Sign and submit </h2> -->
+  <div class="grid-row">
+        <div class="column-two-thirds">
   <br/>
   <p>The information I have provided in this appeal is accurate, to the best of my knowledge. </p>
   <p>[if chosen rep] I give permission for the tribunal to correspond with my named representative about my appeal.</p>
   <div class="form-group">
     <h3 class="heading-small">
       Signed: <span style="font-weight: normal;">[Typed in name goes here]</span></h3>
-      
-    </div>
-    
+      </div>
+
   </div>
+
 </main>
 {% endblock %}
