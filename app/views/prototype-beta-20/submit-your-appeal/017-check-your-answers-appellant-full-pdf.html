@@ -8,13 +8,13 @@
       </div>
       <div class="column-one-half">
         <aside style="margin-top: 60px; text-align: right;">
-          <span style="font-weight: bold;">Appeal submitted:</span> 14 October 2017
+          <span style="font-weight: bold;">Appeal submitted:</span> 14 October 2017 <span style="color: red;">[Date the online form was submitted]</span>
         </aside>
       </div>  
     </div>
     <div class="grid-row">
       <div class="column-full">
-        <h1 class="heading-large">Your PIP benefit appeal</h1>
+        <h1 class="heading-large">Your  <span style="color: red;">[Benefit type abbreviation if exists e.g. PIP otherwise long format]</span> benefit appeal</h1>
         <!-- Benefit type -->
         <h2 class="heading-medium">1. Benefit</h2>
         <dl class="govuk-check-your-answers cya-questions-short">
@@ -23,7 +23,7 @@
               Benefit name
             </dt>
             <dd class="cya-answer">
-              Personal Independence Payment (PIP)
+              Personal Independence Payment (PIP) <span style="color: red;">[Display long format and benefit abbreviation (if there is one)]</span>
             </dd>
             <dd class="cya-change">
             </dd>
@@ -37,7 +37,7 @@
               Number from MRN address
             </dt>
             <dd class="cya-answer">
-              6
+              6 <span style="color: red;">[Not required for Private Beta]</span>
             </dd>
              <dd class="cya-change">
             </dd>
@@ -48,7 +48,7 @@
               Date of MRN
             </dt>
             <dd class="cya-answer">
-              22 September 2017
+              22.09.2017
             </dd>
              <dd class="cya-change">
             </dd>
@@ -58,7 +58,12 @@
               Why appeal is late
             </dt>
             <dd class="cya-answer">
-              [Reason for late appeal. Display ]
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+ <span style="color: red;">[Reason for late appeal. Display if appeal is late and reason entered on either</span>
+<a href="https://track-your-appeal.herokuapp.com/prototype-beta-20/submit-your-appeal/003-3-why-appeal-late-1month">'Tell us why your appeal is late' (over 1 month)</a> or <a href="https://track-your-appeal.herokuapp.com/prototype-beta-20/submit-your-appeal/003-4-why-appeal-late-13months">'Tell us why your appeal is late' (over 13 months)</a>]
+
+             
             </dd>
           </div>
 
@@ -66,8 +71,9 @@
             <dt class="cya-question">
               No MRN
             </dt>
+
             <dd class="cya-answer">
-              [Reason for no MRN]
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <span style="color: red;">[Reason for no MRN as entered on <a href="https://track-your-appeal.herokuapp.com/prototype-beta-20/submit-your-appeal/003-1-no-mrn">'Tell us why you don’t have a Mandatory Reconsideration Notice'</a></span>
             </dd>
           </div>
         </dl>
@@ -79,7 +85,7 @@
               Appointee
             </dt>
             <dd class="cya-answer">
-              No
+              No <span style="color: red;">['Yes' or 'No']</span>
             </dd>
             <dd class="cya-change">
             </dd>
@@ -89,7 +95,7 @@
               Name
             </dt>
             <dd class="cya-answer">
-              Alex Smith 
+              Mr Alex Smith <span style="color: red;">[Title_Name_Last name]</span>
             </dd>
             <dd class="cya-change">
             </dd>
@@ -109,7 +115,7 @@
               National Insurance number
             </dt>
             <dd class="cya-answer">
-              NP 27 28 67
+              NP 27 28 67 A <span style="color: red;">[Display in format shown in uppercase and spaces regardless of the format the user has entered it]</span>
             </dd>
             <dd class="cya-change">
             </dd>
@@ -124,8 +130,8 @@
              <p>122 Breach Street<br/>
               Newcastle<br/>
               NE1 2HB<br/></p>
-              <p>your.name@gmail.com</p>
-              <p>0797 243 8179</p>
+              <p>your.name@gmail.com <span style="color: red;">[If not entered display 'Not provided']</span></p>
+              <p>0797 243 8179 <span style="color: red;">[If not entered display 'Not provided']</span></p>
             </p>
           </dd>
           <dd class="cya-change">
@@ -140,7 +146,7 @@
             Receive text message reminders
           </dt>
           <dd class="cya-answer">
-            Yes
+            Yes <span style="color: red;">['Yes' or 'No']</span>
           </dd>
           <dd class="cya-change">
           </dd>
@@ -150,7 +156,7 @@
             Mobile number
           </dt>
           <dd class="cya-answer">
-            0797 243 8179
+            0797 243 8179 <span style="color: red;">[Display only if user has selected 'Yes' to receiving text reminders].</span>
           </dd>
           <dd class="cya-change">
           </dd>
@@ -164,29 +170,32 @@
             Have a representative
           </dt>
           <dd class="cya-answer">
-            Yes
+            Yes <span style="color: red;">['Yes' or 'No']</span>
           </dd>
           <dd class="cya-change">
           </dd>
         </div>
         <div>
+
           <dt class="cya-question">
-            <p class="pbold">Name</p>
+            <p><br/><br/><br/><br/><br/></p>
+            <p class="pbold">Name </p>
             <p class="pbold">Organisation</p>
             <p class="pbold">Address<br/><br/><br/></p>
             <p class="pbold">Email</p>
             <p class="pbold">Phone number</p>
           </dt>
           <dd class="cya-answer">
-          <p>Peter Smith</p>
-          <p>Citizens Advice</p>
-          <p>Ground Floor<br/>
+<p><span style="color: red;">[Only display rep details if user has selected 'Yes' for 'Have a representative'] [User may have selected 'Yes' but then clicked the 'I don’t have their details to hand' link on the rep details page which which case display section but show entry as 'Not provided' for each item]</p></span>
+          <p>Peter Smith <span style="color: red;">[If name not entered display 'Not provided']</span></p>
+          <p>Citizens Advice <span style="color: red;">[If not entered display 'Not provided']</span></p>
+          <p>Ground Floor <span style="color: red;">[If address not entered display 'Not provided']</span><br/>
             Gazette Buildings<br/>
             168 Corporation Street<br/>
             Newcastle<br/>
           NE2 6TF</p>
-          <p>peter.smith@cab.org.uk</p>
-          <p>03444 77 1010</p>
+          <p>peter.smith@cab.org.uk <span style="color: red;">[If not entered display 'Not provided']</span></p>
+          <p>03444 77 1010 <span style="color: red;">[If not entered display 'Not provided']</span></p>
         </dd>
         <dd class="cya-change">
         </dd>
@@ -238,17 +247,19 @@
         Attending the hearing
       </dt>
       <dd class="cya-answer">
-        Yes
+        Yes <span style="color: red;">['Yes' or 'No']</span>
       </dd>
       <dd class="cya-change">
       </dd>
     </div>
     <div>
       <dt class="cya-question">
+       <span> <br/></span>
         Dates you're not availabile
       </dt>
       <dd class="cya-answer">
-        <p>12 December 2017 to 13 December 2017</p>
+        <span style="color: red;">[Only display 'Dates you're not availabile' if attending the hearing]</span>
+        <p>12 December 2017 to 13 December 2017 <span style="color: red;">[If attending the hearing and no dates provided display 'None provided']</span></p>
         <p>18 December 2017</p>
       </dd>
       <dd class="cya-change">
@@ -256,7 +267,7 @@
     </div>
   </dl>
   <!-- The hearing arrangements -->
-  <h2 class="heading-medium">8. Hearing arrangements</h2>
+  <h2 class="heading-medium">8. Hearing arrangements <span style="color: red;">[Only display if attending the hearing]</span></h2>
   <dl class="govuk-check-your-answers cya-questions-short">
     <div>
       <dt class="cya-question">
@@ -267,11 +278,11 @@
         <p class="pbold">Any other arrangements</p>
       </dt>
       <dd class="cya-answer">
-        <p>Not required</p>
-        <p>Not required</p>
-        <p>Not required</p>
-        <p>Required</p>
-        <p>Not required</p>
+        <p>Not required <span style="color: red;">['Language/dialect entered' or 'Not required']</span></p>
+        <p>Not required <span style="color: red;">['Sign language entered' or 'Not required']</span></p>
+        <p>Not required <span style="color: red;">['Required' or 'Not required']</span></p>
+        <p>Required <span style="color: red;">['Required' or 'Not required']</span></p>
+        <p>Not required <span style="color: red;">['Date entered' or 'Not required']</span></p>
       </dd>
       <dd class="cya-change">
       </dd>
