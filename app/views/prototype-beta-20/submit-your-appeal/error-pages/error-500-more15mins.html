@@ -5,17 +5,17 @@ Page not found - GOV.UK
 {% block content %}
 <main id="content" class="prototype-8" role="main">
    {% include "includes/phase_banner_beta.html" %} 
-   {% include "includes/breadcrumbs.html" %}
    <div class="grid-row">
-    <div>
-    <h1 class="heading-large">
+    <div class="column-full">
+    <h1 class="heading-xlarge">
             Sorry, we’re experiencing technical difficulties
         </h1>
-        <p class="lede">Please try again in a few minutes.</p>
-        <p class="lede">If you want help with your appeal you can call 0300 123 1142.</p>
     </div>
-    <div class="column-third">
+  
+  <div class="column-two-thirds">
+        <p>The service may be unavailable for some time. If you need to submit your appeal quickly, you can <a href="https://hmctsformfinder.justice.gov.uk/HMCTS/GetForm.do?original_id=3038">download and fill out an SSCS1 form</a>.</p>
     </div>
+    
 </div>
 </main>
 {% endblock %}
