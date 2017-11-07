@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Enter your surname - Appeal a benefit decision - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" class="prototype-8" role="main">
+ {% include "includes/phase_banner_beta.html" %} 
+
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <form>
+      <div class="form-group">
+        <fieldset>
+          <legend class="visually-hidden">Enter your surname</legend>
+          <label>
+            <h1 class="heading-large">
+              Enter your surname
+            </h1>
+          </label>
+          <input class="form-control" type="text">
+        </fieldset>
+      </div>
+      <a class="button" href="status">Continue</a>
+    </form>
+    
+    
+  </div>
+</div>
+</main>
+{% endblock %}
