@@ -341,8 +341,12 @@ a {
   border-style: solid;
   border-width: 1px;
   border-color: $grey-2;
-  padding: 30px;
+  padding: 0px;
   }
+
+.email-margin {
+  margin: 20px;
+}
 
 .date-updates {
   color: #0B0C0C;
