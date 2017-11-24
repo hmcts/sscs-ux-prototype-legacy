@@ -17,6 +17,7 @@ var prototypeElevenCtrl = require('./controllers/prototype-16');
 var prototypeTwelveCtrl = require('./controllers/prototype-17');
 var prototypeThirteenCtrl = require('./controllers/prototype-18');
 var prototypeFourteenCtrl = require('./controllers/prototype-20');
+var prototypeFourteenCtrl = require('./controllers/prototype-23');
 
 router.get('/', home.index);
 router.get('/prototype-1/status', prototypeOneCtrl.status);
@@ -146,5 +147,27 @@ router.post('/prototype-20/checkdate',   prototypeFourteenCtrl.checkdate);
 router.post('/prototype-20/availability',   prototypeFourteenCtrl.availability);
 router.post('/prototype-20/availability-app',   prototypeFourteenCtrl.availabilityApp);
 router.post('/prototype-20/address-app',   prototypeFourteenCtrl.addressApp);
+
+router.get('/prototype-23/validate',   prototypeFourteenCtrl.validateCaseReference);
+router.get('/prototype-23/validatemulti',   prototypeFourteenCtrl.validateCaseReferenceMulti);
+router.get('/prototype-23/validatereference',   prototypeFourteenCtrl.validateReference);
+router.get('/prototype-23/validate-surname',   prototypeFourteenCtrl.validateSurname);
+router.get('/prototype-23/status',   prototypeFourteenCtrl.getAppealStatus);
+router.post('/prototype-23/appointee',   prototypeFourteenCtrl.appointee);
+router.post('/prototype-23/representative',   prototypeFourteenCtrl.representative);
+router.post('/prototype-23/representative-app',   prototypeFourteenCtrl.representativeApp);
+router.post('/prototype-23/hearing',   prototypeFourteenCtrl.hearing);
+router.post('/prototype-23/hearing-app',   prototypeFourteenCtrl.hearingApp);
+router.post('/prototype-23/arrangements',   prototypeFourteenCtrl.arrangements);
+router.post('/prototype-23/arrangements-app',   prototypeFourteenCtrl.arrangementsApp);
+router.post('/prototype-23/mobile',   prototypeFourteenCtrl.mobile);
+router.post('/prototype-23/mobile-app',   prototypeFourteenCtrl.mobileApp);
+router.post('/prototype-23/mobileboth',   prototypeFourteenCtrl.mobileboth);
+router.post('/prototype-23/notifications',   prototypeFourteenCtrl.notifications);
+router.post('/prototype-23/mrnDate',   prototypeFourteenCtrl.mrnDate);
+router.post('/prototype-23/checkdate',   prototypeFourteenCtrl.checkdate);
+router.post('/prototype-23/availability',   prototypeFourteenCtrl.availability);
+router.post('/prototype-23/availability-app',   prototypeFourteenCtrl.availabilityApp);
+router.post('/prototype-23/address-app',   prototypeFourteenCtrl.addressApp);
 
 module.exports = router;
