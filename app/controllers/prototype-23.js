@@ -72,7 +72,7 @@ var controller = {
 
     availabilityApp: function(req, res) {
         if (req.body.radioGroup === 'datesYesApp') {
-            res.render('prototype-beta-23/submit-your-appeal/016-hearing-dates-nonjs-appointee');
+            res.render('prototype-beta-23/submit-your-appeal/016-hearing-dates-appointee');
         } else if (req.body.radioGroup === 'datesNoApp') {
             res.render('prototype-beta-23/submit-your-appeal/017-check-your-answers-appointee');
         }
