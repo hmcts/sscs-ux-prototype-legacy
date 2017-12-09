@@ -136,6 +136,24 @@ var controller = {
         }
     },
 
+ 
+ mrnhave: function(req, res) {
+        if (req.body.radioGroup === 'yesMRN') {
+            res.render('prototype-beta-23/submit-your-appeal/002-dwp-office');
+        } else if (req.body.radioGroup === 'noMRN') {
+            res.render('prototype-beta-23/submit-your-appeal/002-contacted-dwp');
+        }
+    },
+
+ contactdwp: function(req, res) {
+        if (req.body.radioGroup === 'yesContactDWP') {
+            res.render('prototype-beta-23/submit-your-appeal/003-1-no-mrn');
+        } else if (req.body.radioGroup === 'noContactDWP') {
+            res.render('prototype-beta-23/submit-your-appeal/003-2-contact-dwp');
+        }
+    },
+
+
 
     // The class above has a dependency on moment.js which makes our life easier when dealing with dates. 
 // To create a moment object from user input (e.g. MRN date) you would do the following:

@@ -169,5 +169,7 @@ router.post('/prototype-23/checkdate',   prototypeFourteenCtrl.checkdate);
 router.post('/prototype-23/availability',   prototypeFourteenCtrl.availability);
 router.post('/prototype-23/availability-app',   prototypeFourteenCtrl.availabilityApp);
 router.post('/prototype-23/address-app',   prototypeFourteenCtrl.addressApp);
+router.post('/prototype-23/mrnhave',   prototypeFourteenCtrl.mrnhave);
+router.post('/prototype-23/contactdwp',   prototypeFourteenCtrl.contactdwp);
 
 module.exports = router;
