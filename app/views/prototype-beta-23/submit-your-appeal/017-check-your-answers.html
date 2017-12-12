@@ -43,7 +43,6 @@ Check benefit appeal answers (appointee) - Appeal a benefit decision - GOV.UK
             </a>
           </dd>
         </div>
-
         <div>
           <dt class="cya-question">
             Date of MRN
@@ -54,6 +53,34 @@ Check benefit appeal answers (appointee) - Appeal a benefit decision - GOV.UK
           <dd class="cya-change">
             <a href="003-mrn-date">
               Change<span class="visually-hidden"> date of MRN</span>
+            </a>
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+            Why appeal is late
+          </dt>
+          <dd class="cya-answer">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <span style="color: red;">[Reason for late appeal. Display if appeal is late and reason entered on either</span>
+            <a href="https://track-your-appeal.herokuapp.com/prototype-beta-20/submit-your-appeal/003-3-why-appeal-late-1month">'Tell us why your appeal is late' (over 1 month)</a> or <a href="https://track-your-appeal.herokuapp.com/prototype-beta-20/submit-your-appeal/003-4-why-appeal-late-13months">'Tell us why your appeal is late' (over 13 months)</a>]
+          </dd>
+          <dd class="cya-change">
+            <a href="003-mrn-date">
+              Change<span class="visually-hidden"> why appeal is late</span>
+            </a>
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+            Reason for no MRN
+          </dt>
+          <dd class="cya-answer">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <span style="color: red;">[Reason for no MRN as entered on <a href="https://track-your-appeal.herokuapp.com/prototype-beta-20/submit-your-appeal/003-1-no-mrn">'Tell us why you don’t have a Mandatory Reconsideration Notice'</a></span>
+          </dd>
+           <dd class="cya-change">
+            <a href="003-mrn-date">
+              Change<span class="visually-hidden"> reason for no MRN</span>
             </a>
           </dd>
         </div>
@@ -165,7 +192,6 @@ Check benefit appeal answers (appointee) - Appeal a benefit decision - GOV.UK
         </dd>
       </div>
     </dl>
-    
   </dl>
   <!-- Representative -->
   <h2 class="heading-medium">Representative</h2>
@@ -230,104 +256,103 @@ Check benefit appeal answers (appointee) - Appeal a benefit decision - GOV.UK
     <div>
       <dt class="cya-question">
        <p class="pbold"> What you disagree with</p>
-        <p class="pbold">Why you disagree with it</p>
-      </dt>
-      <dd class="cya-answer">
-        <p>That i am able to cope with social situations</p>
-          <p>I have trouble remembering people’s names. I get very anxious before social situations. I try to avoid them because i don't want to offend people by forgetting their name. </p>
-      </dd>
-      <dd class="cya-change">
-        <a href="http://fngwu7.axshare.com/#c=2"> <!-- onPageLoad open the relevant accordion panel -->
-          Change<span class="visually-hidden"> 2nd reason for appealing</span>
-        </a>
-      </dd>
-    </div>
-    <div>
-      <dt class="cya-question">
-        Anything else you want to tell us<br/>
-      </dt>
-      <dd class="cya-answer">
-        I told the assessor about my condition but he did not listen to me.  
-      </dd>
-      <dd class="cya-change">
-        <a href="011-additional-reasons">
-          Change<span class="visually-hidden"> anything else you want to tell us</span>
-        </a>
-      </dd>
-    </div>
-  </dl>
-  <!-- The hearing -->
-  <h2 class="heading-medium">The hearing</h2>
-  <dl class="govuk-check-your-answers cya-questions-short">
-    <div>
-      <dt class="cya-question">
-        Attending the hearing
-      </dt>
-      <dd class="cya-answer">
-        Yes
-      </dd>
-      <dd class="cya-change">
-        <a href="013-your-hearing">
-          Change<span class="visually-hidden"> attending the hearing</span>
-        </a>
-      </dd>
-    </div>
-    <div>
-      <dt class="cya-question">
-        Dates you can't attend 
-      </dt>
-      <dd class="cya-answer">
-        <p>20 December 2018 to 21 December 2017</p>
-        <p>2 March 2018</p>
-      </dd>
-      <dd class="cya-change">
-        <a href="016-hearing-dates-nonjs">
-          Change<span class="visually-hidden"> dates you're not available</span>
-        </a>
-      </dd>
-    </div>
-  </dl>
-  <!-- The hearing arrangements -->
-  <h2 class="heading-medium">8. Hearing arrangements</h2>
-  <dl class="govuk-check-your-answers cya-questions-short">
-    <div>
-      <dt class="cya-question">
-        <p class="pbold">Language interpreter</p>
-        <p class="pbold">Sign interpreter</p>
-        <p class="pbold">Hearing loop</p>
-        <p class="pbold">Disabled access</p>
-        <p class="pbold">Any other arrangements</p>
-      </dt>
-      <dd class="cya-answer">
-        <p>Not required</p>
-        <p>Not required</p>
-        <p>Not required</p>
-        <p>Required</p>
-        <p>Not required</p>
-      </dd>
-      <dd class="cya-change">
-        <a href="015-hearing-arrangements">
-          Change<span class="visually-hidden"> hearing arrangements</span>
-        </a>
-      </dd>
-    </div>
-  </dl>
-  <br/>
-  <h2 class="heading-medium">Sign and submit </h2>
-  <p>The information I have provided in this appeal is accurate, to the best of my knowledge. </p>
-  <p><!--[if chosen rep]--> I give permission for you to correspond with my named representative about my appeal.</p>
-  <p>I agree to the <a href="other-pages/terms-and-conditions">terms and conditions</a> of using the ‘Appeal a benefit decision’ service.</p>
-  <div class="form-group">
-    <h3 class="heading-small">
-      Enter your name
-      <span class="form-hint">This should be the person who is named on the appeal</span>
-      </h3>
-       
-      <input class="form-control form-control-2-4" id="form-control-3-4" type="text"> 
-    </div>
-    <div class="form-group">
-      <a class="button" href="018-confirmation">Submit your appeal</a>
-    </div>
+       <p class="pbold">Why you disagree with it</p>
+     </dt>
+     <dd class="cya-answer">
+      <p>That i am able to cope with social situations</p>
+      <p>I have trouble remembering people’s names. I get very anxious before social situations. I try to avoid them because i don't want to offend people by forgetting their name. </p>
+    </dd>
+    <dd class="cya-change">
+      <a href="http://fngwu7.axshare.com/#c=2"> <!-- onPageLoad open the relevant accordion panel -->
+        Change<span class="visually-hidden"> 2nd reason for appealing</span>
+      </a>
+    </dd>
   </div>
+  <div>
+    <dt class="cya-question">
+      Anything else you want to tell us<br/>
+    </dt>
+    <dd class="cya-answer">
+      I told the assessor about my condition but he did not listen to me.  
+    </dd>
+    <dd class="cya-change">
+      <a href="011-additional-reasons">
+        Change<span class="visually-hidden"> anything else you want to tell us</span>
+      </a>
+    </dd>
+  </div>
+</dl>
+<!-- The hearing -->
+<h2 class="heading-medium">The hearing</h2>
+<dl class="govuk-check-your-answers cya-questions-short">
+  <div>
+    <dt class="cya-question">
+      Attending the hearing
+    </dt>
+    <dd class="cya-answer">
+      Yes
+    </dd>
+    <dd class="cya-change">
+      <a href="013-your-hearing">
+        Change<span class="visually-hidden"> attending the hearing</span>
+      </a>
+    </dd>
+  </div>
+  <div>
+    <dt class="cya-question">
+      Dates you can't attend 
+    </dt>
+    <dd class="cya-answer">
+      <p>20 December 2018 to 21 December 2017</p>
+      <p>2 March 2018</p>
+    </dd>
+    <dd class="cya-change">
+      <a href="016-hearing-dates-nonjs">
+        Change<span class="visually-hidden"> dates you're not available</span>
+      </a>
+    </dd>
+  </div>
+</dl>
+<!-- The hearing arrangements -->
+<h2 class="heading-medium">8. Hearing arrangements</h2>
+<dl class="govuk-check-your-answers cya-questions-short">
+  <div>
+    <dt class="cya-question">
+      <p class="pbold">Language interpreter</p>
+      <p class="pbold">Sign interpreter</p>
+      <p class="pbold">Hearing loop</p>
+      <p class="pbold">Disabled access</p>
+      <p class="pbold">Any other arrangements</p>
+    </dt>
+    <dd class="cya-answer">
+      <p>Not required</p>
+      <p>Not required</p>
+      <p>Not required</p>
+      <p>Required</p>
+      <p>Not required</p>
+    </dd>
+    <dd class="cya-change">
+      <a href="015-hearing-arrangements">
+        Change<span class="visually-hidden"> hearing arrangements</span>
+      </a>
+    </dd>
+  </div>
+</dl>
+<br/>
+<h2 class="heading-medium">Sign and submit </h2>
+<p>The information I have provided in this appeal is accurate, to the best of my knowledge. </p>
+<p><!--[if chosen rep]--> I give permission for you to correspond with my named representative about my appeal.</p>
+<p>I agree to the <a href="other-pages/terms-and-conditions">terms and conditions</a> of using the ‘Appeal a benefit decision’ service.</p>
+<div class="form-group">
+  <h3 class="heading-small">
+    Enter your name
+    <span class="form-hint">This should be the person who is named on the appeal</span>
+  </h3>
+  <input class="form-control form-control-2-4" id="form-control-3-4" type="text"> 
+</div>
+<div class="form-group">
+  <a class="button" href="018-confirmation">Submit your appeal</a>
+</div>
+</div>
 </main>
 {% endblock %}
