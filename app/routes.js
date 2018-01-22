@@ -18,6 +18,8 @@ var prototypeTwelveCtrl = require('./controllers/prototype-17');
 var prototypeThirteenCtrl = require('./controllers/prototype-18');
 var prototypeFourteenCtrl = require('./controllers/prototype-20');
 var prototypeFithteenCtrl = require('./controllers/prototype-23');
+var prototypeFithteenCtrl = require('./controllers/prototype-sya-demo');
+
 
 router.get('/', home.index);
 router.get('/prototype-1/status', prototypeOneCtrl.status);
@@ -171,5 +173,30 @@ router.post('/prototype-23/availability-app',   prototypeFithteenCtrl.availabili
 router.post('/prototype-23/address-app',   prototypeFithteenCtrl.addressApp);
 router.post('/prototype-23/mrnhave',   prototypeFithteenCtrl.mrnhave);
 router.post('/prototype-23/contactdwp',   prototypeFithteenCtrl.contactdwp);
+
+router.get('/prototype-sya-demo/validate',   prototypeFithteenCtrl.validateCaseReference);
+router.get('/prototype-sya-demo/validatemulti',   prototypeFithteenCtrl.validateCaseReferenceMulti);
+router.get('/prototype-sya-demo/validatereference',   prototypeFithteenCtrl.validateReference);
+router.get('/prototype-sya-demo/validate-surname',   prototypeFithteenCtrl.validateSurname);
+router.get('/prototype-sya-demo/status',   prototypeFithteenCtrl.getAppealStatus);
+router.post('/prototype-sya-demo/appointee',   prototypeFithteenCtrl.appointee);
+router.post('/prototype-sya-demo/representative',   prototypeFithteenCtrl.representative);
+router.post('/prototype-sya-demo3/representative-app',   prototypeFithteenCtrl.representativeApp);
+router.post('/prototype-sya-demo/hearing',   prototypeFithteenCtrl.hearing);
+router.post('/prototype-sya-demo/hearing-app',   prototypeFithteenCtrl.hearingApp);
+router.post('/prototype-sya-demo/arrangements',   prototypeFithteenCtrl.arrangements);
+router.post('/prototype-sya-demo/arrangements-app',   prototypeFithteenCtrl.arrangementsApp);
+router.post('/prototype-sya-demo/mobile',   prototypeFithteenCtrl.mobile);
+router.post('/prototype-sya-demo/mobile-app',   prototypeFithteenCtrl.mobileApp);
+router.post('/prototype-sya-demo/mobileboth',   prototypeFithteenCtrl.mobileboth);
+router.post('/prototype-sya-demo3/notifications',   prototypeFithteenCtrl.notifications);
+router.post('/prototype-sya-demo/mrnDate',   prototypeFithteenCtrl.mrnDate);
+router.post('/prototype-sya-demo/checkdate',   prototypeFithteenCtrl.checkdate);
+router.post('/prototype-sya-demo/availability',   prototypeFithteenCtrl.availability);
+router.post('/prototype-sya-demo/availability-app',   prototypeFithteenCtrl.availabilityApp);
+router.post('/prototype-sya-demo/address-app',   prototypeFithteenCtrl.addressApp);
+router.post('/prototype-sya-demo/mrnhave',   prototypeFithteenCtrl.mrnhave);
+router.post('/prototype-sya-demo/contactdwp',   prototypeFithteenCtrl.contactdwp);
+
 
 module.exports = router;
