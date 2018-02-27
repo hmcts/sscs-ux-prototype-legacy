@@ -1,23 +1,35 @@
 {% extends "layout_unbranded.html" %}
-{% block page_title %}
-Email - Appeal summary
+
+{% block head %}
+<link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css">
 {% endblock %}
 {% block content %}
 <main id="content" class="prototype-8" role="main">
-	<p style="padding-top: 30px;"><strong class="bold-small">Subject: </strong>Your PIP benefit appeal</p>
+
 	
+	<p style="padding-top: 30px; font-size: 16px;">
+		<strong style="font-weight: bold;">Subject: </strong>Your PIP benefit appeal<br/>
+		<strong style="font-weight: bold;">From: </strong>PIP Benefit Appeals (pipbenefitappeals@hmcts.net)<br/>
+		<strong style="font-weight: bold;">Date: </strong>14/02/2018 <br/>
+	</p>
 	<div class="email-border">
 		
 		<div style="margin-bottom: 15px;"> <img src="/public/images/notify-email-header.png"></div>
 		<div class="email-margin">
-		<div style="margin-bottom: 20px;"> <img src="/public/images/hmcts-logo.png"></div>
-		<div class="panel panel-border-wide">
-			<p>Appeal reference number: SC242/16/03435</p>
-		</div>
-		<br/>
-		<p>Dear Manish Sharma</p>
-		<p>Here is a copy of the information you submitted in relation to your PIP benefit appeal.</p> 
-		
+			<div style="margin-bottom: 20px;"> <img src="/public/images/hmcts-logo.png"></div>
+			<div class="panel panel-border-wide">
+				<p>Appeal reference number: SC242/16/03435</p>
+			</div>
+			<br/>
+					<p>Dear Manish Sharma</p>
+		<p>Your appeal has been received by the tribunal. A copy of the information you have submitted is below.</p> 
+
+<h2 class="heading-medium">What happens next</h2>
+<p>Your appeal will be lodged within 3 days. You’ll then be emailed an appeal reference number and an address where you can send your evidence. </p>
+
+<p>You can track the progress of your appeal any time: <br/><a href="../status">https://www.sscs.reform.hmcts.net/progress/fzpqcy/track-your-appeal</a></p>
+<p>---------------------------------------------------</p>
+	<h2 class="heading-medium">Appeal summary</h2>	
 		<h2 class="heading-medium">Benefit</h2>
 		<p>Benefit name: Personal Independence Payment</p>
 
@@ -91,8 +103,6 @@ Email - Appeal summary
 		<p>This message is automatically generated; please do not reply to this email.</p>
 		<p>Change your email address or stop receiving these emails:  <a href="../manage/manage-email-notifications">https://www.sscs.reform.hmcts.net/progress/fzpqcy/manage-<br/>email-notifications</a></p> 
 	</div>
-	 
-</main>
-
-
-{% endblock %}
+		
+	</main>
+	{% endblock %}
