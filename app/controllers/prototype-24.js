@@ -131,7 +131,7 @@ var controller = {
             res.render('prototype-beta-24/submit-your-appeal/016-notifications-text');
 
         } else if (req.body.radioGroup === 'both') {
-            res.render('prototype-beta-24/submit-your-appeal/016-notifications-receive-to-mobile');
+            res.render('prototype-beta-24/submit-your-appeal/016-notifications-email-both');
         }
     },
 
