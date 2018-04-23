@@ -226,6 +226,7 @@ router.post('/prototype-24/mrnhave',   prototypeFithteenCtrl.mrnhave);
 router.post('/prototype-24/contactdwp',   prototypeFithteenCtrl.contactdwp);
 router.post('/prototype-24/evidenceoptions',   prototypeFithteenCtrl.evidenceoptions);
 router.post('/prototype-24/evidencechannel',   prototypeFithteenCtrl.evidencechannel);
+router.post('/prototype-24/evidenceprovide',   prototypeFithteenCtrl.evidenceprovide);
 
 
 

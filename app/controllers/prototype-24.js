@@ -192,6 +192,14 @@ var controller = {
         }
     },
 
+        evidenceprovide: function(req, res) {
+        if (req.body.radioGroup === 'yesupload') {
+            res.render('prototype-beta-24/submit-your-appeal/012-evidence-upload');
+        } else if (req.body.radioGroup === 'noupload') {
+            res.render('prototype-beta-24/submit-your-appeal/013-your-hearing');
+        }
+    },
+
 
 
     // The class above has a dependency on moment.js which makes our life easier when dealing with dates. 
