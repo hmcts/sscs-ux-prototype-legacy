@@ -19,6 +19,7 @@ var prototypeThirteenCtrl = require('./controllers/prototype-18');
 var prototypeFourteenCtrl = require('./controllers/prototype-20');
 var prototypeFithteenCtrl = require('./controllers/prototype-23');
 var prototypeFithteenCtrl = require('./controllers/prototype-sya-demo');
+var prototypeFithteenCtrl = require('./controllers/prototype-24');
 
 
 router.get('/', home.index);
@@ -197,6 +198,35 @@ router.post('/prototype-sya-demo/availability-app',   prototypeFithteenCtrl.avai
 router.post('/prototype-sya-demo/address-app',   prototypeFithteenCtrl.addressApp);
 router.post('/prototype-sya-demo/mrnhave',   prototypeFithteenCtrl.mrnhave);
 router.post('/prototype-sya-demo/contactdwp',   prototypeFithteenCtrl.contactdwp);
+
+router.get('/prototype-24/validate',   prototypeFithteenCtrl.validateCaseReference);
+router.get('/prototype-24/validatemulti',   prototypeFithteenCtrl.validateCaseReferenceMulti);
+router.get('/prototype-24/validatereference',   prototypeFithteenCtrl.validateReference);
+router.get('/prototype-24/validate-surname',   prototypeFithteenCtrl.validateSurname);
+router.get('/prototype-24/status',   prototypeFithteenCtrl.getAppealStatus);
+router.post('/prototype-24/appointee',   prototypeFithteenCtrl.appointee);
+router.post('/prototype-24/representative',   prototypeFithteenCtrl.representative);
+router.post('/prototype-24/representative-app',   prototypeFithteenCtrl.representativeApp);
+router.post('/prototype-24/hearing',   prototypeFithteenCtrl.hearing);
+router.post('/prototype-24/hearing-app',   prototypeFithteenCtrl.hearingApp);
+router.post('/prototype-24/arrangements',   prototypeFithteenCtrl.arrangements);
+router.post('/prototype-24/arrangements-app',   prototypeFithteenCtrl.arrangementsApp);
+router.post('/prototype-24/mobile',   prototypeFithteenCtrl.mobile);
+router.post('/prototype-24/mobile-app',   prototypeFithteenCtrl.mobileApp);
+router.post('/prototype-24/mobileboth',   prototypeFithteenCtrl.mobileboth);
+router.post('/prototype-24/notifications',   prototypeFithteenCtrl.notifications);
+router.post('/prototype-24/notificationstype',   prototypeFithteenCtrl.notificationstype);
+router.post('/prototype-24/notificationsmobile',   prototypeFithteenCtrl.notificationsmobile);
+router.post('/prototype-24/mrnDate',   prototypeFithteenCtrl.mrnDate);
+router.post('/prototype-24/checkdate',   prototypeFithteenCtrl.checkdate);
+router.post('/prototype-24/availability',   prototypeFithteenCtrl.availability);
+router.post('/prototype-24/availability-app',   prototypeFithteenCtrl.availabilityApp);
+router.post('/prototype-24/address-app',   prototypeFithteenCtrl.addressApp);
+router.post('/prototype-24/mrnhave',   prototypeFithteenCtrl.mrnhave);
+router.post('/prototype-24/contactdwp',   prototypeFithteenCtrl.contactdwp);
+router.post('/prototype-24/evidenceoptions',   prototypeFithteenCtrl.evidenceoptions);
+router.post('/prototype-24/evidencechannel',   prototypeFithteenCtrl.evidencechannel);
+
 
 
 module.exports = router;
