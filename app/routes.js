@@ -240,9 +240,13 @@ router.post('/prototype-24/mrnhave',   prototypeFithteenCtrl.mrnhave);
 router.post('/prototype-24/contactdwp',   prototypeFithteenCtrl.contactdwp);
 router.post('/prototype-24/evidenceoptions',   prototypeFithteenCtrl.evidenceoptions);
 router.post('/prototype-24/evidencechannel',   prototypeFithteenCtrl.evidencechannel);
+
 router.get('/prototype-beta-24/submit-your-appeal/012-evidence-reminder', prototypeFithteenCtrl.evidenceReminder);
-router.post('/012-evidence-reminder-file-upload', upload.single('fileUpload'), prototypeFithteenCtrl.evidenceReminderFileUpload);
-router.post('/012-evidence-reminder-file-delete', prototypeFithteenCtrl.evidenceReminderFileDelete);
-router.get('/012-evidence-reminder-file-get', prototypeFithteenCtrl.evidenceReminderGetFiles);
+router.get('/prototype-beta-24/evidence-upload', prototypeFithteenCtrl.evidenceUpload);
+
+// File uploading for SYA and TYA
+router.post('/file-upload', upload.single('fileUpload'), prototypeFithteenCtrl.fileUpload);
+router.post('/file-delete', prototypeFithteenCtrl.fileDelete);
+router.get('/file-get', prototypeFithteenCtrl.getFiles);
 
 module.exports = router;

@@ -434,7 +434,11 @@ validateSurname: function(req, res) {
         res.render('prototype-beta-24/submit-your-appeal/012-evidence-reminder');
     },
 
-    evidenceReminderFileUpload: function(req, res, next) {
+    evidenceUpload: function(req, res, next) {
+        res.render('prototype-beta-24/evidence-upload');
+    },
+
+    fileUpload: function(req, res, next) {
         // Add file data to session
         if (req.session.interactingFileUploads) {
             req.session.interactingFileUploads.push(req.file)
@@ -445,7 +449,7 @@ validateSurname: function(req, res) {
         res.send(req.file);
     },
 
-    evidenceReminderFileDelete: function(req, res, next) {
+    fileDelete: function(req, res, next) {
         var fileName = req.body.name || req.body.originalname;
         var fileList = req.session.interactingFileUploads;
 
@@ -459,7 +463,7 @@ validateSurname: function(req, res) {
         res.status(200).send(fileList);
     },
 
-    evidenceReminderGetFiles: function(req, res, next) {
+    getFiles: function(req, res, next) {
         var files = req.session.interactingFileUploads || [];
         res.send(files);
     }

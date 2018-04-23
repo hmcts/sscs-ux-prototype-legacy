@@ -10,7 +10,7 @@ $(document).ready(function () {
 
     var myDropzone = new Dropzone('#actions', { // Make the whole body a dropzone
         paramName: 'fileUpload',
-        url: "/012-evidence-reminder-file-upload", // Set the url
+        url: "/file-upload", // Set the url
         thumbnailWidth: 80,
         thumbnailHeight: 80,
         parallelUploads: 20,
@@ -23,7 +23,7 @@ $(document).ready(function () {
     //First check if there are any files
     $.ajax({
         type: 'GET',
-        url: '/012-evidence-reminder-file-get',
+        url: '/file-get',
         success: function(files) {
             if (files.length > 0) {
                 files.forEach(function(file) {
@@ -79,7 +79,7 @@ $(document).ready(function () {
                 type: 'POST',
                 contentType: "application/json",
                 data: fileData,
-                url: '/012-evidence-reminder-file-delete',
+                url: '/file-delete',
                 success: function(files) {
                     $(file.previewElement).remove();
                     myDropzone.emit('removedfile', fileData);
