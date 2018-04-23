@@ -1,5 +1,19 @@
 var express = require('express');
 var router = express.Router();
+var crypto = require('crypto');
+var path = require('path');
+var multer = require('multer');
+var storage = multer.diskStorage({
+        destination: (req, file, cb) => {
+        cb(null, path.join(__dirname, '../uploads'));
+    },
+    filename: (req, file, cb) => {
+        crypto.pseudoRandomBytes(16, function (err, raw) {
+            cb(null, raw.toString('hex') + Date.now() + path.extname(file.originalname));
+        });
+    }
+});
+var upload = multer({ storage });
 
 var home = require('./controllers/home');
 var prototypeOneCtrl = require('./controllers/prototype-1');
@@ -226,7 +240,9 @@ router.post('/prototype-24/mrnhave',   prototypeFithteenCtrl.mrnhave);
 router.post('/prototype-24/contactdwp',   prototypeFithteenCtrl.contactdwp);
 router.post('/prototype-24/evidenceoptions',   prototypeFithteenCtrl.evidenceoptions);
 router.post('/prototype-24/evidencechannel',   prototypeFithteenCtrl.evidencechannel);
-
-
+router.get('/prototype-beta-24/submit-your-appeal/012-evidence-reminder', prototypeFithteenCtrl.evidenceReminder);
+router.post('/012-evidence-reminder-file-upload', upload.single('fileUpload'), prototypeFithteenCtrl.evidenceReminderFileUpload);
+router.post('/012-evidence-reminder-file-delete', prototypeFithteenCtrl.evidenceReminderFileDelete);
+router.get('/012-evidence-reminder-file-get', prototypeFithteenCtrl.evidenceReminderGetFiles);
 
 module.exports = router;
