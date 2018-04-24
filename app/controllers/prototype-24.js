@@ -1,6 +1,7 @@
 var serviceFactory = require('../services/serviceFactory');
 var appealStatusService = serviceFactory.get('appealStatus');
 var DateUtils = require('./DateUtils');
+var _ = require('lodash');
 
 var controller = {
 
@@ -435,7 +436,80 @@ validateSurname: function(req, res) {
     }, function (error) {
         res.send('HTTP '  + error.status + ': ' + error.message);
     });
-}
+},
+
+    evidenceReminder: function(req, res, next) {
+        res.render('prototype-beta-24/submit-your-appeal/012-evidence-reminder');
+    },
+
+    evidenceUpload: function(req, res, next) {
+        res.render('prototype-beta-24/evidence-upload');
+    },
+
+    fileUpload: function(req, res, next) {
+        // Add file data to session
+        if (req.session.interactingFileUploads) {
+            req.session.interactingFileUploads.push(req.file)
+        } else {
+            req.session.interactingFileUploads = [req.file];
+        }
+
+        res.send(req.file);
+    },
+
+    fileDelete: function(req, res, next) {
+        var fileName = req.body.name || req.body.originalname;
+        var fileList = req.session.interactingFileUploads;
+
+        fileList.forEach(file => {
+            if (file.originalname === fileName) {
+                _.pull(fileList, file);
+            }
+        });
+
+        req.session.interactingFileUploads = fileList;
+        res.status(200).send(fileList);
+    },
+
+    getFiles: function(req, res, next) {
+        var files = req.session.interactingFileUploads || [];
+        res.send(files);
+    },
+
+    idamAccountActivated: function(req, res, next) {
+        res.locals.serviceName = '';
+        res.render('prototype-beta-24/idam-account-activated');
+    },
+
+    idamCreateAccount: function(req, res, next) {
+        res.locals.serviceName = '';
+        res.render('prototype-beta-24/idam-create-account')
+    },
+
+    idamCreatePassword: function(req, res, next) {
+        res.locals.serviceName = '';
+        res.render('prototype-beta-24/idam-create-password');
+    },
+
+    idamSignIn: function(req, res, next) {
+        res.locals.serviceName = '';
+        res.render('prototype-beta-24/idam-sign-in');
+    },
+
+    idamSignInActivated: function(req, res, next) {
+        res.locals.serviceName = '';
+        res.render('prototype-beta-24/idam-sign-in-activated');
+    },
+
+    idamSignInError: function(req, res, next) {
+        res.locals.serviceName = '';
+        res.render('prototype-beta-24/idam-sign-in-error');
+    },
+
+    idamVerifyEmail: function(req, res, next) {
+        res.locals.serviceName = '';
+        res.render('prototype-beta-24/idam-verify-email');
+    },
 };
 
 module.exports = controller;

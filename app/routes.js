@@ -1,5 +1,19 @@
 var express = require('express');
 var router = express.Router();
+var crypto = require('crypto');
+var path = require('path');
+var multer = require('multer');
+var storage = multer.diskStorage({
+        destination: (req, file, cb) => {
+        cb(null, path.join(__dirname, '../uploads'));
+    },
+    filename: (req, file, cb) => {
+        crypto.pseudoRandomBytes(16, function (err, raw) {
+            cb(null, raw.toString('hex') + Date.now() + path.extname(file.originalname));
+        });
+    }
+});
+var upload = multer({ storage });
 
 var home = require('./controllers/home');
 var prototypeOneCtrl = require('./controllers/prototype-1');
@@ -228,6 +242,21 @@ router.post('/prototype-24/evidenceoptions',   prototypeFithteenCtrl.evidenceopt
 router.post('/prototype-24/evidencechannel',   prototypeFithteenCtrl.evidencechannel);
 router.post('/prototype-24/evidenceprovide',   prototypeFithteenCtrl.evidenceprovide);
 
+router.get('/prototype-beta-24/submit-your-appeal/012-evidence-reminder', prototypeFithteenCtrl.evidenceReminder);
+router.get('/prototype-beta-24/evidence-upload', prototypeFithteenCtrl.evidenceUpload);
 
+// File uploading for SYA and TYA
+router.post('/file-upload', upload.single('fileUpload'), prototypeFithteenCtrl.fileUpload);
+router.post('/file-delete', prototypeFithteenCtrl.fileDelete);
+router.get('/file-get', prototypeFithteenCtrl.getFiles);
+
+// IDAM Screens
+router.get('/prototype-beta-24/idam-account-activated', prototypeFithteenCtrl.idamAccountActivated);
+router.get('/prototype-beta-24/idam-create-account', prototypeFithteenCtrl.idamCreateAccount);
+router.get('/prototype-beta-24/idam-create-password', prototypeFithteenCtrl.idamCreatePassword);
+router.get('/prototype-beta-24/idam-sign-in', prototypeFithteenCtrl.idamSignIn);
+router.get('/prototype-beta-24/idam-sign-in-activated', prototypeFithteenCtrl.idamSignInActivated);
+router.get('/prototype-beta-24/idam-sign-in-error', prototypeFithteenCtrl.idamSignInError);
+router.get('/prototype-beta-24/idam-verify-email', prototypeFithteenCtrl.idamVerifyEmail);
 
 module.exports = router;
