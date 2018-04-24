@@ -466,7 +466,42 @@ validateSurname: function(req, res) {
     getFiles: function(req, res, next) {
         var files = req.session.interactingFileUploads || [];
         res.send(files);
-    }
+    },
+
+    idamAccountActivated: function(req, res, next) {
+        res.locals.serviceName = '';
+        res.render('prototype-beta-24/idam-account-activated');
+    },
+
+    idamCreateAccount: function(req, res, next) {
+        res.locals.serviceName = '';
+        res.render('prototype-beta-24/idam-create-account')
+    },
+
+    idamCreatePassword: function(req, res, next) {
+        res.locals.serviceName = '';
+        res.render('prototype-beta-24/idam-create-password');
+    },
+
+    idamSignIn: function(req, res, next) {
+        res.locals.serviceName = '';
+        res.render('prototype-beta-24/idam-sign-in');
+    },
+
+    idamSignInActivated: function(req, res, next) {
+        res.locals.serviceName = '';
+        res.render('prototype-beta-24/idam-sign-in-activated');
+    },
+
+    idamSignInError: function(req, res, next) {
+        res.locals.serviceName = '';
+        res.render('prototype-beta-24/idam-sign-in-error');
+    },
+
+    idamVerifyEmail: function(req, res, next) {
+        res.locals.serviceName = '';
+        res.render('prototype-beta-24/idam-verify-email');
+    },
 };
 
 module.exports = controller;

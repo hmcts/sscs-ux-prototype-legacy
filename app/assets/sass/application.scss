@@ -108,3 +108,15 @@
 .button-secondary{
   @include button($grey-3);
 }
+
+#sign-out-link {
+  text-decoration: none;
+  float: right;
+  color: white;
+  font-weight: 700;
+  padding-right: 15px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

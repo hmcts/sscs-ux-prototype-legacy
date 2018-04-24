@@ -249,4 +249,13 @@ router.post('/file-upload', upload.single('fileUpload'), prototypeFithteenCtrl.f
 router.post('/file-delete', prototypeFithteenCtrl.fileDelete);
 router.get('/file-get', prototypeFithteenCtrl.getFiles);
 
+// IDAM Screens
+router.get('/prototype-beta-24/idam-account-activated', prototypeFithteenCtrl.idamAccountActivated);
+router.get('/prototype-beta-24/idam-create-account', prototypeFithteenCtrl.idamCreateAccount);
+router.get('/prototype-beta-24/idam-create-password', prototypeFithteenCtrl.idamCreatePassword);
+router.get('/prototype-beta-24/idam-sign-in', prototypeFithteenCtrl.idamSignIn);
+router.get('/prototype-beta-24/idam-sign-in-activated', prototypeFithteenCtrl.idamSignInActivated);
+router.get('/prototype-beta-24/idam-sign-in-error', prototypeFithteenCtrl.idamSignInError);
+router.get('/prototype-beta-24/idam-verify-email', prototypeFithteenCtrl.idamVerifyEmail);
+
 module.exports = router;
