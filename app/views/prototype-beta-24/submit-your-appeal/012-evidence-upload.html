@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block page_title %}
-Submit evidence - Statement
+Submit evidence - Upload
 {% endblock %}
 {% block content %}
 <main id="content" role="main">
@@ -8,60 +8,95 @@ Submit evidence - Statement
   <div class="grid-row">
     <div class="column-two-thirds">
       <a class="link-back" href="#">Back</a>
-      <form class="form">
-        <legend>
-          <h1 class="heading-large">
-            Upload evidence
-          </h1>
-          <p>You can upload letters, documents or photos. For example,  you could take a picture of a letter from your doctor and upload it. </p>
-          <p>Useful evidence describes or shows how your condition affects your life.<br/><a href="benefit-appeal-evidence">Read more about what evidence the tribunal finds useful</a></p>
-          <!--<a href="about-evidence">Read more about what evidence the tribunal finds useful</a>--></p>
-        </legend>
-        <br/>
+      <legend>
+        <h1 class="heading-large">
+          Upload evidence
+        </h1>
+        <p>You can upload letters, documents or photos. For example,  you could take a picture of a letter from your doctor and upload it. </p>
+        <p>Useful evidence describes or shows how your condition affects your life.<br/><a href="../benefit-appeal-evidence">Read more about what evidence the tribunal finds useful</a></p>
+
+      </legend>
+      <form>  
         <label class="heading-small" for="upload-description">Describe the evidence<span class="form-hint">Briefly describe what you’re uploading and why</span>
         </label>
-        <textarea class="form-control autoExpand form-control-3-4" id="textarea"  rows='4' data-min-rows='4' width="100%" ></textarea>
+        <textarea class="form-control form-control-3-4 autoExpand" name="textarea" id="textarea" rows='6' data-min-rows='6'></textarea>
         <br/>
-        <div class="dropzone" tabindex="0">
-          <form  action="/file-upload" id="dropzone" data-js="drag-and-drop">
-            <div class="dz-message">          
-             <br/> 
-              <div class="dz-message-text"><span class="button-secondary">Choose file</div>
-              </div>    
-           <br/>
-         
-          <table>
-            <thead>
-              <tr>
-                <th>Uploaded files</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>No files uploaded</td>
-              </tr>
-            </tbody>
-          </table>
-          
-           </form>
-            </div>
-          <!--
-          <details>
-            <summary><span class="summary">Switch to another device to upload</span></summary>
-            <div class="panel panel-border-narrow">
-              <p>To upload using another device like your mobile phone, got to: </p>
-              <p><a href="">http://evidence.upload@hmcts.net</a></p>
-              <p>You will be asked to enter this code</p>
-              <p class="bold-small">730506</p>
-            </div>
-          </details>
-        -->
-   <br/>  
-        <div class="form-group">
-          <a href="../prototype-beta-24/submit-your-appeal/013-your-hearing" class="button">Submit evidence to the tribunal</a>
-          <!-- <input class="button" type="submit" value="Submit statement"> -->
+
+        <details>
+          <summary>Read more about uploading evidence</summary>
+          <p>If you are taking a picture of a letter or document, lay it on a flat surface and take the picture from above. </p>
+          <!-- File upload -->
+          <p>You can upload evidence to support your answer such as letters, photos, video or audio. If you are taking a picture of a letter, place it on a flat surface and take the picture from above. </p>
+        </summary>
+      </details>
+  
+
+      <!-- File upload -->
+      <div id="actions" class="row">
+        <div class="col-lg-7">
+          <!-- The fileinput-button span is used to style the file input field as button -->
+          <span class="btn btn-success fileinput-button button-secondary">
+            <i class="glyphicon glyphicon-plus"></i>
+            <span>Choose file</span>
+          </span>
         </div>
-      </form>
+        <div class="col-lg-5">
+          <!-- The global file processing state -->
+          <span class="fileupload-process">
+            <div id="total-progress" class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" style="display:none;3">
+              <div class="progress-bar progress-bar-success" style="width:0%;color:red;" data-dz-uploadprogress></div>
+            </div>
+          </span>
+        </div>
+      </div>
+      <div id="file-upload-table-display">
+       <h2 class="heading-small" id="uploads">Uploaded files</h2>
+       <div class="c-uploads" id="upload-documents" role="upload-documents" role="region" aria-labelledby="uploads" aria-live="polite">
+         <div class="c-uploads-item">
+           <p class="c-uploads-empty">No files uploaded</p>
+         </div>
+       </div>
+       <div class="table table-striped files" id="previews">
+         <div id="template" class="file-row">
+           <div id="file-name">
+             <span class="name" data-dz-name></span>
+             <strong class="error text-danger" data-dz-errormessage></strong>
+           </div>
+           <div id="p-bar">
+             <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+               <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+             </div>
+           </div>
+           <div id="file-size">
+             <p class="size" data-dz-size></p>
+           </div>
+           <div id="file-buttons">
+             <a data-dz-remove class="btn btn-warning cancel">
+               <span class="link">Cancel</span>
+             </a>
+             <a class="btn preview-file">
+               <span class="link">Preview</span>
+             </a>
+             <a class="btn btn-danger delete">
+               <span class="link">Delete</span>
+             </a>
+           </div>
+         </div>
+       </div>
+     </div>
+
+     <!-- Modal window for image preview -->
+     <div id="imageModal" class="">
+       <div id="modal-container">
+         <a class="link close">Close</a>
+         <div id="modal-content" class="modal-content"></div>
+         <div id="image-name"></div>
+       </div>
+     </div>
+
+     <a class="button" href="013-your-hearing">Submit evidence to the tribunal</a>
+   </form>
+ 
     </div>
   </div>
 </main>
