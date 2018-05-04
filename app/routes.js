@@ -34,6 +34,7 @@ var prototypeFourteenCtrl = require('./controllers/prototype-20');
 var prototypeFithteenCtrl = require('./controllers/prototype-23');
 var prototypeFithteenCtrl = require('./controllers/prototype-sya-demo');
 var prototypeFithteenCtrl = require('./controllers/prototype-24');
+var prototypeFithteenCtrl = require('./controllers/prototype-180425');
 
 
 router.get('/', home.index);
@@ -244,6 +245,40 @@ router.post('/prototype-24/evidenceprovide',   prototypeFithteenCtrl.evidencepro
 
 router.get('/prototype-beta-24/submit-your-appeal/012-evidence-reminder', prototypeFithteenCtrl.evidenceReminder);
 router.get('/prototype-beta-24/evidence-upload', prototypeFithteenCtrl.evidenceUpload);
+
+router.get('/prototype-180425/validate',   prototypeFithteenCtrl.validateCaseReference);
+router.get('/prototype-180425/validatemulti',   prototypeFithteenCtrl.validateCaseReferenceMulti);
+router.get('/prototype-180425/validatereference',   prototypeFithteenCtrl.validateReference);
+router.get('/prototype-180425/validate-surname',   prototypeFithteenCtrl.validateSurname);
+router.get('/prototype-180425/status',   prototypeFithteenCtrl.getAppealStatus);
+router.post('/prototype-180425/appointee',   prototypeFithteenCtrl.appointee);
+router.post('/prototype-180425/representative',   prototypeFithteenCtrl.representative);
+router.post('/prototype-180425/representative-app',   prototypeFithteenCtrl.representativeApp);
+router.post('/prototype-180425/hearing',   prototypeFithteenCtrl.hearing);
+router.post('/prototype-180425/hearing-app',   prototypeFithteenCtrl.hearingApp);
+router.post('/prototype-180425/arrangements',   prototypeFithteenCtrl.arrangements);
+router.post('/prototype-180425/arrangements-app',   prototypeFithteenCtrl.arrangementsApp);
+router.post('/prototype-180425/mobile',   prototypeFithteenCtrl.mobile);
+router.post('/prototype-180425/mobile-app',   prototypeFithteenCtrl.mobileApp);
+router.post('/prototype-180425/mobileboth',   prototypeFithteenCtrl.mobileboth);
+router.post('/prototype-180425/notifications',   prototypeFithteenCtrl.notifications);
+router.post('/prototype-180425/notificationstype',   prototypeFithteenCtrl.notificationstype);
+router.post('/prototype-180425/notificationsmobile',   prototypeFithteenCtrl.notificationsmobile);
+router.post('/prototype-180425/mrnDate',   prototypeFithteenCtrl.mrnDate);
+router.post('/prototype-180425/checkdate',   prototypeFithteenCtrl.checkdate);
+router.post('/prototype-180425/availability',   prototypeFithteenCtrl.availability);
+router.post('/prototype-180425/availability-app',   prototypeFithteenCtrl.availabilityApp);
+router.post('/prototype-180425/address-app',   prototypeFithteenCtrl.addressApp);
+router.post('/prototype-180425/mrnhave',   prototypeFithteenCtrl.mrnhave);
+router.post('/prototype-180425/contactdwp',   prototypeFithteenCtrl.contactdwp);
+router.post('/prototype-180425/evidenceoptions',   prototypeFithteenCtrl.evidenceoptions);
+router.post('/prototype-180425/evidencechannel',   prototypeFithteenCtrl.evidencechannel);
+router.post('/prototype-180425/evidenceprovide',   prototypeFithteenCtrl.evidenceprovide);
+router.get('/prototype-beta-180425/submit-your-appeal/012-evidence-reminder', prototypeFithteenCtrl.evidenceReminder);
+router.get('/prototype-beta-180425/evidence-upload', prototypeFithteenCtrl.evidenceUpload);
+
+
+
 
 // File uploading for SYA and TYA
 router.post('/file-upload', upload.single('fileUpload'), prototypeFithteenCtrl.fileUpload);
