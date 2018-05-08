@@ -1,33 +1,22 @@
 {% extends "layout.html" %}
-
 {% block page_title %}
 Check your answers
 {% endblock %}
-
 {% block content %}
-
 <main id="content" class="prototype-8" role="main">
   <div class="grid-row">
     <div>
-
       <h1 class="heading-large">
         Check your appeal
       </h1>
-
-
       <!-- only add a heading for a list if there is more than one list -->
       <h2 class="heading-medium">Benefit</h2>
-
       <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
       <!--   * `cya-questions-short` for short questions -->
       <!--   * `cya-questions-long` for long questions -->
       <!--   * none for single group of q&a -->
-
-
       <!-- Benefit name -->
       <dl class="govuk-check-your-answers cya-questions-short">
-        
-
         <div>
           <dt class="cya-question">
             Name of benefit
@@ -42,7 +31,6 @@ Check your answers
           </dd>
         </div>
       </dl>
-
       <!-- Mandatory Reconsideration Notice (MRN) -->
       <h2 class="heading-medium">Mandatory Reconsideration Notice (MRN)</h2>
       <dl class="govuk-check-your-answers cya-questions-short">
@@ -60,11 +48,8 @@ Check your answers
           </dd>
         </div>
       </dl>
-
-
       <!-- Appointee -->
       <h2 class="heading-medium">Appointee</h2>
-
       <dl class="govuk-check-your-answers cya-questions-short">
         <div>
           <dt class="cya-question">
@@ -80,10 +65,8 @@ Check your answers
           </dd>
         </div>
       </dl>
-
       <!-- Your details -->
       <h2 class="heading-medium">Your details</h2>
-
       <dl class="govuk-check-your-answers cya-questions-short">
         <div>
           <dt class="cya-question">
@@ -101,7 +84,6 @@ Check your answers
             B1 2HB<br/>
             manish.patel@gmail.com<br/>
             0121 460 2033
-
           </dd>
           <dd class="cya-change">
             <a href="004-your-details">
@@ -109,16 +91,10 @@ Check your answers
             </a>
           </dd>
         </div>
-
- 
-   </dl>
-
-
-
-
+      </dl>
       <!-- Text message reminders -->
       <h2 class="heading-medium">Text message reminders</h2>
-<dl class="govuk-check-your-answers cya-questions-short">
+      <dl class="govuk-check-your-answers cya-questions-short">
         <div>
           <dt class="cya-question">
             Receive text message reminders
@@ -132,7 +108,6 @@ Check your answers
             </a>
           </dd>
         </div>
-
         <div>
           <dt class="cya-question">
             Your mobile phone number
@@ -146,12 +121,9 @@ Check your answers
             </a>
           </dd>
         </div>
-
       </dl>
-
       <!-- Your representative -->
       <h2 class="heading-medium">Your representative</h2>
-
       <dl class="govuk-check-your-answers cya-questions-short">
         <div>
           <dt class="cya-question">
@@ -180,15 +152,10 @@ Check your answers
             </a>
           </dd>
         </div>
-
-        
-   </dl>
-      
-
-
+      </dl>
       <!-- Reasons for appealing -->
       <h2 class="heading-medium">Reasons for appealing</h2>
-<dl class="govuk-check-your-answers cya-questions-short">
+      <dl class="govuk-check-your-answers cya-questions-short">
         <div>
           <dt class="cya-question">
             What you disagree with on the MRN
@@ -205,10 +172,9 @@ Check your answers
           </dd>
         </div>
       </dl>
-
       <!-- the hearing -->
       <h2 class="heading-medium">The hearing</h2>
-<dl class="govuk-check-your-answers cya-questions-short">
+      <dl class="govuk-check-your-answers cya-questions-short">
         <div>
           <dt class="cya-question">
             Attending the hearing
@@ -235,15 +201,9 @@ Check your answers
             </a>
           </dd>
         </div>
-     
-    
-
       </dl>
-
-<h2 class="heading-medium">The hearing arrangements</h2>
-<dl class="govuk-check-your-answers cya-questions-short">
-        
-     
+      <h2 class="heading-medium">The hearing arrangements</h2>
+      <dl class="govuk-check-your-answers cya-questions-short">
         <div>
           <dt class="cya-question">
             Language interpreter<br/>
@@ -265,32 +225,21 @@ Check your answers
             </a>
           </dd>
         </div>
-
-    
-
       </dl>
-
-
-<br/>
-
-
+      <br/>
       <h2 class="heading-medium">Sign and submit </h2>
-          <p>The information I have provided in this appeal is accurate, to the best of my knowledge. </p>
-          <p>[if chosen rep] I give permission for the tribunal to correspond with my named representative about my appeal.</p>
-          <div class="form-group">
-            <h3 class="heading-small">
-              Enter your name
-              <span class="form-hint">This should be the person who is named on your appeal</span></h3>
-              <input class="form-control form-control-2-4" id="form-control-3-4" type="text"> 
-            </div>
-
-             <div class="form-group">
-            <a class="button" href="018-confirmation">Submit your appeal</a>
-</div>
-     
-
+      <p>The information I have provided in this appeal is accurate, to the best of my knowledge. </p>
+      <p>[if chosen rep] I give permission for the tribunal to correspond with my named representative about my appeal.</p>
+      <div class="form-group">
+        <h3 class="heading-small">
+          Enter your name
+          <span class="form-hint">This should be the person who is named on your appeal</span></h3>
+          <input class="form-control form-control-2-4" id="form-control-3-4" type="text"> 
+        </div>
+        <div class="form-group">
+          <a class="button" href="018-confirmation">Submit your appeal</a>
+        </div>
+      </div>
     </div>
-  </div>
-</main>
-
-{% endblock %}
+  </main>
+  {% endblock %}
