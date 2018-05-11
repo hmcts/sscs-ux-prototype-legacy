@@ -1,0 +1,33 @@
+{% extends "layout_unbranded.html" %}
+{% block page_title %}
+Email - Appeal Received
+{% endblock %}
+{% block content %}
+<main id="content" class="prototype-8" role="main">
+	<p style="padding-top: 30px;"><strong class="bold-small">Subject: </strong>Your PIP benefit appeal</p>
+	<div class="email-border">
+		<div style="margin-bottom: 15px;"> <img src="/public/images/notify-email-header.png"></div>
+		<div class="email-margin">
+			<div style="margin-bottom: 20px;"> <img src="/public/images/hmcts-logo.png"></div>
+			<br/>
+			<p>Dear Manish Sharma</p>
+			<p>You’ve saved your PIP benefit appeal. 
+				<p>Sign into your appeal where you left off:
+				<a href="../submit-your-appeal/idam-sign-in-return">www.gov.uk/benefit-appeal/sign-in</a></p>
+
+				<p>HMCTS<br/>
+					Birmingham ASC<br/>
+					PO Box 14620<br/>
+					Birmingham<br/>
+				B16 6FR</p> 
+				<br/>		
+				<p>This message is automatically generated; please do not reply to this email.</p>
+				<p>PIP Benefit Appeals<br/>
+					HMCTS<br/>
+					Telephone: 0300 123 1142<br/>
+				</p>
+				<p>Change your email address or stop receiving these emails:  <a href="../manage/manage-email-notifications">https://www.sscs.reform.hmcts.net/progress/fzpqcy/manage-<br/>email-notifications</a></p>
+				
+				</div>
+			</main>
+			{% endblock %}
