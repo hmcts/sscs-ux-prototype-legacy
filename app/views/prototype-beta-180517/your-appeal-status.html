@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Your PIP benefit appeal
+{% endblock %}
+{% block proposition_header %}
+  {% include "includes/idam_signout_propositional_navigation.html" %}
+{% endblock %}
+{% block content %}
+<link href="/public/kit-icons/icons.css" media="screen" rel="stylesheet" type="text/css" />
+<main id="content" class="prototype-8" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge">
+        Your PIP benefit appeal
+    </h1>
+    <div class="details">
+        <h2 class="heading-medium">Manish Sharma</h2>
+        <h2 class="form-hint">Appeal reference:  SC242/16/03435  </h2>
+    </div>
+    <br/>
+
+</div>
+</div>
+<div class="grid-row">
+    <div class="column-two-thirds">
+
+        <div class="js-tabs"> <!-- JS will add .tabs class -->
+            <ul class="list list-bullet">
+              <li><a class="tabs__link" href="#activity">Status</a></li>
+              <li><a class="tabs__link" href="#questions">Evidence</a></li>
+          </ul>
+
+        <!-- Tab 1 -->
+          <h2 class="heading-medium">Status</h2>
+          <div class="progress-container">
+             <img src="/public/images/bs11/progress-bar-appeal-received.svg" width=100%>
+         </div>
+         <div class="description">
+          <h3 class="heading-small">Latest update</h3>
+          <p>DWP have to respond to your appeal by 30 May 2018. You’ll receive details of what happens next, after they’ve responded.</p>
+      </div>
+  </div>
+
+  <!-- Tab 2 -->
+      <div id="questions" class="tab-content">
+        <h2 class="heading-medium">Provide additional evidence</h2>
+        <br/>
+        <p>If you have any additional information that's relevant to your appeal, you can submit it to the tribunal. You don’t have to submit anything if you don’t want to. </p>
+        <a  href="evidence-options">Submit additional evidence</a>
+      </div>
+</div>
+
+
+  <div class="column-third">
+      <aside class="govuk-related-items" role="complementary">
+        <h2 class="heading-small" id="subsection-title">About your appeal</h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="font-xsmall">
+            <!-- <li><a href="check-your-hearing-details-mvp">Check your hearing details</a></li>-->
+            <li><a href="benefit-appeal-evidence">Providing evidence to support your appeal</a></li><li>
+                <li><a href="about-hearing">What to expect at your hearing</a></li><li><a href="claiming-hearing-expenses">Claiming hearing expenses</a></li>
+                <li><a href="contact-us">Contact us</a></li>
+                <!--<li><a href="https://www.gov.uk/browse/benefits/entitlement" class="bold-xsmall">More <span class="visuallyhidden">in Subsection</span></a></li> -->
+            </ul>
+        </nav>
+    </aside>
+</div>
+</div>
+</main>
+{% endblock %}
