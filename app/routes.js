@@ -309,6 +309,11 @@ router.post('/prototype-180517/contactdwp',   prototypeNineteenCtrl.contactdwp);
 router.post('/prototype-180517/evidenceoptions',   prototypeNineteenCtrl.evidenceoptions);
 router.post('/prototype-180517/evidencechannel',   prototypeNineteenCtrl.evidencechannel);
 router.post('/prototype-180517/evidenceprovide',   prototypeNineteenCtrl.evidenceprovide);
+router.post('/prototype-180517/saveappeal',   prototypeNineteenCtrl.saveappeal);
+router.post('/prototype-180517/uploadaccount',   prototypeNineteenCtrl.uploadaccount);
+router.post('/prototype-180517/appealaccess',   prototypeNineteenCtrl.appealaccess);
+
+
 router.get('/prototype-beta-180517/submit-your-appeal/012-evidence-reminder', prototypeNineteenCtrl.evidenceReminder);
 router.get('/prototype-beta-180517/evidence-upload', prototypeNineteenCtrl.evidenceUpload);
 

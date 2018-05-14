@@ -203,6 +203,32 @@ var controller = {
 
 
 
+        saveappeal: function(req, res) {
+        if (req.body.radioGroup === 'savesignin') {
+            res.render('prototype-beta-180517/submit-your-appeal/idam-sign-in-activated');
+        } else if (req.body.radioGroup === 'savecreate') {
+            res.render('prototype-beta-180517/submit-your-appeal/idam-create-account');
+        }
+    },
+
+        uploadaccount: function(req, res) {
+        if (req.body.radioGroup === 'uploadsignin') {
+            res.render('prototype-beta-180517/idam-sign-in-upload');
+        } else if (req.body.radioGroup === 'uploadcreate') {
+            res.render('prototype-beta-180517/idam-create-account-upload');
+        }
+    },
+
+
+            appealaccess: function(req, res) {
+        if (req.body.radioGroup === 'appealsignin') {
+            res.render('prototype-beta-180517/idam-sign-in-access');
+        } else if (req.body.radioGroup === 'appealcreate') {
+            res.render('prototype-beta-180517/idam-create-account-access');
+        }
+    },
+
+
     // The class above has a dependency on moment.js which makes our life easier when dealing with dates. 
 // To create a moment object from user input (e.g. MRN date) you would do the following:
 
