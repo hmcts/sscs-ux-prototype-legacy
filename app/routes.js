@@ -314,6 +314,14 @@ router.post('/prototype-180517/uploadaccount',   prototypeNineteenCtrl.uploadacc
 router.post('/prototype-180517/appealaccess',   prototypeNineteenCtrl.appealaccess);
 
 
+// Reason for Appeal
+router.get('/prototype-beta-180517/submit-your-appeal/011-why-are-you-appealing', prototypeNineteenCtrl.reasonForAppeal);
+router.get('/prototype-beta-180517/submit-your-appeal/011-why-are-you-appealing-fields/:fieldIndex', prototypeNineteenCtrl.editReasonForAppeal);
+router.get('/prototype-beta-180517/submit-your-appeal/011-why-are-you-appealing-fields/:fieldIndex/delete', prototypeNineteenCtrl.deleteReasonForAppeal);
+router.post('/prototype-180517/submit-your-appeal/reasonForAppeal/:fieldIndex', prototypeNineteenCtrl.updateEditedReasonForAppeal);
+router.post('/prototype-180517/submit-your-appeal/reasonForAppeal', prototypeNineteenCtrl.addReasonForAppeal);
+
+
 router.get('/prototype-beta-180517/submit-your-appeal/012-evidence-reminder', prototypeNineteenCtrl.evidenceReminder);
 router.get('/prototype-beta-180517/evidence-upload', prototypeNineteenCtrl.evidenceUpload);
 
