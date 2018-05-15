@@ -228,18 +228,55 @@ var controller = {
         }
     },
 
+  reasonForAppeal: function(req, res) {
+      const reasonsForAppeal = req.session.reasonsForAppeal || null;
+      res.render('prototype-beta-180517/submit-your-appeal/011-why-are-you-appealing', { reasonsForAppeal });
+  },
 
-    // The class above has a dependency on moment.js which makes our life easier when dealing with dates. 
+  editReasonForAppeal: function(req, res) {
+      const index = req.params.fieldIndex;
+      const reasonsForAppeal = req.session.reasonsForAppeal;
+      const reason = reasonsForAppeal[index];
+      res.render('prototype-beta-180517/submit-your-appeal/011-why-are-you-appealing-fields', { reason, index });
+  },
+
+  updateEditedReasonForAppeal: function(req, res) {
+    const index = req.params.fieldIndex;
+    const reasonsForAppeal = req.session.reasonsForAppeal;
+    const reason = req.body;
+    reasonsForAppeal[index] = reason;
+    req.session.reasonsForAppeal = reasonsForAppeal;
+    res.redirect('/prototype-beta-180517/submit-your-appeal/011-why-are-you-appealing')
+  },
+
+  deleteReasonForAppeal: function(req, res) {
+    const index = req.params.fieldIndex;
+    const reasonsForAppeal = req.session.reasonsForAppeal;
+    _.pullAt(reasonsForAppeal, [index]);
+    req.session.reasonsForAppeal = reasonsForAppeal;
+    res.render('prototype-beta-180517/submit-your-appeal/011-why-are-you-appealing', { reasonsForAppeal });
+  },
+
+  addReasonForAppeal: function(req, res) {
+    const reason = req.body;
+    const reasonsForAppeal = req.session.reasonsForAppeal || [];
+    reasonsForAppeal.push(reason);
+    req.session.reasonsForAppeal = reasonsForAppeal;
+    res.redirect('/prototype-beta-180517/submit-your-appeal/011-why-are-you-appealing')
+  },
+
+
+    // The class above has a dependency on moment.js which makes our life easier when dealing with dates.
 // To create a moment object from user input (e.g. MRN date) you would do the following:
 
-mrnDate: function(req, res) {        
+mrnDate: function(req, res) {
     var day = req.body.day;
     var month = req.body.month;
     var year = req.body.year;
     console.log(day,month,year);
     const dob = `${day}-${month}-${year}`;
     console.log(dob);
-    var mDate = DateUtils.createMoment(day, month, year); 
+    var mDate = DateUtils.createMoment(day, month, year);
 
     if (DateUtils.isLessThanOrEqualToAMonth(mDate)) {
         res.render('prototype-beta-180517/submit-your-appeal/004-your-name');
