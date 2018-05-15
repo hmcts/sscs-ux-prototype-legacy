@@ -228,6 +228,17 @@ var controller = {
         }
     },
 
+
+            emailsavedappeal: function(req, res) {
+        if (req.body.radioGroup === 'useemail') {
+            res.render('prototype-beta-180517/submit-your-appeal/saved-appeal-email-sent');
+        } else if (req.body.radioGroup === 'newemail') {
+            res.render('prototype-beta-180517/submit-your-appeal/saved-appeal-email-new');
+        }
+    },
+
+
+
   reasonForAppeal: function(req, res) {
       const reasonsForAppeal = req.session.reasonsForAppeal || null;
       res.render('prototype-beta-180517/submit-your-appeal/011-why-are-you-appealing', { reasonsForAppeal });
