@@ -247,6 +247,15 @@ var controller = {
     },
 
 
+            smssignup: function(req, res) {
+        if (req.body.radioGroup === 'smsyes') {
+            res.render('prototype-beta-180517/submit-your-appeal/006-sms-mobile-number-provided');
+        } else if (req.body.radioGroup === 'smsno') {
+            res.render('prototype-beta-180517/submit-your-appeal/008-representative');
+        }
+    },
+
+
   reasonForAppeal: function(req, res) {
       const reasonsForAppeal = req.session.reasonsForAppeal || null;
       res.render('prototype-beta-180517/submit-your-appeal/011-why-are-you-appealing', { reasonsForAppeal });

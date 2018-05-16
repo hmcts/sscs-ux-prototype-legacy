@@ -314,6 +314,8 @@ router.post('/prototype-180517/uploadaccount',   prototypeNineteenCtrl.uploadacc
 router.post('/prototype-180517/appealaccess',   prototypeNineteenCtrl.appealaccess);
 router.post('/prototype-180517/emailsavedappeal',   prototypeNineteenCtrl.emailsavedappeal);
 router.post('/prototype-180517/updateemail',   prototypeNineteenCtrl.updateemail);
+router.post('/prototype-180517/smssignup',   prototypeNineteenCtrl.smssignup);
+
 
 
 // Reason for Appeal

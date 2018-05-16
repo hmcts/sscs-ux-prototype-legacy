@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block page_title %}
-SMS reminders - Appeal a benefit decision - GOV.UK
+SMS notifications - Appeal a benefit decision - GOV.UK
 {% endblock %}
 {% block content %}
 <main id="content" class="prototype-8" role="main">
@@ -12,15 +12,27 @@ SMS reminders - Appeal a benefit decision - GOV.UK
      Do you want to receive text message notifications?
    </h1>
    <p>Text message notifications provide you with short updates about your appeal. You’ll only receive them when something important happens. You won’t be charged to receive them. </p>
-   <a class="button" href="006-sms-mobile-number-provided">Sign up</a>
-   <br/>  <br/>
-   <p><a href="008-representative">No thanks</a></p>
-<br/>
-        <p> <a href="#">Save and come back later</a></p>
-
-        <p class="timeout-note">If you leave this page for 30 minutes then the service will time out and you will have to start again. <!--[when save and return implemented] You can upload or post evidence after you have submitted your appeal, if you don’t have it to hand. --></p>
-
+   <form  action="/prototype-180517/smssignup" method="post">
+    <div class="form-group">
+      <fieldset>
+        <div class="multiple-choice">
+          <input id="radio-1" type="radio" name="radioGroup" value="smsyes">
+          <label for="radio-1">Yes, I want to receive text messages</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-2" type="radio" name="radioGroup" value="smsno">
+          <label for="radio-2">No, I don't want to receive text messages</label>
+        </div>
+      </fieldset>
     </div>
+    <input type="submit" class="button" value="Continue">
+  </form>
+ <br/>
+  <p> <a href="#">Save and come back later</a></p>
+
+  <p class="timeout-note">If you leave this page for 30 minutes then the service will time out and you will have to start again. <!--[when save and return implemented] You can upload or post evidence after you have submitted your appeal, if you don’t have it to hand. --></p>
+
+</div>
 </div>
 </main>
 {% endblock %}
