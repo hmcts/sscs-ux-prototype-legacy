@@ -233,10 +233,18 @@ var controller = {
         if (req.body.radioGroup === 'useemail') {
             res.render('prototype-beta-180517/submit-your-appeal/saved-appeal-email-sent');
         } else if (req.body.radioGroup === 'newemail') {
-            res.render('prototype-beta-180517/submit-your-appeal/saved-appeal-email-new');
+            res.render('prototype-beta-180517/submit-your-appeal/saved-about-to-update-email');
         }
     },
 
+
+            updateemail: function(req, res) {
+        if (req.body.radioGroup === 'yesupdateemail') {
+            res.render('prototype-beta-180517/submit-your-appeal/saved-appeal-email-new');
+        } else if (req.body.radioGroup === 'noupdateemail') {
+            res.render('prototype-beta-180517/submit-your-appeal/saved-appeal-confirm-email');
+        }
+    },
 
 
   reasonForAppeal: function(req, res) {

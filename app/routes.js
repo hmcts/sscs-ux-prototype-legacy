@@ -313,6 +313,7 @@ router.post('/prototype-180517/saveappeal',   prototypeNineteenCtrl.saveappeal);
 router.post('/prototype-180517/uploadaccount',   prototypeNineteenCtrl.uploadaccount);
 router.post('/prototype-180517/appealaccess',   prototypeNineteenCtrl.appealaccess);
 router.post('/prototype-180517/emailsavedappeal',   prototypeNineteenCtrl.emailsavedappeal);
+router.post('/prototype-180517/updateemail',   prototypeNineteenCtrl.updateemail);
 
 
 // Reason for Appeal
