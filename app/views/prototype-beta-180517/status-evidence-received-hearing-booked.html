@@ -11,7 +11,7 @@ Status - Hearing booked + evidence received - GOV.UK (PHHB2-S)
 <main id="content" class="prototype-8" role="main">
 
      {% include "includes/phase_banner_beta.html" %} 
- <!-- {% include "includes/breadcrumbs.html" %}  -->
+ 
 
     <div class="grid-row">
         <div class="column-two-thirds">
@@ -20,14 +20,43 @@ Your PIP benefit appeal
 </h1>
 
             <div class="details">
-<h2 class="heading-medium">Mr M Sharma</h2>
+<h2 class="heading-medium">Manish Sharma</h2>
 <h2>Appeal reference number:  SC242/16/034</h2>
 </div>
             <div class="divider"></div>
-            <div class="progress-container">
-               <img src="/public/images/bs11/progress-bar-hearing-booked.svg" width=100%>
-
-            </div>
+           <section class="progress-bar-tya">
+          <div class="appeal-received active">
+              <div class="ring">
+                  <img class="tick" src="/public/images/tick2.png" alt="ignored by screen readers" aria-hidden="true">
+              </div>
+              <h4 class="active" aria-hidden="true">Appeal</h4>
+              <span class="screen-reader-text">Appeal received. This step is complete.</span>
+          </div>
+          <div class="dwp-respond active">
+            <div class="leg"></div>
+            <div class="ring">
+              <img class="tick" src="/public/images/tick2.png" alt="ignored by screen readers" aria-hidden="true">
+          </div>
+          <h4 class="" aria-hidden="true">DWP Response</h4>
+          <span class="screen-reader-text">DWP response. This step is complete.</span>
+      </div>
+      <div class="hearing-booked active">
+          <div class="leg"></div>
+          <div class="ring">
+              <img class="tick" src="/public/images/tick2.png" alt="ignored by screen readers" aria-hidden="true">
+          </div>
+          <h4 class="current" aria-hidden="true">Hearing booked</h4>
+          <span class="screen-reader-text">Hearing booked. This step is complete.</span>
+      </div>
+      <div class="hearing">
+          <div class="leg"></div>
+          <div class="ring">
+              <img class="tick" src="/public/images/tick.svg" alt="ignored by screen readers" aria-hidden="true">
+          </div>
+          <h4 class="" aria-hidden="true">Hearing</h4>
+          <span class="screen-reader-text">Hearing booked. This step has not happened yet.</span>
+      </div>
+  </section>
 
         </div>
 
@@ -90,7 +119,7 @@ Your PIP benefit appeal
           
                 
 
-<div style="padding-top: 30px;"></div>              
+ </div>              
     <div class="panel panel-border-wide">
 
 
