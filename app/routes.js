@@ -38,7 +38,6 @@ var prototypeEightteenCtrl = require('./controllers/prototype-180425');
 var prototypeNineteenCtrl = require('./controllers/prototype-180517');
 
 
-
 router.get('/', home.index);
 router.get('/prototype-1/status', prototypeOneCtrl.status);
 router.get('/prototype-2/status', prototypeTwoCtrl.status);
@@ -318,16 +317,17 @@ router.post('/prototype-180517/smssignup',   prototypeNineteenCtrl.smssignup);
 
 
 
+
 // Reason for Appeal
 router.get('/prototype-beta-180517/submit-your-appeal/011-why-are-you-appealing', prototypeNineteenCtrl.reasonForAppeal);
 router.get('/prototype-beta-180517/submit-your-appeal/011-why-are-you-appealing-fields/:fieldIndex', prototypeNineteenCtrl.editReasonForAppeal);
 router.get('/prototype-beta-180517/submit-your-appeal/011-why-are-you-appealing-fields/:fieldIndex/delete', prototypeNineteenCtrl.deleteReasonForAppeal);
 router.post('/prototype-180517/submit-your-appeal/reasonForAppeal/:fieldIndex', prototypeNineteenCtrl.updateEditedReasonForAppeal);
 router.post('/prototype-180517/submit-your-appeal/reasonForAppeal', prototypeNineteenCtrl.addReasonForAppeal);
-
-
 router.get('/prototype-beta-180517/submit-your-appeal/012-evidence-reminder', prototypeNineteenCtrl.evidenceReminder);
 router.get('/prototype-beta-180517/evidence-upload', prototypeNineteenCtrl.evidenceUpload);
+
+
 
 
 
@@ -347,6 +347,7 @@ router.post('/file-delete', prototypeNineteenCtrl.fileDelete);
 router.get('/file-get', prototypeNineteenCtrl.getFiles);
 
 
+
 // IDAM Screens 180425
 router.get('/prototype-beta-180425/idam-account-activated', prototypeEightteenCtrl.idamAccountActivated);
 router.get('/prototype-beta-180425/idam-create-account', prototypeEightteenCtrl.idamCreateAccount);
@@ -364,5 +365,7 @@ router.get('/prototype-beta-180517/idam-sign-in', prototypeNineteenCtrl.idamSign
 router.get('/prototype-beta-180517/idam-sign-in-activated', prototypeNineteenCtrl.idamSignInActivated);
 router.get('/prototype-beta-180517/idam-sign-in-error', prototypeNineteenCtrl.idamSignInError);
 router.get('/prototype-beta-180517/idam-verify-email', prototypeNineteenCtrl.idamVerifyEmail);
+
+
 
 module.exports = router;
