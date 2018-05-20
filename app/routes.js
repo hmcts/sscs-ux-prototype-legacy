@@ -317,41 +317,35 @@ router.post('/prototype-180517/updateemail',   prototypeNineteenCtrl.updateemail
 router.post('/prototype-180517/smssignup',   prototypeNineteenCtrl.smssignup);
 
 
-
-router.get('/prototype-180522/validate',   prototypeTwentyCtrl.validateCaseReference);
-router.get('/prototype-180522/validatemulti',   prototypeTwentyCtrl.validateCaseReferenceMulti);
-router.get('/prototype-180522/validatereference',   prototypeTwentyCtrl.validateReference);
-router.get('/prototype-180522/validate-surname',   prototypeTwentyCtrl.validateSurname);
-router.get('/prototype-180522/status',   prototypeTwentyCtrl.getAppealStatus);
-router.get('/prototype-180522/appointee',   prototypeTwentyCtrl.appointee);
-router.get('/prototype-180522/representative',   prototypeTwentyCtrl.representative);
-router.get('/prototype-180522/representative-app',   prototypeTwentyCtrl.representativeApp);
-router.get('/prototype-180522/hearing',   prototypeTwentyCtrl.hearing);
-router.get('/prototype-180522/hearing-app',   prototypeTwentyCtrl.hearingApp);
-router.get('/prototype-180522/arrangements',   prototypeTwentyCtrl.arrangements);
-router.get('/prototype-180522/arrangements-app',   prototypeTwentyCtrl.arrangementsApp);
-router.get('/prototype-180522/mobile',   prototypeTwentyCtrl.mobile);
-router.get('/prototype-180522/mobile-app',   prototypeTwentyCtrl.mobileApp);
-router.get('/prototype-180522/mobileboth',   prototypeTwentyCtrl.mobileboth);
-router.get('/prototype-180522/notifications',   prototypeTwentyCtrl.notifications);
-router.get('/prototype-180522/notificationstype',   prototypeTwentyCtrl.notificationstype);
-router.get('/prototype-180522/notificationsmobile',   prototypeTwentyCtrl.notificationsmobile);
-router.get('/prototype-180522/mrnDate',   prototypeTwentyCtrl.mrnDate);
-router.get('/prototype-180522/checkdate',   prototypeTwentyCtrl.checkdate);
-router.get('/prototype-180522/availability',   prototypeTwentyCtrl.availability);
-router.get('/prototype-180522/availability-app',   prototypeTwentyCtrl.availabilityApp);
-router.get('/prototype-180522/address-app',   prototypeTwentyCtrl.addressApp);
-router.get('/prototype-180522/mrnhave',   prototypeTwentyCtrl.mrnhave);
-router.get('/prototype-180522/contactdwp',   prototypeTwentyCtrl.contactdwp);
-router.get('/prototype-180522/evidenceoptions',   prototypeTwentyCtrl.evidenceoptions);
-router.get('/prototype-180522/evidencechannel',   prototypeTwentyCtrl.evidencechannel);
-router.get('/prototype-180522/evidenceprovide',   prototypeTwentyCtrl.evidenceprovide);
-router.get('/prototype-180522/saveappeal',   prototypeTwentyCtrl.saveappeal);
-router.get('/prototype-180522/uploadaccount',   prototypeTwentyCtrl.uploadaccount);
-router.get('/prototype-180522/appealaccess',   prototypeTwentyCtrl.appealaccess);
-router.get('/prototype-180522/emailsavedappeal',   prototypeTwentyCtrl.emailsavedappeal);
-router.get('/prototype-180522/updateemail',   prototypeTwentyCtrl.updateemail);
-router.get('/prototype-180522/smssignup',   prototypeTwentyCtrl.smssignup);
+router.post('/prototype-180522/appointee',   prototypeTwentyCtrl.appointee);
+router.post('/prototype-180522/representative',   prototypeTwentyCtrl.representative);
+router.post('/prototype-180522/representative-app',   prototypeTwentyCtrl.representativeApp);
+router.post('/prototype-180522/hearing',   prototypeTwentyCtrl.hearing);
+router.post('/prototype-180522/hearing-app',   prototypeTwentyCtrl.hearingApp);
+router.post('/prototype-180522/arrangements',   prototypeTwentyCtrl.arrangements);
+router.post('/prototype-180522/arrangements-app',   prototypeTwentyCtrl.arrangementsApp);
+router.post('/prototype-180522/mobile',   prototypeTwentyCtrl.mobile);
+router.post('/prototype-180522/mobile-app',   prototypeTwentyCtrl.mobileApp);
+router.post('/prototype-180522/mobileboth',   prototypeTwentyCtrl.mobileboth);
+router.post('/prototype-180522/notifications',   prototypeTwentyCtrl.notifications);
+router.post('/prototype-180522/notificationstype',   prototypeTwentyCtrl.notificationstype);
+router.post('/prototype-180522/notificationsmobile',   prototypeTwentyCtrl.notificationsmobile);
+router.post('/prototype-180522/mrnDate',   prototypeTwentyCtrl.mrnDate);
+router.post('/prototype-180522/checkdate',   prototypeTwentyCtrl.checkdate);
+router.post('/prototype-180522/availability',   prototypeTwentyCtrl.availability);
+router.post('/prototype-180522/availability-app',   prototypeTwentyCtrl.availabilityApp);
+router.post('/prototype-180522/address-app',   prototypeTwentyCtrl.addressApp);
+router.post('/prototype-180522/mrnhave',   prototypeTwentyCtrl.mrnhave);
+router.post('/prototype-180522/contactdwp',   prototypeTwentyCtrl.contactdwp);
+router.post('/prototype-180522/evidenceoptions',   prototypeTwentyCtrl.evidenceoptions);
+router.post('/prototype-180522/evidencechannel',   prototypeTwentyCtrl.evidencechannel);
+router.post('/prototype-180522/evidenceprovide',   prototypeTwentyCtrl.evidenceprovide);
+router.post('/prototype-180522/saveappeal',   prototypeTwentyCtrl.saveappeal);
+router.post('/prototype-180522/uploadaccount',   prototypeTwentyCtrl.uploadaccount);
+router.post('/prototype-180522/appealaccess',   prototypeTwentyCtrl.appealaccess);
+router.post('/prototype-180522/emailsavedappeal',   prototypeTwentyCtrl.emailsavedappeal);
+router.post('/prototype-180522/updateemail',   prototypeTwentyCtrl.updateemail);
+router.post('/prototype-180522/smssignup',   prototypeTwentyCtrl.smssignup);
 
 
 // Reason for Appeal
@@ -411,15 +405,6 @@ router.get('/prototype-beta-180517/idam-sign-in', prototypeNineteenCtrl.idamSign
 router.get('/prototype-beta-180517/idam-sign-in-activated', prototypeNineteenCtrl.idamSignInActivated);
 router.get('/prototype-beta-180517/idam-sign-in-error', prototypeNineteenCtrl.idamSignInError);
 router.get('/prototype-beta-180517/idam-verify-email', prototypeNineteenCtrl.idamVerifyEmail);
-
-// IDAM Screens 180522
-router.get('/prototype-beta-180522/idam-account-activated', prototypeTwentyCtrl.idamAccountActivated);
-router.get('/prototype-beta-180522/idam-create-account', prototypeTwentyCtrl.idamCreateAccount);
-router.get('/prototype-beta-180522/idam-create-password', prototypeTwentyCtrl.idamCreatePassword);
-router.get('/prototype-beta-180522/idam-sign-in', prototypeTwentyCtrl.idamSignIn);
-router.get('/prototype-beta-180522/idam-sign-in-activated', prototypeTwentyCtrl.idamSignInActivated);
-router.get('/prototype-beta-180522/idam-sign-in-error', prototypeTwentyCtrl.idamSignInError);
-router.get('/prototype-beta-180522/idam-verify-email', prototypeTwentyCtrl.idamVerifyEmail);
 
 
 module.exports = router;
