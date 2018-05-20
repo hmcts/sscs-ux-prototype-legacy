@@ -7,142 +7,142 @@ var controller = {
 
     appointee: function(req, res) {
         if (req.body.radioGroup === 'appointee') {
-            res.render('prototype-beta-180517/submit-your-appeal/001-1-sscs-form-download');
+            res.render('prototype-beta-180522/submit-your-appeal/001-1-sscs-form-download');
         } else if (req.body.radioGroup === 'nonAppointee') {
-            res.render('prototype-beta-180517/submit-your-appeal/001-2-independence');
+            res.render('prototype-beta-180522/submit-your-appeal/001-2-independence');
         }
     },
 
     representative: function(req, res) {
         if (req.body.radioGroup === 'rep') {
-            res.render('prototype-beta-180517/submit-your-appeal/009-reps-details');
+            res.render('prototype-beta-180522/submit-your-appeal/009-reps-details');
         } else if (req.body.radioGroup === 'noRep') {
-            res.render('prototype-beta-180517/submit-your-appeal/011-why-are-you-appealing');
+            res.render('prototype-beta-180522/submit-your-appeal/011-why-are-you-appealing');
         }
     },
 
     representativeApp: function(req, res) {
         if (req.body.radioGroup === 'repApp') {
-            res.render('prototype-beta-180517/submit-your-appeal/009-reps-details-appointee');
+            res.render('prototype-beta-180522/submit-your-appeal/009-reps-details-appointee');
         } else if (req.body.radioGroup === 'noRepApp') {
-            res.render('prototype-beta-180517/submit-your-appeal/011-why-are-you-appealing-appointee');
+            res.render('prototype-beta-180522/submit-your-appeal/011-why-are-you-appealing-appointee');
         }
     },
 
 
     hearing: function(req, res) {
         if (req.body.radioGroup === 'attend') {
-            res.render('prototype-beta-180517/submit-your-appeal/014-hearing-arrangements-needed');
+            res.render('prototype-beta-180522/submit-your-appeal/014-hearing-arrangements-needed');
         } else if (req.body.radioGroup === 'notAttend') {
-            res.render('prototype-beta-180517/submit-your-appeal/013-hearing-not-attending');
+            res.render('prototype-beta-180522/submit-your-appeal/013-hearing-not-attending');
         }
     },
 
     hearingApp: function(req, res) {
         if (req.body.radioGroup === 'attendApp') {
-            res.render('prototype-beta-180517/submit-your-appeal/014-hearing-arrangements-needed-appointee');
+            res.render('prototype-beta-180522/submit-your-appeal/014-hearing-arrangements-needed-appointee');
         } else if (req.body.radioGroup === 'notAttendApp') {
-            res.render('prototype-beta-180517/submit-your-appeal/013-hearing-not-attending-appointee');
+            res.render('prototype-beta-180522/submit-your-appeal/013-hearing-not-attending-appointee');
         }
     },
 
     arrangements: function(req, res) {
         if (req.body.radioGroup === 'arrangementsRequired') {
-            res.render('prototype-beta-180517/submit-your-appeal/015-hearing-arrangements');
+            res.render('prototype-beta-180522/submit-your-appeal/015-hearing-arrangements');
         } else if (req.body.radioGroup === 'arrangementsNotRequired') {
-            res.render('prototype-beta-180517/submit-your-appeal/016-hearing-availability');
+            res.render('prototype-beta-180522/submit-your-appeal/016-hearing-availability');
         }
     },
 
     arrangementsApp: function(req, res) {
         if (req.body.radioGroup === 'arrangementsRequiredApp') {
-            res.render('prototype-beta-180517/submit-your-appeal/015-hearing-arrangements-appointee');
+            res.render('prototype-beta-180522/submit-your-appeal/015-hearing-arrangements-appointee');
         } else if (req.body.radioGroup === 'arrangementsNotRequiredApp') {
-            res.render('prototype-beta-180517/submit-your-appeal/016-hearing-availability-appointee');
+            res.render('prototype-beta-180522/submit-your-appeal/016-hearing-availability-appointee');
         }
     },
 
 
     availability: function(req, res) {
         if (req.body.radioGroup === 'datesYes') {
-            res.render('prototype-beta-180517/submit-your-appeal/016-hearing-dates');
+            res.render('prototype-beta-180522/submit-your-appeal/016-hearing-dates');
         } else if (req.body.radioGroup === 'datesNo') {
-            res.render('prototype-beta-180517/submit-your-appeal/016-notifications-receive');
+            res.render('prototype-beta-180522/submit-your-appeal/016-notifications-receive');
         }
     },
 
     availabilityApp: function(req, res) {
         if (req.body.radioGroup === 'datesYesApp') {
-            res.render('prototype-beta-180517/submit-your-appeal/016-hearing-dates-appointee');
+            res.render('prototype-beta-180522/submit-your-appeal/016-hearing-dates-appointee');
         } else if (req.body.radioGroup === 'datesNoApp') {
-            res.render('prototype-beta-180517/submit-your-appeal/017-check-your-answers-appointee');
+            res.render('prototype-beta-180522/submit-your-appeal/017-check-your-answers-appointee');
         }
     },
 
 
     mobile: function(req, res) {
         if (req.body.radioGroup === 'usemobile') {
-            res.render('prototype-beta-180517/submit-your-appeal/007-sms-confirmation');
+            res.render('prototype-beta-180522/submit-your-appeal/007-sms-confirmation');
         } else if (req.body.radioGroup === 'newmobile') {
-            res.render('prototype-beta-180517/submit-your-appeal/006-enter-mobile-number');
+            res.render('prototype-beta-180522/submit-your-appeal/006-enter-mobile-number');
         }
     },
 
     mobileApp: function(req, res) {
         if (req.body.radioGroup === 'usemobileApp') {
-            res.render('prototype-beta-180517/submit-your-appeal/007-sms-confirmation-appointee');
+            res.render('prototype-beta-180522/submit-your-appeal/007-sms-confirmation-appointee');
         } else if (req.body.radioGroup === 'newmobileApp') {
-            res.render('prototype-beta-180517/submit-your-appeal/006-enter-mobile-number-appointee');
+            res.render('prototype-beta-180522/submit-your-appeal/006-enter-mobile-number-appointee');
         }
     },
 
     mobileboth: function(req, res) {
         if (req.body.radioGroup === 'usemobileboth') {
-            res.render('prototype-beta-180517/submit-your-appeal/007-sms-email-confirmation');
+            res.render('prototype-beta-180522/submit-your-appeal/007-sms-email-confirmation');
         } else if (req.body.radioGroup === 'newmobileboth') {
-            res.render('prototype-beta-180517/submit-your-appeal/006-enter-mobile-number-both');
+            res.render('prototype-beta-180522/submit-your-appeal/006-enter-mobile-number-both');
         }
     },
 
 
     checkdate: function(req, res) {
         if (req.body.radioGroup === 'correctdate') {
-            res.render('prototype-beta-180517/submit-your-appeal/003-3-why-appeal-late-1month');
+            res.render('prototype-beta-180522/submit-your-appeal/003-3-why-appeal-late-1month');
         } else if (req.body.radioGroup === 'wrongdate') {
-            res.render('prototype-beta-180517/submit-your-appeal/003-mrn-date');
+            res.render('prototype-beta-180522/submit-your-appeal/003-mrn-date');
         }
     },
 
 
     notifications: function(req, res) {
         if (req.body.radioGroup === 'yesNotifications') {
-            res.render('prototype-beta-180517/submit-your-appeal/016-notifications-how-receive');
+            res.render('prototype-beta-180522/submit-your-appeal/016-notifications-how-receive');
 
         } else if (req.body.radioGroup === 'noNotifications') {
-            res.render('prototype-beta-180517/submit-your-appeal/017-check-your-answers');
+            res.render('prototype-beta-180522/submit-your-appeal/017-check-your-answers');
         }
     },
 
 
     notificationstype: function(req, res) {
         if (req.body.radioGroup === 'email') {
-            res.render('prototype-beta-180517/submit-your-appeal/016-notifications-email');
+            res.render('prototype-beta-180522/submit-your-appeal/016-notifications-email');
 
         } else if (req.body.radioGroup === 'text') {
-            res.render('prototype-beta-180517/submit-your-appeal/016-notifications-text');
+            res.render('prototype-beta-180522/submit-your-appeal/016-notifications-text');
 
         } else if (req.body.radioGroup === 'both') {
-            res.render('prototype-beta-180517/submit-your-appeal/016-notifications-email-both');
+            res.render('prototype-beta-180522/submit-your-appeal/016-notifications-email-both');
         }
     },
 
 
     notificationsmobile: function(req, res) {
         if (req.body.radioGroup === 'samemobile') {
-            res.render('prototype-beta-180517/submit-your-appeal/017-check-your-answers');
+            res.render('prototype-beta-180522/submit-your-appeal/017-check-your-answers');
 
         } else if (req.body.radioGroup === 'newmobile') {
-            res.render('prototype-beta-180517/submit-your-appeal/016-notifications-text');
+            res.render('prototype-beta-180522/submit-your-appeal/016-notifications-text');
 
         }
     },
@@ -151,26 +151,26 @@ var controller = {
 
     addressApp: function(req, res) {
         if (req.body.radioGroup === 'diffAddress') {
-            res.render('prototype-beta-180517/submit-your-appeal/004-their-address-appointee');
+            res.render('prototype-beta-180522/submit-your-appeal/004-their-address-appointee');
         } else if (req.body.radioGroup === 'sameAddress') {
-            res.render('prototype-beta-180517/submit-your-appeal/005-sms-sign-up-address-same-appointee');
+            res.render('prototype-beta-180522/submit-your-appeal/005-sms-sign-up-address-same-appointee');
         }
     },
 
 
     mrnhave: function(req, res) {
         if (req.body.radioGroup === 'yesMRN') {
-            res.render('prototype-beta-180517/submit-your-appeal/002-dwp-office');
+            res.render('prototype-beta-180522/submit-your-appeal/002-dwp-office');
         } else if (req.body.radioGroup === 'noMRN') {
-            res.render('prototype-beta-180517/submit-your-appeal/002-contacted-dwp');
+            res.render('prototype-beta-180522/submit-your-appeal/002-contacted-dwp');
         }
     },
 
     contactdwp: function(req, res) {
         if (req.body.radioGroup === 'yesContactDWP') {
-            res.render('prototype-beta-180517/submit-your-appeal/003-1-no-mrn');
+            res.render('prototype-beta-180522/submit-your-appeal/003-1-no-mrn');
         } else if (req.body.radioGroup === 'noContactDWP') {
-            res.render('prototype-beta-180517/submit-your-appeal/003-2-contact-dwp');
+            res.render('prototype-beta-180522/submit-your-appeal/003-2-contact-dwp');
         }
     },
 
@@ -178,26 +178,26 @@ var controller = {
 
         evidencechannel: function(req, res) {
         if (req.body.radioGroup === 'online') {
-            res.render('prototype-beta-180517/idam-set-up');
+            res.render('prototype-beta-180522/idam-set-up');
         } else if (req.body.radioGroup === 'post') {
-            res.render('prototype-beta-180517/evidence-post');
+            res.render('prototype-beta-180522/evidence-post');
         }
     },
 
 
         evidenceoptions: function(req, res) {
         if (req.body.radioGroup === 'statement') {
-            res.render('prototype-beta-180517/evidence-statement');
+            res.render('prototype-beta-180522/evidence-statement');
         } else if (req.body.radioGroup === 'upload') {
-            res.render('prototype-beta-180517/evidence-upload');
+            res.render('prototype-beta-180522/evidence-upload');
         }
     },
 
         evidenceprovide: function(req, res) {
         if (req.body.radioGroup === 'yesupload') {
-            res.render('prototype-beta-180517/submit-your-appeal/012-evidence-upload');
+            res.render('prototype-beta-180522/submit-your-appeal/012-evidence-upload');
         } else if (req.body.radioGroup === 'noupload') {
-            res.render('prototype-beta-180517/submit-your-appeal/013-your-hearing');
+            res.render('prototype-beta-180522/submit-your-appeal/013-your-hearing');
         }
     },
 
@@ -205,67 +205,67 @@ var controller = {
 
         saveappeal: function(req, res) {
         if (req.body.radioGroup === 'savesignin') {
-            res.render('prototype-beta-180517/submit-your-appeal/idam-sign-in-activated');
+            res.render('prototype-beta-180522/submit-your-appeal/idam-sign-in-activated');
         } else if (req.body.radioGroup === 'savecreate') {
-            res.render('prototype-beta-180517/submit-your-appeal/idam-create-account');
+            res.render('prototype-beta-180522/submit-your-appeal/idam-create-account');
         }
     },
 
         uploadaccount: function(req, res) {
         if (req.body.radioGroup === 'uploadsignin') {
-            res.render('prototype-beta-180517/idam-sign-in-upload');
+            res.render('prototype-beta-180522/idam-sign-in-upload');
         } else if (req.body.radioGroup === 'uploadcreate') {
-            res.render('prototype-beta-180517/idam-create-account-upload');
+            res.render('prototype-beta-180522/idam-create-account-upload');
         }
     },
 
 
             appealaccess: function(req, res) {
         if (req.body.radioGroup === 'appealsignin') {
-            res.render('prototype-beta-180517/idam-sign-in-access');
+            res.render('prototype-beta-180522/idam-sign-in-access');
         } else if (req.body.radioGroup === 'appealcreate') {
-            res.render('prototype-beta-180517/idam-create-account-access');
+            res.render('prototype-beta-180522/idam-create-account-access');
         }
     },
 
 
             emailsavedappeal: function(req, res) {
         if (req.body.radioGroup === 'useemail') {
-            res.render('prototype-beta-180517/submit-your-appeal/saved-appeal-email-sent');
+            res.render('prototype-beta-180522/submit-your-appeal/saved-appeal-email-sent');
         } else if (req.body.radioGroup === 'newemail') {
-            res.render('prototype-beta-180517/submit-your-appeal/saved-about-to-update-email');
+            res.render('prototype-beta-180522/submit-your-appeal/saved-about-to-update-email');
         }
     },
 
 
             updateemail: function(req, res) {
         if (req.body.radioGroup === 'yesupdateemail') {
-            res.render('prototype-beta-180517/submit-your-appeal/saved-appeal-email-new');
+            res.render('prototype-beta-180522/submit-your-appeal/saved-appeal-email-new');
         } else if (req.body.radioGroup === 'noupdateemail') {
-            res.render('prototype-beta-180517/submit-your-appeal/saved-appeal-confirm-email');
+            res.render('prototype-beta-180522/submit-your-appeal/saved-appeal-confirm-email');
         }
     },
 
 
             smssignup: function(req, res) {
         if (req.body.radioGroup === 'smsyes') {
-            res.render('prototype-beta-180517/submit-your-appeal/006-sms-mobile-number-provided');
+            res.render('prototype-beta-180522/submit-your-appeal/006-sms-mobile-number-provided');
         } else if (req.body.radioGroup === 'smsno') {
-            res.render('prototype-beta-180517/submit-your-appeal/008-representative');
+            res.render('prototype-beta-180522/submit-your-appeal/008-representative');
         }
     },
 
 
   reasonForAppeal: function(req, res) {
       const reasonsForAppeal = req.session.reasonsForAppeal || null;
-      res.render('prototype-beta-180517/submit-your-appeal/011-why-are-you-appealing', { reasonsForAppeal });
+      res.render('prototype-beta-180522/submit-your-appeal/011-why-are-you-appealing', { reasonsForAppeal });
   },
 
   editReasonForAppeal: function(req, res) {
       const index = req.params.fieldIndex;
       const reasonsForAppeal = req.session.reasonsForAppeal;
       const reason = reasonsForAppeal[index];
-      res.render('prototype-beta-180517/submit-your-appeal/011-why-are-you-appealing-fields', { reason, index });
+      res.render('prototype-beta-180522/submit-your-appeal/011-why-are-you-appealing-fields', { reason, index });
   },
 
   updateEditedReasonForAppeal: function(req, res) {
@@ -274,7 +274,7 @@ var controller = {
     const reason = req.body;
     reasonsForAppeal[index] = reason;
     req.session.reasonsForAppeal = reasonsForAppeal;
-    res.redirect('/prototype-beta-180517/submit-your-appeal/011-why-are-you-appealing')
+    res.redirect('/prototype-beta-180522/submit-your-appeal/011-why-are-you-appealing')
   },
 
   deleteReasonForAppeal: function(req, res) {
@@ -282,7 +282,7 @@ var controller = {
     const reasonsForAppeal = req.session.reasonsForAppeal;
     _.pullAt(reasonsForAppeal, [index]);
     req.session.reasonsForAppeal = reasonsForAppeal;
-    res.render('prototype-beta-180517/submit-your-appeal/011-why-are-you-appealing', { reasonsForAppeal });
+    res.render('prototype-beta-180522/submit-your-appeal/011-why-are-you-appealing', { reasonsForAppeal });
   },
 
   addReasonForAppeal: function(req, res) {
@@ -290,7 +290,7 @@ var controller = {
     const reasonsForAppeal = req.session.reasonsForAppeal || [];
     reasonsForAppeal.push(reason);
     req.session.reasonsForAppeal = reasonsForAppeal;
-    res.redirect('/prototype-beta-180517/submit-your-appeal/011-why-are-you-appealing')
+    res.redirect('/prototype-beta-180522/submit-your-appeal/011-why-are-you-appealing')
   },
 
 
@@ -307,17 +307,17 @@ mrnDate: function(req, res) {
     var mDate = DateUtils.createMoment(day, month, year);
 
     if (DateUtils.isLessThanOrEqualToAMonth(mDate)) {
-        res.render('prototype-beta-180517/submit-your-appeal/004-your-name');
+        res.render('prototype-beta-180522/submit-your-appeal/004-your-name');
         return;
     }
 
     if (DateUtils.isGreaterThanAMonth(mDate) && DateUtils.isLessThanOrEqualToThirteenMonths(mDate)) {
-        res.render('prototype-beta-180517/submit-your-appeal/003-0-check-mrn-date');
+        res.render('prototype-beta-180522/submit-your-appeal/003-0-check-mrn-date');
         return;
     }
 
     if (DateUtils.isGreaterThanThirteenMonths(mDate)) {
-        res.render('prototype-beta-180517/submit-your-appeal/003-4-why-appeal-late-13months');
+        res.render('prototype-beta-180522/submit-your-appeal/003-4-why-appeal-late-13months');
         return;
     }
 },
@@ -359,7 +359,7 @@ validateCaseReference: function (req, res) {
     if(surname === 'wrong') {
         errors.nomatch.push("Your details don’t match our records.");
         errors.nomatch.push("Check any correspondence you’ve received about your appeal and enter them again.");
-        res.render('prototype-180517/track-your-appeal-error-no-match', {
+        res.render('prototype-180522/track-your-appeal-error-no-match', {
             errorMessages: errors,
             caseRefNumber: reference,
             surname: surname
@@ -368,7 +368,7 @@ validateCaseReference: function (req, res) {
     }
 
     if(errors.reference.length || errors.surname.length) {
-        res.render('prototype-180517/track-your-appeal-error', {
+        res.render('prototype-180522/track-your-appeal-error', {
             errorMessages: errors,
             caseRefNumber: reference,
             surname: surname
@@ -391,7 +391,7 @@ validateCaseReference: function (req, res) {
     }
 
     if(errors.reference.length || errors.surname.length) {
-        res.render('prototype-180517/track-your-appeal-error', {
+        res.render('prototype-180522/track-your-appeal-error', {
             errorMessages: errors,
             caseRefNumber: reference,
             surname: surname
@@ -406,10 +406,10 @@ validateCaseReference: function (req, res) {
         var data = result.body;
         data.status = data.status.toLowerCase().split('_').join('');
         console.log(JSON.stringify(data, null, 2));
-        res.render('prototype-180517/status-pb-one', data);
-                //res.render('prototype-180517/status-pb-four', data);
-                //res.render('prototype-180517/status-pb-seven', data);
-                //res.render('prototype-180517/status-pb-ten', data);
+        res.render('prototype-180522/status-pb-one', data);
+                //res.render('prototype-180522/status-pb-four', data);
+                //res.render('prototype-180522/status-pb-seven', data);
+                //res.render('prototype-180522/status-pb-ten', data);
             }, function (error) {
                 res.send('HTTP '  + error.status + ': ' + error.message);
             });
@@ -433,7 +433,7 @@ validateCaseReferenceMulti: function(req, res) {
     if(caseRef1 === '' && caseRef2 === '' && caseRef3 === '') {
         errors.push("You have not entered an appeal reference number. Enter it to find your appeal.");
         errors.push("No appeal reference number entered.");
-        res.render('prototype-180517/track-your-appeal-error-multi', {
+        res.render('prototype-180522/track-your-appeal-error-multi', {
             errorMessages: errors,
             caseRefNumbers: [caseRef1, caseRef2, caseRef3]
         });
@@ -444,7 +444,7 @@ validateCaseReferenceMulti: function(req, res) {
     if(!caseRef1RegExMatch || !caseRef2RegExMatch || !caseRef3RegExMatch) {
         errors.push("You’ve entered an invalid appeal reference number. Check it and enter it again.");
         errors.push("Invalid appeal reference number entered.");
-        res.render('prototype-180517/track-your-appeal-error-multi', {
+        res.render('prototype-180522/track-your-appeal-error-multi', {
             errorMessages: errors,
             caseRefNumbers: [caseRef1, caseRef2, caseRef3]
         });
@@ -457,7 +457,7 @@ validateCaseReferenceMulti: function(req, res) {
     .then(function (result, error) {
         var data = result.body;
         data.status = data.status.toLowerCase().split('_').join('');
-        res.render('prototype-180517/status', data);
+        res.render('prototype-180522/status', data);
     }, function (error) {
         res.send('HTTP '  + error.status + ': ' + error.message);
     });
@@ -481,14 +481,14 @@ validateReference: function(req, res) {
     }
 
     if(errors.length) {
-        res.render('prototype-180517/validate-reference-error', {
+        res.render('prototype-180522/validate-reference-error', {
             errors: errors,
             reference: reference
         });
         return;
     }
 
-    res.render('prototype-180517/validate-surname');
+    res.render('prototype-180522/validate-surname');
 },
 
 validateSurname: function(req, res) {
@@ -508,7 +508,7 @@ validateSurname: function(req, res) {
     }
 
     if(errors.length) {
-        res.render('prototype-180517/validate-surname-error', {
+        res.render('prototype-180522/validate-surname-error', {
             errors: errors,
             reference: reference,
             surname: surname
@@ -523,18 +523,18 @@ validateSurname: function(req, res) {
     .then(function (result, error) {
         var data = result.body;
         data.status = data.status.toLowerCase().split('_').join('');
-        res.render('prototype-180517/status', data);
+        res.render('prototype-180522/status', data);
     }, function (error) {
         res.send('HTTP '  + error.status + ': ' + error.message);
     });
 },
 
     evidenceReminder: function(req, res, next) {
-        res.render('prototype-beta-180517/submit-your-appeal/012-evidence-reminder');
+        res.render('prototype-beta-180522/submit-your-appeal/012-evidence-reminder');
     },
 
     evidenceUpload: function(req, res, next) {
-        res.render('prototype-beta-180517/evidence-upload');
+        res.render('prototype-beta-180522/evidence-upload');
     },
 
     fileUpload: function(req, res, next) {
@@ -569,37 +569,37 @@ validateSurname: function(req, res) {
 
     idamAccountActivated: function(req, res, next) {
         res.locals.serviceName = '';
-        res.render('prototype-beta-180517/idam-account-activated');
+        res.render('prototype-beta-180522/idam-account-activated');
     },
 
     idamCreateAccount: function(req, res, next) {
         res.locals.serviceName = '';
-        res.render('prototype-beta-180517/idam-create-account')
+        res.render('prototype-beta-180522/idam-create-account')
     },
 
     idamCreatePassword: function(req, res, next) {
         res.locals.serviceName = '';
-        res.render('prototype-beta-180517/idam-create-password');
+        res.render('prototype-beta-180522/idam-create-password');
     },
 
     idamSignIn: function(req, res, next) {
         res.locals.serviceName = '';
-        res.render('prototype-beta-180517/idam-sign-in');
+        res.render('prototype-beta-180522/idam-sign-in');
     },
 
     idamSignInActivated: function(req, res, next) {
         res.locals.serviceName = '';
-        res.render('prototype-beta-180517/idam-sign-in-activated');
+        res.render('prototype-beta-180522/idam-sign-in-activated');
     },
 
     idamSignInError: function(req, res, next) {
         res.locals.serviceName = '';
-        res.render('prototype-beta-180517/idam-sign-in-error');
+        res.render('prototype-beta-180522/idam-sign-in-error');
     },
 
     idamVerifyEmail: function(req, res, next) {
         res.locals.serviceName = '';
-        res.render('prototype-beta-180517/idam-verify-email');
+        res.render('prototype-beta-180522/idam-verify-email');
     },
 };
 
