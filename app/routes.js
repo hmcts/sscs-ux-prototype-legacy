@@ -346,6 +346,10 @@ router.post('/prototype-180522/appealaccess',   prototypeTwentyCtrl.appealaccess
 router.post('/prototype-180522/emailsavedappeal',   prototypeTwentyCtrl.emailsavedappeal);
 router.post('/prototype-180522/updateemail',   prototypeTwentyCtrl.updateemail);
 router.post('/prototype-180522/smssignup',   prototypeTwentyCtrl.smssignup);
+router.post('/prototype-180522/smssignupapp',   prototypeTwentyCtrl.smssignupapp);
+
+
+
 
 
 // Reason for Appeal

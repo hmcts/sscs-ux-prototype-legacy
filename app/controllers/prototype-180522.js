@@ -7,9 +7,9 @@ var controller = {
 
     appointee: function(req, res) {
         if (req.body.radioGroup === 'appointee') {
-            res.render('prototype-beta-180522/submit-your-appeal/001-1-sscs-form-download');
+            res.render('prototype-beta-180522/submit-your-appeal/004-your-name-appointee');
         } else if (req.body.radioGroup === 'nonAppointee') {
-            res.render('prototype-beta-180522/submit-your-appeal/001-2-independence');
+            res.render('prototype-beta-180522/submit-your-appeal/004-your-name');
         }
     },
 
@@ -23,9 +23,9 @@ var controller = {
 
     representativeApp: function(req, res) {
         if (req.body.radioGroup === 'repApp') {
-            res.render('prototype-beta-180522/submit-your-appeal/009-reps-details-appointee');
+            res.render('prototype-beta-180522/submit-your-appeal/009-reps-details');
         } else if (req.body.radioGroup === 'noRepApp') {
-            res.render('prototype-beta-180522/submit-your-appeal/011-why-are-you-appealing-appointee');
+            res.render('prototype-beta-180522/submit-your-appeal/011-why-are-you-appealing');
         }
     },
 
@@ -153,7 +153,7 @@ var controller = {
         if (req.body.radioGroup === 'diffAddress') {
             res.render('prototype-beta-180522/submit-your-appeal/004-their-address-appointee');
         } else if (req.body.radioGroup === 'sameAddress') {
-            res.render('prototype-beta-180522/submit-your-appeal/005-sms-sign-up-address-same-appointee');
+            res.render('prototype-beta-180522/submit-your-appeal/005-sms-sign-up-appointee');
         }
     },
 
@@ -255,6 +255,14 @@ var controller = {
         }
     },
 
+                smssignupapp: function(req, res) {
+        if (req.body.radioGroup === 'smsyes') {
+            res.render('prototype-beta-180522/submit-your-appeal/006-sms-mobile-number-provided-appointee');
+        } else if (req.body.radioGroup === 'smsno') {
+            res.render('prototype-beta-180522/submit-your-appeal/008-representative-appointee');
+        }
+    },
+
 
   reasonForAppeal: function(req, res) {
       const reasonsForAppeal = req.session.reasonsForAppeal || null;
@@ -307,7 +315,7 @@ mrnDate: function(req, res) {
     var mDate = DateUtils.createMoment(day, month, year);
 
     if (DateUtils.isLessThanOrEqualToAMonth(mDate)) {
-        res.render('prototype-beta-180522/submit-your-appeal/004-your-name');
+        res.render('prototype-beta-180522/submit-your-appeal/004-appointee');
         return;
     }
 
