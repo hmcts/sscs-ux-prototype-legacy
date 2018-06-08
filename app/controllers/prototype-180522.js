@@ -4,6 +4,9 @@ var DateUtils = require('./DateUtils');
 var _ = require('lodash');
 var moment = require('moment');
 
+var languageInterpreter = require('../data/languageInterpreterList');
+var signLanguage = require('../data/signLanguageList');
+
 var controller = {
 
     appointee: function(req, res) {
@@ -284,6 +287,10 @@ var controller = {
     session.splice(index, 1);
     req.session.datesCantAttend = session;
     res.sendStatus(200);
+  },
+
+  hearingArrangements: function(req, res) {
+    res.render('prototype-beta-180522/submit-your-appeal/015-hearing-arrangements', { languageInterpreter, signLanguage })
   },
 
 
