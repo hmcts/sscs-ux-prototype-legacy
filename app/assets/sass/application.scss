@@ -35,6 +35,7 @@
 @import 'progress-bar/h-progress-bar';
 @import 'progress-bar/v-progress-bar';
 @import 'progress-bar/mixins';
+@import 'date-picker';
 
 .progress-bar-tya {
 
@@ -207,6 +208,11 @@
 
 // Reasons for appeal
 .add-another-list {
+
+  &#dates-cant-attend-list {
+    padding-bottom: 20px;
+  }
+
   div {
     &:not(.noItems) {
       padding: 15px 0;

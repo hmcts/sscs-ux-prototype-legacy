@@ -2,6 +2,7 @@ var serviceFactory = require('../services/serviceFactory');
 var appealStatusService = serviceFactory.get('appealStatus');
 var DateUtils = require('./DateUtils');
 var _ = require('lodash');
+var moment = require('moment');
 
 var controller = {
 
@@ -262,6 +263,28 @@ var controller = {
             res.render('prototype-beta-180522/submit-your-appeal/008-representative-appointee');
         }
     },
+
+  hearingDates: function(req, res) {
+    const datesCantAttend = req.session.datesCantAttend || [];
+    res.render('prototype-beta-180522/submit-your-appeal/016-hearing-dates', { datesCantAttend });
+  },
+
+  addDate: function(req, res) {
+    const session = req.session.datesCantAttend || [];
+    const date = req.body;
+    const mDate = `${date['item.year']}-${date['item.month']}-${date['item.day']}`;
+    session.push(mDate);
+    req.session.datesCantAttend = session;
+    res.sendStatus(200);
+  },
+
+  removeDate: function(req, res) {
+    const session = req.session.datesCantAttend;
+    const index = req.params.item;
+    session.splice(index, 1);
+    req.session.datesCantAttend = session;
+    res.sendStatus(200);
+  },
 
 
   reasonForAppeal: function(req, res) {
