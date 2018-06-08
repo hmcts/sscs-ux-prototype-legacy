@@ -1,14 +1,45 @@
-<!DOCTYPE html>
-<html>
+{% extends "layout.html" %}
+{% block page_title %}
+Hearing availability - Appeal a benefit decision - GOV.UK
+{% endblock %}
+{% block content %}
+<main id="content" class="prototype-8" role="main">
+    {% include "includes/phase_banner_beta.html" %}
+    <a href="#" class="link-back">Back</a>
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h1 class="heading-large">Your availability for a hearing</h1>
+            <p>
+                It’s important that you make yourself available for a hearing. If you postpone or don’t show up, your appeal could go ahead in your absence or be delayed by several months.
+            </p>
+            <p>
+                Your hearing will take some time to book so only enter dates between 4 and 22 weeks in the future. Don’t include weekends or bank holidays.
+            </p>
 
-<head>
-  <title>Redirect</title>
-  <meta http-equiv="refresh" content="0; URL='https://h9qkhd.axshare.com/#c=2'" />
+                    <div id="date-picker" class="datepicker"></div>
 
-</head>
+                <dl id="dates-cant-attend-list" class="add-another-list">
+                    {% if datesCantAttend %}
+                        {% for date in datesCantAttend %}
+                        <div id="add-another-list-items-{{ loop.index0 }}">
+                            <dd class="add-another-list-item"><span data-index="{{ loop.index0 }}">{{ date }}</span></dd>
+                            <dd class="add-another-list-controls">
+                                <a href="/prototype-beta-180522/submit-your-appeal/011-why-are-you-appealing-fields/{{ loop.index0 }}" class="add-another-edit-link">Edit</a>
+                                <a href="/prototype-beta-180522/submit-your-appeal/011-why-are-you-appealing-fields/{{ loop.index0 }}/delete" class="add-another-delete-link">Delete</a>
+                            </dd>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                    <div>
+                        <dd class="add-another-list-item">
+                            <div id="items" class="noItems">No reasons added yet</div>
+                        </dd>
+                    </div>
+                    {% endif %}
+                </dl>
 
-<body>
-
-</body>
-
-</html>
+            <a class="button" href="017-check-your-answers.html">Continue</a>
+        </div>
+    </div>
+</main>
+{% endblock %}

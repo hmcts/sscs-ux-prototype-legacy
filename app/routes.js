@@ -347,7 +347,10 @@ router.post('/prototype-180522/emailsavedappeal',   prototypeTwentyCtrl.emailsav
 router.post('/prototype-180522/updateemail',   prototypeTwentyCtrl.updateemail);
 router.post('/prototype-180522/smssignup',   prototypeTwentyCtrl.smssignup);
 router.post('/prototype-180522/smssignupapp',   prototypeTwentyCtrl.smssignupapp);
-
+// Date Picker
+router.get('/prototype-beta-180522/submit-your-appeal/016-hearing-dates', prototypeTwentyCtrl.hearingDates);
+router.post('/prototype-180522/016-hearing-dates/:item', prototypeTwentyCtrl.addDate);
+router.get('/prototype-180522/016-hearing-dates/:item/delete', prototypeTwentyCtrl.removeDate);
 
 
 
