@@ -351,6 +351,8 @@ router.post('/prototype-180522/smssignupapp',   prototypeTwentyCtrl.smssignupapp
 router.get('/prototype-beta-180522/submit-your-appeal/016-hearing-dates', prototypeTwentyCtrl.hearingDates);
 router.post('/prototype-180522/016-hearing-dates/:item', prototypeTwentyCtrl.addDate);
 router.get('/prototype-180522/016-hearing-dates/:item/delete', prototypeTwentyCtrl.removeDate);
+//hearing-arrangements
+router.get('/prototype-beta-180522/submit-your-appeal/015-hearing-arrangements', prototypeTwentyCtrl.hearingArrangements);
 
 
 
