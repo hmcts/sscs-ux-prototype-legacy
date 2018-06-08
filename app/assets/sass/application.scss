@@ -247,6 +247,12 @@
   @include button($grey-3);
 }
 
+.auto-comp-field {
+  input {
+    width: 60%;
+  }
+}
+
 
 
 
