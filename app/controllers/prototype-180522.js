@@ -267,6 +267,15 @@ var controller = {
         }
     },
 
+
+                manageemail: function(req, res) {
+        if (req.body.radioGroup === 'changeEmail') {
+            res.render('prototype-beta-180522/manage/your-new-email-address');
+        } else if (req.body.radioGroup === 'stopEmail') {
+            res.render('prototype-beta-180522/manage/stop-receiving-email-updates');
+        }
+    },
+
   hearingDates: function(req, res) {
     const datesCantAttend = req.session.datesCantAttend || [];
     res.render('prototype-beta-180522/submit-your-appeal/016-hearing-dates', { datesCantAttend });
