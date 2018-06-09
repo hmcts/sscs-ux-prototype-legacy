@@ -37,7 +37,6 @@
 @import 'progress-bar/mixins';
 @import 'date-picker';
 @import 'auto-complete';
-@import 'guidance-pages';
 
 .progress-bar-tya {
 
@@ -248,6 +247,8 @@
   @include button($grey-3);
 }
 
-
-
-
+.auto-comp-field {
+  input {
+    width: 60%;
+  }
+}

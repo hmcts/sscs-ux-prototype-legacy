@@ -23,11 +23,11 @@ SSCS Protoypes
 		<ol class="list list-number">
 			<li><a href="enter-lastname">Enter lastname - TYA access</a></li>
 			<li><a href="status?casenumber=SC012%2F34%2F56789&status=appeal">Appeal received (PHAR1-S)</a></li>
-			<li><a href="status-evidence-received-appeal">Appeal received with evidence received (PHAR2-S)</a></li>
+			<!--<li><a href="status-evidence-received-appeal">Appeal received with evidence received (PHAR2-S)</a></li>-->
 			<li><a href="status-dwp-response">DWP response received (PHRR1-S) </a></li>
 			<li><a href="status-evidence-received-dwp-response">DWP response received with evidence received (PHRR2-S)</a></li>
 			<li><a href="status-hearing-booked">Hearing booked (PHHB1-S)</a></li>
-			<li><a href="status-evidence-received-hearing-booked">Hearing booked with evidence received (PHHB2-S)</a></li>
+			<!--<li><a href="status-evidence-received-hearing-booked">Hearing booked with evidence received (PHHB2-S)</a></li>-->
 			<li><a href="status-decision">Decision made - Generic (Doormant) (PHDM1-S)</a></li>
 		<!--	<li><a href="status-decision-sent">Decision made - Issued (PHDM2-S)</a></li> -->
 			<li><a href="status-appeal-closed">Appeal closed - After 3 months from decision (PHDM2-S)</a></li>
@@ -36,7 +36,7 @@ SSCS Protoypes
 		<h2 id="online-status-exceptions" class="heading-medium">Online status - Exceptions</h2>
 		<h3 class="heading-small">MVP</h3>
 		<ol class="list list-number">
-			<li><a href="status-dwp-response-overdue">DWP response date exceeded (EXRE3-S)</a></li>
+			<li><a href="status-dwp-response-late">DWP response date exceeded (EXRE3-S)</a></li>
 			<li><a href="status-past-hearing-date">Hearing booked date exceeded (EXRE1-S)</a></li>
 			<li><a href="status-postponed-generic">Postponed generic (EXHP9-S)</a></li>
 			<li><a href="status-adjourned-generic">Adjourned generic (EXHA10-S)</a></li>
@@ -69,9 +69,9 @@ SSCS Protoypes
 		<ol class="list list-number">
 			<li><a href="notifications/email-confirmation-supporter">Subscription confirmation - Supporter (ATNA1S-E)</a></li>
 
-			<li><a href="notifications/email-appeal-received-mvp">Appeal received (PHAR1-E)</a>  - MVP</li>
-<li><a href="notifications/email-appeal-lodged">Appeal lodged (code tbc)</a> - SYA MVP</li>
-			<li><a href="notifications/email-dwp-response">DWP response received (PHRR1-E)  - ITERATED in PB</a></li>
+			<li><a href="notifications/email-appeal-received-mvp">Appeal received (PHAR1-E)</a>  - ITERATED in PB</li>
+<li><a href="notifications/email-appeal-lodged">Appeal lodged (code tbc)</a>  - ITERATED in PB</li>
+			<li><a href="notifications/email-dwp-response">DWP response received (PHRR1-E)</a>  - ITERATED in PB</li>
 			<li><a href="notifications/email-evidence-reminder-generic">Evidence reminder - Generic (PHER0-E)</a></li>
 			<li><a href="notifications/email-evidence-received">Evidence received (PHER1-E)</a></li>
 			<li><a href="notifications/email-hearing-booked-mvp">Hearing booked (PHHB1-E)</a></li>
@@ -90,6 +90,8 @@ SSCS Protoypes
 		<h3 class="heading-small">MVP</h3>
 		<ol class="list list-number">
 			<li><a href="notifications/email-dwp-response-late">DWP response date exceeded (EXRE-E) </a></li>
+			<li><a href="notifications/email-hearing-booked-late">Hearing not booked yet (code tbc) </a>  - NEW in PB</li>
+
 			<li><a href="notifications/email-postponed-generic">Postponement - Generic (EXHP9-E) </a></li>
 			<li><a href="notifications/email-adjourned-generic">Adjourned - Generic (EXHA10-E) </a></li>
 			<li><a href="notifications/email-hearing-booked-new">New hearing booked (EXNH1-E)</a></li>
@@ -118,21 +120,21 @@ SSCS Protoypes
 		<h2 id="sms" class="heading-medium">SMS</h2>
 		<h3 class="heading-small">MVP</h3>
 		<ol class="list list-number">
-			<li><a href="notifications/sms-confirmation">Subscription confirmation appellant SMS (ATNA1-T) - ITERATED in PB</a></li>
-			<li><a href="notifications/sms-confirmation-supporter">Subscription confirmation supporter SMS (ATNA1S-T) - ITERATED in PB</a></li>
-			<li><a href="notifications/sms-appeal-received">Appeal received  (code tbc) - NEW in PB</a></li>
-			<li><a href="notifications/sms-appeal-lodged">Appeal lodged  (code tbc) - NEW in PB</a></li>
-			<li><a href="notifications/sms-dwp-response">DWP response  (code tbc) - NEW in PB</a></li>
-			<li><a href="notifications/sms-dwp-response-late">DWP response late  (code tbc) - NEW in PB</a></li>
-			<li><a href="notifications/sms-hearing-booked-not-yet">Hearing booked - not yet (code tbc) - NEW in PB</a></li>
+			<li><a href="notifications/sms-confirmation">Subscription confirmation appellant SMS (ATNA1-T)</a> - ITERATED in PB</li>
+			<li><a href="notifications/sms-confirmation-supporter">Subscription confirmation supporter SMS (ATNA1S-T)</a> - ITERATED in PB</li>
+			<li><a href="notifications/sms-appeal-received">Appeal received  (code tbc)</a> - NEW in PB</li>
+			<li><a href="notifications/sms-appeal-lodged">Appeal lodged  (code tbc)</a> - NEW in PB</li>
+			<li><a href="notifications/sms-dwp-response">DWP response  (code tbc)</a> - NEW in PB</li>
+			<li><a href="notifications/sms-dwp-response-late">DWP response late  (code tbc)</a> - NEW in PB</li>
+			<li><a href="notifications/sms-hearing-booked-not-yet">Hearing booked - not yet (code tbc)</a> - NEW in PB</li>
 
 			<li><a href="notifications/sms-evidence-reminder">Evidence reminder (PHER0-T)</a></li>
 			<li><a href="notifications/sms-evidence-received">Evidence received (PHED1-T)</a></li>
-			<li><a href="notifications/sms-hearing-booked">Hearing booked (code tbc) - NEW in PB</a></li>
+			<li><a href="notifications/sms-hearing-booked">Hearing booked (code tbc)</a> - NEW in PB</li>
 			<li><a href="notifications/sms-hearing-reminder-1wk-mvp">Hearing reminder  - One week (PHHR1-T)</a></li>
 			<li><a href="notifications/sms-hearing-reminder-1day-mvp">Hearing reminder - One day (PHHR2-T)</a></li>
 			<li><a href="notifications/sms-adjourned-generic">Hearing adjourned (EXHA10-T)</a></li>
-			<li><a href="notifications/sms-new-hearing-booked">New hearing booked  (????-T) - NEW in PB</a></li>
+			<li><a href="notifications/sms-new-hearing-booked">New hearing booked  (code tbc)</a> - NEW in PB</li>
 			<li><a href="notifications/sms-updated-number-new">Updated phone number - sent to new number (MNCM1-T)</a></li>
 			<li><a href="notifications/sms-updated-number-old">Updated phone number - sent to old number (MNCM2-T)</a></li>
 		</ol>
@@ -182,7 +184,7 @@ SSCS Protoypes
 <h2 id="error" class="heading-medium">Error pages</h2>
 <ol class="list list-number">
 	<li><a href="error-pages/error-404">Page not found - 404</a></li>
-	<li><a href="error-pages/error-500">Service temorarily down - 500</a></li>
+	<li><a href="error-pages/error-500">Service temorarily unavailable</a></li>
 </ol>
 </div>
 </main>
