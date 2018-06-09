@@ -13,7 +13,7 @@ Hearing arrangements (appointee) - Appeal a benefit decision - GOV.UK
       Support  for the hearing
     </h1>
     <p>Click all the support you need for the hearing:    </p>
-    <p>You <span class="pbold">can’t</span> bring your own interpreter to the hearing. </p>
+    <p>You <span class="pbold">can’t</span>  bring your own interpreter to the hearing or interpret for anyone else. You need to tell us if you need an interpreter.  </p>
 <!-- Checkbox with reveal pattern - code based on - http://govuk-elements.herokuapp.com/form-elements/#form-checkboxes
   Styling and functionality isn't working -->
   <form>
@@ -27,6 +27,7 @@ Hearing arrangements (appointee) - Appeal a benefit decision - GOV.UK
 
         <div class="panel panel-border-wide js-hidden auto-comp-field" id="language-types">
           <label class="form-label" for="nationalities-other-country">Enter the Language</label>
+
             <select class="form-control" type="text" id="nationalities-other-country" name="nationalities-other-country">
                 <option disabled="" selected="" value="" style="display: none"></option>
                 {% for language in languageInterpreter %}
@@ -44,7 +45,7 @@ Hearing arrangements (appointee) - Appeal a benefit decision - GOV.UK
               <label class="form-label" for="nationalities-other-country">
                   Enter the language
                   <span class="form-hint">
-                    Enter what type of sign language you need. For example, British Sign Language.
+                    Enter the sign language you need
                 </span>
               </label>
               <select class="form-control" type="text" id="sign-nationalities-other-country" name="sign-nationalities-other-country">
@@ -61,7 +62,7 @@ Hearing arrangements (appointee) - Appeal a benefit decision - GOV.UK
         </div>
         <div class="multiple-choice">
           <input id="disabled-access" name="disabled-access" type="checkbox" value="Disabled access">
-          <label for="disabled-access">Disabled access</label>
+          <label for="disabled-access">Accessible hearing rooms</label>
         </div>
 
           <div class="multiple-choice" data-target="other-text-input">
