@@ -3,11 +3,8 @@ $(document).ready(function() {
   $.each(selects, function(index, select) {
     accessibleAutocomplete.enhanceSelectElement({
       selectElement: select,
+      minLength: 2,
       source: function(query, populateResults) {
-        var minQueryLength = 2;
-        if (query.length < minQueryLength) {
-          return null;
-        }
         var options = Array.from(select.options).map(function(opt){
           return opt.value;
         });
