@@ -52,7 +52,7 @@ var controller = {
 
     arrangements: function(req, res) {
         if (req.body.radioGroup === 'arrangementsRequired') {
-            res.render('prototype-beta-180522/submit-your-appeal/015-hearing-arrangements');
+            res.redirect('/prototype-beta-180522/submit-your-appeal/015-hearing-arrangements');
         } else if (req.body.radioGroup === 'arrangementsNotRequired') {
             res.render('prototype-beta-180522/submit-your-appeal/016-hearing-availability');
         }
@@ -299,6 +299,7 @@ var controller = {
   },
 
   hearingArrangements: function(req, res) {
+      console.log('***********************');
     res.render('prototype-beta-180522/submit-your-appeal/015-hearing-arrangements', { languageInterpreter, signLanguage })
   },
 
