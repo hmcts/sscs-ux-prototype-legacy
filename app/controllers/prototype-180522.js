@@ -299,7 +299,6 @@ var controller = {
   },
 
   hearingArrangements: function(req, res) {
-      console.log('***********************');
     res.render('prototype-beta-180522/submit-your-appeal/015-hearing-arrangements', { languageInterpreter, signLanguage })
   },
 
