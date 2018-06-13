@@ -11,9 +11,9 @@ var controller = {
 
     appointee: function(req, res) {
         if (req.body.radioGroup === 'appointee') {
-            res.render('prototype-beta-180522/submit-your-appeal/004-your-name-appointee');
+            res.render('prototype-beta-180522/submit-your-appeal/001-1-sscs-form-download');
         } else if (req.body.radioGroup === 'nonAppointee') {
-            res.render('prototype-beta-180522/submit-your-appeal/004-your-name');
+            res.render('prototype-beta-180522/submit-your-appeal/001-2-independence');
         }
     },
 
