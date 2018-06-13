@@ -50,10 +50,12 @@ var datePickerUtils = {
     var mDate = moment(date);
     var day = mDate.format('D');
     var month = mDate.format('MMM');
-    var displayMonth = {};
+    var displayMonth = {
+      content: '<span>' + day + '</span>'
+    };
     if (day === '1') {
       var html = day + '<p class="first-of-month">' + month + '</p>';
-      displayMonth.content = html;
+      displayMonth.content += html;
     }
     return displayMonth;
   }
@@ -75,6 +77,10 @@ var datePicker = {
       endDate: '+22w',
       weekStart: 1,
       maxViewMode: 0,
+      templates: {
+        leftArrow: datePicker.toggleArrows('prev'),
+        rightArrow: datePicker.toggleArrows('next')
+      },
       beforeShowDay: function(date) {
         return datePickerUtils.displayFirstOfMonth(date);
       }
@@ -82,6 +88,7 @@ var datePicker = {
       datePicker.changeDateHandler(event)
     });
 
+    datePicker.setUpDOWHeading();
 
     // Update the date-picker with dates that have already been added.
     var d = datePicker.getData().map(function(date) {
@@ -94,6 +101,27 @@ var datePicker = {
 
   selector: function() {
     return $('#date-picker')
+  },
+
+  setUpDOWHeading: function() {
+    var days = [
+      'MON',
+      'TUE',
+      'WED',
+      'THU',
+      'FRI',
+      'SAT',
+      'SUN'
+    ];
+    var dow = $('.dow');
+    $.each(dow, function(index, day) {
+      $(this).text(days[index]);
+    });
+  },
+
+  toggleArrows: function(nextOrPrevArrow) {
+    var assetPath = $('#asset-path').data('path');
+    return '<img src="' + assetPath + 'images/' + nextOrPrevArrow + '_arrow.png">';
   },
 
   changeDateHandler: function(event) {
@@ -129,7 +157,7 @@ var datePicker = {
     if (elements === '') {
       var noItems = '<div>' +
         '<dd class="add-another-list-item">' +
-          '<div id="items" class="noItems">No reasons added yet</div>' +
+          '<div id="items" class="noItems">No dates added yet</div>' +
         '</dd>' +
       '</div>';
       $('.add-another-list').empty().append(noItems);
