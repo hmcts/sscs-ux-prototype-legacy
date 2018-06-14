@@ -54,8 +54,8 @@ var datePickerUtils = {
       content: '<span>' + day + '</span>'
     };
     if (day === '1') {
-      var html = day + '<p class="first-of-month">' + month + '</p>';
-      displayMonth.content += html;
+      var html = '<span>' + day + '</span><p class="first-of-month">' + month + '</p>';
+      displayMonth.content = html;
     }
     return displayMonth;
   }
