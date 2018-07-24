@@ -8,7 +8,7 @@ module.exports = [
   'Deafblind manual alphabet',
   'Notetaker',
   'Deaf Relay',
-  'Speech Supported English (SSE)',
+  'Sign Supported English (SSE)',
   'Visual frame signing',
   'Palantypist / Speech to text'
 ];
