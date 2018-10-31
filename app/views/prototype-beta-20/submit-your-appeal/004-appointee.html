@@ -11,20 +11,22 @@ Are you an appointee? - Appeal a benefit decision - GOV.UK
             <h1 class="heading-large">
                 Are you an 'appointee'?
             </h1>
-            <p>You’re an appointee if you’ve been appointed by DWP to act on behalf of someone who is unable to deal with their benefit claim. For example, a parent who is claiming on behalf of a child.</p>
+            <p>You’re an appointee if you’ve been authorised by DWP to act on behalf of someone who is unable to deal with their benefit claim. For example, a parent who is claiming on behalf of a child.</p>
             <form  action="/prototype-20/appointee" method="post">
                 <div class="form-group">
                     <fieldset>
                       <legend class="visually-hidden">Where do you live?</legend>
-                      <div class="multiple-choice">
-                        <input id="radio-1" type="radio" name="radioGroup" value="nonAppointee">
-                        <label for="radio-1">No, I’m appealing for myself</label>
-                    </div>
 
+
+                                          <div class="multiple-choice">
+                        <input id="radio-1" type="radio" name="radioGroup" value="nonAppointee">
+                        <label for="radio-1">I’m appealing for myself</label>
+                    </div>
                       <div class="multiple-choice">
                         <input id="radio-2" type="radio" name="radioGroup" value="appointee">
-                        <label for="radio-2">Yes, I have been appointed by DWP to act on behalf of someone else</label>
+                        <label for="radio-2">I have been authorised by DWP to act on behalf of someone else</label>
                     </div>
+
 
                 </fieldset>
             </div>
