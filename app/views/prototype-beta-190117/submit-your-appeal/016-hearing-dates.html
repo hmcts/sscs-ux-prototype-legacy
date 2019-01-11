@@ -2,6 +2,9 @@
 {% block page_title %}
 Hearing availability - Appeal a benefit decision - GOV.UK
 {% endblock %}
+{% block proposition_header %}
+  {% include "includes/idam_signout_propositional_navigation_190117.html" %}
+{% endblock %}
 {% block content %}
 <main id="content" class="prototype-8" role="main">
     {% include "includes/phase_banner_beta.html" %}
@@ -24,8 +27,8 @@ Hearing availability - Appeal a benefit decision - GOV.UK
                         <div id="add-another-list-items-{{ loop.index0 }}">
                             <dd class="add-another-list-item"><span data-index="{{ loop.index0 }}">{{ date }}</span></dd>
                             <dd class="add-another-list-controls">
-                                <a href="/prototype-beta-180522/submit-your-appeal/011-why-are-you-appealing-fields/{{ loop.index0 }}" class="add-another-edit-link">Edit</a>
-                                <a href="/prototype-beta-180522/submit-your-appeal/011-why-are-you-appealing-fields/{{ loop.index0 }}/delete" class="add-another-delete-link">Remove</a>
+                                <a href="/prototype-beta-190117/submit-your-appeal/011-why-are-you-appealing-fields/{{ loop.index0 }}" class="add-another-edit-link">Edit</a>
+                                <a href="/prototype-beta-190117/submit-your-appeal/011-why-are-you-appealing-fields/{{ loop.index0 }}/delete" class="add-another-delete-link">Remove</a>
                             </dd>
                         </div>
                         {% endfor %}
@@ -38,11 +41,9 @@ Hearing availability - Appeal a benefit decision - GOV.UK
                     {% endif %}
                 </dl>
 
-            <a class="button" href="../prototype-beta-180522/submit-your-appeal/017-check-your-answers.html">Continue</a>
+            <a class="button" href="../prototype-beta-190117/submit-your-appeal/017-check-your-answers.html">Save and continue</a>
 
-                   <br/><br/> <!-- <p> <a href="#">Save and come back later</a></p> -->
-
-<p class="timeout-note">This page will time out in 20 minutes if there is no activity. This is to protect your personal information. </p>
+                   <!--<p> <a href="#">Save and come back later</a></p>-->
         </div>
 
     </div>

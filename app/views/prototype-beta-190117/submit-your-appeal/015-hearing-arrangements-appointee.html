@@ -2,12 +2,14 @@
 {% block page_title %}
 Hearing arrangements (appointee) - Appeal a benefit decision - GOV.UK
 {% endblock %}
-
+{% block proposition_header %}
+{% include "includes/idam_signout_propositional_navigation_190117.html" %}
+{% endblock %}
 {% block content %}
 <main id="content" class="prototype-8" role="main">
  {% include "includes/phase_banner_beta.html" %}
 
-<a href="../prototype-beta-180522/submit-your-appeal/014-hearing-arrangements-needed-appointee" class="link-back">Back</a>
+ <a href="../prototype-beta-190117/submit-your-appeal/014-hearing-arrangements-needed-appointee" class="link-back">Back</a>
 
  <div class="grid-row">
   <div class="column-two-thirds">
@@ -55,28 +57,23 @@ Hearing arrangements (appointee) - Appeal a benefit decision - GOV.UK
           <input id="disabled-access" name="disabled-access" type="checkbox" value="Disabled access">
           <label for="disabled-access">Disabled access</label>
         </div>
- </fieldset>
- <br/>
+      </fieldset>
+      <br/>
       <div class="form-group">
 
-          <label class="form-label" for="anything-else">
-            Any other support you need
-          </label>
-          <textarea class="form-control form-control-3-4" id="textarea-a" cols="90" rows="4"></textarea>
-        </div>
-      <a class="button" href="/prototype-beta-180522/submit-your-appeal/016-hearing-availability-appointee">Continue</a>
+        <label class="form-label" for="anything-else">
+          Any other support you need
+        </label>
+        <textarea class="form-control form-control-3-4" id="textarea-a" cols="90" rows="4"></textarea>
+      </div>
+      <a class="button" href="/prototype-beta-190117/submit-your-appeal/016-hearing-availability-appointee">Save and continue</a>
 
     </div>
-
-
 
   </form>
 </div>
 
 </div>
-
-
-
 
 </main>
 

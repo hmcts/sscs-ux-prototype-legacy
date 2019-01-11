@@ -2,6 +2,9 @@
 {% block page_title %}
 Provide evidence - Appeal a benefit decision - GOV.UK
 {% endblock %}
+{% block proposition_header %}
+  {% include "includes/idam_signout_propositional_navigation_190117.html" %}
+{% endblock %}
 {% block content %}
 <main id="content" class="prototype-8" role="main">
    {% include "includes/phase_banner_beta.html" %} 
@@ -13,7 +16,7 @@ Provide evidence - Appeal a benefit decision - GOV.UK
       </h1>
       <p>Evidence is any information that supports your appeal such as a letter, written statement or medical report. Useful evidence shows how your condition affects your life. </p>
       <p>You can upload evidence now or after you have submitted your appeal. You can also post it in. You’ll be sent the address after you’ve submitted your appeal.</p>
-      <form  action="/prototype-180522/evidenceprovide" method="post">
+      <form  action="/prototype-190117/evidenceprovide" method="post">
         <div class="form-group">
             <fieldset>
               <label>
@@ -28,12 +31,12 @@ Provide evidence - Appeal a benefit decision - GOV.UK
                 </div>
             </fieldset>
         </div>
-        <input type="submit" class="button" value="Continue">
-    </form>
-<br/>
-     <!--<p> <a href="saved-appeal-confirm-email">Save and come back later</a></p>-->
-
-        <p class="timeout-note">This page will time out in 20 minutes if there is no activity. This is to protect your personal information. <!--[when save and return implemented] You can upload or post evidence after you have submitted your appeal, if you don’t have it to hand. --></p>
+        <input type="submit" class="button" value="Save and continue">
+   
+<br/><br/>
+     <!--<p> <a href="#">Save and come back later</a></p>-->
+ </form>
+        
 
     </div>
 </div>

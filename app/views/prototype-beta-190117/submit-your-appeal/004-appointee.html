@@ -11,32 +11,31 @@ Are you an appointee? - Appeal a benefit decision - GOV.UK
             <h1 class="heading-large">
                 Are you an 'appointee'?
             </h1>
-            <p>You’re an appointee if you’ve been appointed by DWP to act on behalf of someone who is unable to deal with their benefit claim. For example, a parent who is claiming on behalf of a child.</p>
-            <form  action="/prototype-180522/appointee" method="post">
+            <p>You’re an appointee if you’ve been authorised by DWP to act on behalf of someone who is unable to deal with their benefit claim. For example, a parent who is claiming on behalf of a child.</p>
+            <form  action="/prototype-190117/appointee" method="post">
                 <div class="form-group">
                     <fieldset>
+                      <legend class="visually-hidden">Where do you live?</legend>
 
-                        <div class="multiple-choice">
-                            <input id="radio-1" type="radio" name="radioGroup" value="nonAppointee">
-                            <label for="radio-1">I’m appealing for myself</label>
-                        </div>
 
-                        <div class="multiple-choice">
-                            <input id="radio-2" type="radio" name="radioGroup" value="appointee">
-                            <label for="radio-2">I have been appointed by DWP to act on behalf of someone else</label>
-                        </div>
+                                          <div class="multiple-choice">
+                        <input id="radio-1" type="radio" name="radioGroup" value="nonAppointee">
+                        <label for="radio-1">I’m appealing for myself</label>
+                    </div>
+                      <div class="multiple-choice">
+                        <input id="radio-2" type="radio" name="radioGroup" value="appointee">
+                        <label for="radio-2">I have been authorised by DWP to act on behalf of someone else</label>
+                    </div>
 
-                    </fieldset>
-                </div>
-                <input type="submit" class="button" value="Continue">
-            </form>
 
-<br/>
-        <!-- <p> <a href="#">Save and come back later</a></p> -->
+                </fieldset>
+            </div>
+            <input type="submit" class="button" value="Save and continue">
+                  <br/><br/>
+           <!--<p> <a href="004-create-account">Save and come back later</a></p>-->
 
-        <p class="timeout-note">This page will time out in 20 minutes if there is no activity. This is to protect your personal information. <!--[when save and return implemented] You can upload or post evidence after you have submitted your appeal, if you don’t have it to hand. --></p>
-
-        </div>
+        </form>
     </div>
+</div>
 </main>
 {% endblock %}

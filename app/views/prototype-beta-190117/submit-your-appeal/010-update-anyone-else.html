@@ -2,7 +2,9 @@
 {% block page_title %}
 Update anyone else? - GOV.UK
 {% endblock %}
-
+{% block proposition_header %}
+  {% include "includes/idam_signout_propositional_navigation_190117.html" %}
+{% endblock %}
 {% block content %}
 <main id="content" class="prototype-8" role="main">
  {% include "includes/phase_banner_beta.html" %} 
@@ -14,7 +16,7 @@ Update anyone else? - GOV.UK
       Is there anyone else you’d like to keep updated? 
     </h1>
 
-    <form  action="/prototype-180522/supporter" method="post">
+    <form  action="/prototype-190117/supporter" method="post">
       <div class="form-group">
         <fieldset>
 
@@ -39,13 +41,12 @@ Update anyone else? - GOV.UK
         </fieldset>
 
       </div>
-      <a class="button" href="http://szo3n0.axshare.com/#c=2">Continue</a>
+      <a class="button" href="http://szo3n0.axshare.com/#c=2">Save and continue</a>
 
     </form>
 <br/>
-        <!-- <p> <a href="#">Save and come back later</a></p> -->
-
-        <p class="timeout-note">This page will time out in 20 minutes if there is no activity. This is to protect your personal information. <!--[when save and return implemented] You can upload or post evidence after you have submitted your appeal, if you don’t have it to hand. --></p>
+<!--<p> <a href="#">Save and come back later</a></p>-->
+        
 
     </div>
 </div>

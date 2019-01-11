@@ -2,6 +2,9 @@
 {% block page_title %}
 Reasons for appealing (appointee) - Appeal a benefit decision - GOV.UK - option a
 {% endblock %}
+{% block proposition_header %}
+  {% include "includes/idam_signout_propositional_navigation_190117.html" %}
+{% endblock %}
 {% block content %}
 <main id="content" class="prototype-8" role="main">
  {% include "includes/phase_banner_beta.html" %} 
@@ -21,7 +24,7 @@ Reasons for appealing (appointee) - Appeal a benefit decision - GOV.UK - option 
       <div class="form-group">
         <textarea class="form-control form-control-3-4" id="textarea-a"  rows="8"></textarea>
       </div>
-      <a class="button" href="012-evidence-reminder-appointee">Continue</a><br/>  <br/>
+      <a class="button" href="012-evidence-reminder-appointee">Save and continue</a><br/>  <br/>
       <a href="012-evidence-reminder-appointee">I don’t have anything further to add right now</a>
      <div class="prototype-nav">
         </form>
@@ -37,9 +40,8 @@ Reasons for appealing (appointee) - Appeal a benefit decision - GOV.UK - option 
 
 
 <br/>
-        <!-- <p> <a href="#">Save and come back later</a></p> -->
-
-        <p class="timeout-note">This page will time out in 20 minutes if there is no activity. This is to protect your personal information. <!--[when save and return implemented] You can upload or post evidence after you have submitted your appeal, if you don’t have it to hand. --></p>
+<!--<p> <a href="#">Save and come back later</a></p>-->
+        
 
     </div>
 </div>

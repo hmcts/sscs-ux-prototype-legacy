@@ -1,19 +1,21 @@
 {% extends "layout.html" %}
 {% block page_title %}
 Your contact details - Appeal a benefit decision - GOV.UK
-
 {% endblock %}
-
+{% block proposition_header %}
+  {% include "includes/idam_signout_propositional_navigation_190117.html" %}
+{% endblock %}
 {% block content %}
 <main id="content" class="prototype-8" role="main">
  {% include "includes/phase_banner_beta.html" %} 
- <a href="#" class="link-back">Back</a> 
+ <a href="../prototype-beta-20/submit-your-appeal/004-appointee" class="link-back">Back</a> 
  <div class="grid-row">
   <div class="column-two-thirds">
     <h1 class="heading-large">
       Enter your contact details
     </h1>
-    <p>These will be used to send you information about your appeal.</p>
+    <p>These will be used to send you information about your appeal
+</p>
     <form>
      <!-- <fieldset>
         <div class="form-group">
@@ -84,21 +86,18 @@ Your contact details - Appeal a benefit decision - GOV.UK
       
       <input class="form-control form-control-2-4" id="form-control-2-4" type="text"> 
     </div>
-  <div class="form-group">
+    <div class="form-group">
       <label class="form-label" for="form-control-1-4">
         Email address (optional)
-        <span class="form-hint">You’ll receive email updates and a link so you can track your appeal online</span></label>
+        <span class="form-hint">You’ll get updates and a link so you can track your appeal online</span></label>
         <input class="form-control form-control-3-4" id="form-control-3-4" type="text"> 
-      </div>
+      </div> 
     </fieldset>
-    <a class="button" href="005-sms-sign-up">Continue</a>
+    <a class="button" href="005-sms-sign-up">Save and continue</a>
+           <br/><br/>
+<!--<p> <a href="#">Save and come back later</a></p>-->
   </form>
-<br/>
-        <!-- <p> <a href="#">Save and come back later</a></p> -->
-
-        <p class="timeout-note">This page will time out in 20 minutes if there is no activity. This is to protect your personal information. <!--[when save and return implemented] You can upload or post evidence after you have submitted your appeal, if you don’t have it to hand. --></p>
-
-    </div>
+</div>
 </div>
 </main>
 {% endblock %}
