@@ -276,6 +276,9 @@ var controller = {
         }
     },
 
+
+
+
   hearingDates: function(req, res) {
     const datesCantAttend = req.session.datesCantAttend || [];
     res.render('prototype-beta-190117/submit-your-appeal/016-hearing-dates', { datesCantAttend });
