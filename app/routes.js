@@ -38,7 +38,7 @@ var prototypeEightteenCtrl = require('./controllers/prototype-180425');
 var prototypeNineteenCtrl = require('./controllers/prototype-180517');
 var prototypeTwentyCtrl = require('./controllers/prototype-180522');
 var prototypeTwentyOneCtrl = require('./controllers/prototype-190117');
-
+var prototypeTwentyTwoCtrl = require('./controllers/prototype-190130');
 
 router.get('/', home.index);
 router.get('/prototype-1/status', prototypeOneCtrl.status);
@@ -385,6 +385,40 @@ router.post('/prototype-190117/smssignupapp',   prototypeTwentyOneCtrl.smssignup
 router.post('/prototype-190117/manageemail',   prototypeTwentyOneCtrl.manageemail);
 
 
+// Prototype test - 30.01.2019
+router.post('/prototype-190130/appointee',   prototypeTwentyTwoCtrl.appointee);
+router.post('/prototype-190130/representative',   prototypeTwentyTwoCtrl.representative);
+router.post('/prototype-190130/representative-app',   prototypeTwentyTwoCtrl.representativeApp);
+router.post('/prototype-190130/hearing',   prototypeTwentyTwoCtrl.hearing);
+router.post('/prototype-190130/hearing-app',   prototypeTwentyTwoCtrl.hearingApp);
+router.post('/prototype-190130/arrangements',   prototypeTwentyTwoCtrl.arrangements);
+router.post('/prototype-190130/arrangements-app',   prototypeTwentyTwoCtrl.arrangementsApp);
+router.post('/prototype-190130/mobile',   prototypeTwentyTwoCtrl.mobile);
+router.post('/prototype-190130/mobile-app',   prototypeTwentyTwoCtrl.mobileApp);
+router.post('/prototype-190130/mobileboth',   prototypeTwentyTwoCtrl.mobileboth);
+router.post('/prototype-190130/notifications',   prototypeTwentyTwoCtrl.notifications);
+router.post('/prototype-190130/notificationstype',   prototypeTwentyTwoCtrl.notificationstype);
+router.post('/prototype-190130/notificationsmobile',   prototypeTwentyTwoCtrl.notificationsmobile);
+router.post('/prototype-190130/mrnDate',   prototypeTwentyTwoCtrl.mrnDate);
+router.post('/prototype-190130/checkdate',   prototypeTwentyTwoCtrl.checkdate);
+router.post('/prototype-190130/availability',   prototypeTwentyTwoCtrl.availability);
+router.post('/prototype-190130/availability-app',   prototypeTwentyTwoCtrl.availabilityApp);
+router.post('/prototype-190130/address-app',   prototypeTwentyTwoCtrl.addressApp);
+router.post('/prototype-190130/mrnhave',   prototypeTwentyTwoCtrl.mrnhave);
+router.post('/prototype-190130/contactdwp',   prototypeTwentyTwoCtrl.contactdwp);
+router.post('/prototype-190130/evidenceoptions',   prototypeTwentyTwoCtrl.evidenceoptions);
+router.post('/prototype-190130/evidencechannel',   prototypeTwentyTwoCtrl.evidencechannel);
+router.post('/prototype-190130/evidenceprovide',   prototypeTwentyTwoCtrl.evidenceprovide);
+router.post('/prototype-190130/saveappeal',   prototypeTwentyTwoCtrl.saveappeal);
+router.post('/prototype-190130/uploadaccount',   prototypeTwentyTwoCtrl.uploadaccount);
+router.post('/prototype-190130/appealaccess',   prototypeTwentyTwoCtrl.appealaccess);
+router.post('/prototype-190130/emailsavedappeal',   prototypeTwentyTwoCtrl.emailsavedappeal);
+router.post('/prototype-190130/updateemail',   prototypeTwentyTwoCtrl.updateemail);
+router.post('/prototype-190130/smssignup',   prototypeTwentyTwoCtrl.smssignup);
+router.post('/prototype-190130/smssignupapp',   prototypeTwentyTwoCtrl.smssignupapp);
+router.post('/prototype-190130/manageemail',   prototypeTwentyTwoCtrl.manageemail);
+
+
 // Date Picker
 router.get('/prototype-beta-180522/submit-your-appeal/016-hearing-dates', prototypeTwentyCtrl.hearingDates);
 router.post('/prototype-180522/016-hearing-dates/:item', prototypeTwentyCtrl.addDate);
@@ -394,11 +428,17 @@ router.get('/prototype-beta-190117/submit-your-appeal/016-hearing-dates', protot
 router.post('/prototype-190117/016-hearing-dates/:item', prototypeTwentyOneCtrl.addDate);
 router.get('/prototype-190117/016-hearing-dates/:item/delete', prototypeTwentyOneCtrl.removeDate);
 
+router.get('/prototype-beta-190130/submit-your-appeal/016-hearing-dates', prototypeTwentyOneCtrl.hearingDates);
+router.post('/prototype-190130/016-hearing-dates/:item', prototypeTwentyTwoCtrl.addDate);
+router.get('/prototype-190130/016-hearing-dates/:item/delete', prototypeTwentyTwoCtrl.removeDate);
+
 
 //hearing-arrangements
 router.get('/prototype-beta-180522/submit-your-appeal/015-hearing-arrangements', prototypeTwentyCtrl.hearingArrangements);
 
 router.get('/prototype-beta-190117/submit-your-appeal/015-hearing-arrangements', prototypeTwentyOneCtrl.hearingArrangements);
+
+router.get('/prototype-beta-190130/submit-your-appeal/015-hearing-arrangements', prototypeTwentyTwoCtrl.hearingArrangements);
 
 
 
@@ -427,6 +467,14 @@ router.post('/prototype-190117/submit-your-appeal/reasonForAppeal', prototypeTwe
 router.get('/prototype-beta-190117/submit-your-appeal/012-evidence-reminder', prototypeTwentyOneCtrl.evidenceReminder);
 router.get('/prototype-beta-190117/evidence-upload', prototypeTwentyOneCtrl.evidenceUpload);
 
+router.get('/prototype-beta-190130/submit-your-appeal/011-why-are-you-appealing', prototypeTwentyTwoCtrl.reasonForAppeal);
+router.get('/prototype-beta-190130/submit-your-appeal/011-why-are-you-appealing-fields/:fieldIndex', prototypeTwentyTwoCtrl.editReasonForAppeal);
+router.get('/prototype-beta-190130/submit-your-appeal/011-why-are-you-appealing-fields/:fieldIndex/delete', prototypeTwentyTwoCtrl.deleteReasonForAppeal);
+router.post('/prototype-190130/submit-your-appeal/reasonForAppeal/:fieldIndex', prototypeTwentyTwoCtrl.updateEditedReasonForAppeal);
+router.post('/prototype-190130/submit-your-appeal/reasonForAppeal', prototypeTwentyTwoCtrl.addReasonForAppeal);
+router.get('/prototype-beta-190130/submit-your-appeal/012-evidence-reminder', prototypeTwentyTwoCtrl.evidenceReminder);
+router.get('/prototype-beta-190130/evidence-upload', prototypeTwentyTwoCtrl.evidenceUpload);
+
 
 // File uploading for SYA and TYA
 router.post('/file-upload', upload.single('fileUpload'), prototypeSeventeenCtrl.fileUpload);
@@ -452,6 +500,11 @@ router.get('/file-get', prototypeTwentyCtrl.getFiles);
 router.post('/file-upload', upload.single('fileUpload'), prototypeTwentyOneCtrl.fileUpload);
 router.post('/file-delete', prototypeTwentyOneCtrl.fileDelete);
 router.get('/file-get', prototypeTwentyOneCtrl.getFiles);
+
+// File uploading for SYA and TYA
+router.post('/file-upload', upload.single('fileUpload'), prototypeTwentyTwoCtrl.fileUpload);
+router.post('/file-delete', prototypeTwentyTwoCtrl.fileDelete);
+router.get('/file-get', prototypeTwentyTwoCtrl.getFiles);
 
 // IDAM Screens 180425
 router.get('/prototype-beta-180425/idam-account-activated', prototypeEightteenCtrl.idamAccountActivated);
