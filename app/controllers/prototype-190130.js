@@ -164,7 +164,7 @@ var controller = {
 
     mrnhave: function(req, res) {
         if (req.body.radioGroup === 'yesMRN') {
-            res.render('prototype-beta-190117/submit-your-appeal/002-dwp-office');
+            res.render('prototype-beta-190117/submit-your-appeal/003-mrn-date');
         } else if (req.body.radioGroup === 'noMRN') {
             res.render('prototype-beta-190117/submit-your-appeal/002-contacted-dwp');
         }
@@ -357,7 +357,7 @@ mrnDate: function(req, res) {
     var mDate = DateUtils.createMoment(day, month, year);
 
     if (DateUtils.isLessThanOrEqualToAMonth(mDate)) {
-        res.render('prototype-beta-190117/submit-your-appeal/004-appointee');
+        res.render('prototype-beta-190117/submit-your-appeal/002-dwp-office');
         return;
     }
 
