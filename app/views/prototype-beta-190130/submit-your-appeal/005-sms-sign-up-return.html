@@ -3,7 +3,7 @@
 SMS notifications - Appeal a benefit decision - GOV.UK
 {% endblock %}
 {% block proposition_header %}
-  {% include "includes/idam_signout_propositional_navigation_190117.html" %}
+{% include "includes/idam_signout_propositional_navigation_190117.html" %}
 {% endblock %}
 {% block content %}
 <main id="content" class="prototype-8" role="main">
@@ -28,12 +28,13 @@ SMS notifications - Appeal a benefit decision - GOV.UK
         </div>
       </fieldset>
     </div>
-    <input type="submit" class="button" value="Save and continue">
-  </form>
-<br/>
-         <p class="timeout-note">If you do not do anything for 20 minutes then this service will time out.</p>
+    <p><input type="submit" class="button" value="Save and continue">
+      <a style="padding-left:45px;" href="#">Save and come back later</a></p>
+    </form>
+    <br/>
+    <p class="timeout-note">If you do not do anything for 20 minutes then this service will time out.</p>
 
-</div>
+  </div>
 </div>
 </main>
 {% endblock %}
