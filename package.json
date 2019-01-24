@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "node server.js",
+    "restart": "npm install && npm start",
     "dev": "grunt",
     "lint": "standard",
     "test": "mocha test --require test-config.js --reporter spec",
