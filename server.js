@@ -104,6 +104,28 @@ app.use(function (req, res, next) {
   next()
 })
 
+app.use(function (req, res, next) {
+  let isGovUK = false;
+  
+  let govUKWhiteList = [
+  'submit-your-appeal/guidance/overview',
+  'submit-your-appeal/guidance/submit-appeal',
+  'submit-your-appeal/guidance/after-submit-appeal',
+  'submit-your-appeal/guidance/at-the-hearing',
+  'submit-your-appeal/guidance/unhappy-tribunals-decision'
+  ];
+
+  if(new RegExp(govUKWhiteList.join("|")).test(req.originalUrl)) {
+    isGovUK = true;
+  }
+
+  res.locals.isGovUK = isGovUK;
+  
+  next()
+})
+
+
+
 // Add variables that are available in all views
 app.use(function (req, res, next) {
   res.locals.serviceName = config.serviceName
