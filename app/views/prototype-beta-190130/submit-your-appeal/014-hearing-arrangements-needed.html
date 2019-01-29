@@ -3,7 +3,7 @@
 Hearing arrangements confirm - Appeal a benefit decision - GOV.UK
 {% endblock %}
 {% block proposition_header %}
-  {% include "includes/idam_signout_propositional_navigation_190117.html" %}
+{% include "includes/idam_signout_propositional_navigation_190117.html" %}
 {% endblock %}
 {% block content %}
 <main id="content" class="prototype-8" role="main">
@@ -31,13 +31,21 @@ Hearing arrangements confirm - Appeal a benefit decision - GOV.UK
       </div>
     </fieldset>
   </div>
-  <input type="submit" class="button" value="Save and continue">
-   <a style="padding-left:45px;" href="004-create-account">Save and come back later</a>
-</form>
-<!--<p> <a href="#">Save and come back later</a></p>-->
-        
 
+  <div class="grid-row">
+    <div class="column-one-third">
+      <input type="submit" class="button" value="Save and continue">
     </div>
+    <div class="column-two-thirds save-for-later">
+      <a href="../prototype-beta-190130/submit-your-appeal/saved-signed-out">Save and come back later</a></p>  
+    </div>
+  </div>
+
+</form>
+
+<p class="timeout-note">If you do not do anything for 20 minutes then this service will time out.</p>  
+
+</div>
 </div>
 </main>
 {% endblock %}
