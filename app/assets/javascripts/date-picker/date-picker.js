@@ -1,4 +1,4 @@
-var four = 4;
+var four = 12;
 
 var datePickerUtils = {
 
@@ -73,8 +73,8 @@ var datePicker = {
       multidate: true,
       daysOfWeekDisabled: '06',
       defaultViewDate: moment().add(four, 'weeks').format('MM-D-YYYY'),
-      startDate: '+4w',
-      endDate: '+22w',
+      startDate: '+12w',
+      endDate: '+32w',
       weekStart: 1,
       maxViewMode: 0,
       templates: {

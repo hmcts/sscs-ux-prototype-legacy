@@ -36,25 +36,25 @@ var controller = {
 
     hearing: function(req, res) {
         if (req.body.radioGroup === 'attend') {
-            res.render('mya-hearing-01/submit-your-appeal/014-hearing-arrangements-needed');
+            res.render('mya-hearing-01/hearing-type/003-hearing-arrangements-needed');
         } else if (req.body.radioGroup === 'notAttend') {
-            res.render('mya-hearing-01/submit-your-appeal/013-hearing-not-attending');
+            res.render('mya-hearing-01/hearing-type/002-hearing-not-attending');
         }
     },
 
     hearingApp: function(req, res) {
         if (req.body.radioGroup === 'attendApp') {
-            res.render('mya-hearing-01/submit-your-appeal/014-hearing-arrangements-needed-appointee');
+            res.render('prototype-beta-190211/submit-your-appeal/014-hearing-arrangements-needed-appointee');
         } else if (req.body.radioGroup === 'notAttendApp') {
-            res.render('mya-hearing-01/submit-your-appeal/013-hearing-not-attending-appointee');
+            res.render('prototype-beta-190211/submit-your-appeal/013-hearing-not-attending-appointee');
         }
     },
 
     arrangements: function(req, res) {
         if (req.body.radioGroup === 'arrangementsRequired') {
-            res.redirect('/mya-hearing-01/submit-your-appeal/015-hearing-arrangements');
+            res.redirect('/mya-hearing-01/hearing-type/004-hearing-arrangements');
         } else if (req.body.radioGroup === 'arrangementsNotRequired') {
-            res.render('mya-hearing-01/submit-your-appeal/016-hearing-availability');
+            res.render('mya-hearing-01/hearing-type/005-hearing-availability');
         }
     },
 
@@ -69,9 +69,9 @@ var controller = {
 
     availability: function(req, res) {
         if (req.body.radioGroup === 'datesYes') {
-            res.render('mya-hearing-01/submit-your-appeal/016-hearing-dates');
+            res.render('mya-hearing-01/hearing-type/006-hearing-dates');
         } else if (req.body.radioGroup === 'datesNo') {
-            res.render('mya-hearing-01/submit-your-appeal/016-notifications-receive');
+            res.render('mya-hearing-01/hearing-type/007-no-dates');
         }
     },
 
@@ -324,7 +324,7 @@ var controller = {
     const reason = req.body;
     reasonsForAppeal[index] = reason;
     req.session.reasonsForAppeal = reasonsForAppeal;
-    res.redirect('/mya-hearing-01/submit-your-appeal/011-why-are-you-appealing')
+    res.redirect('mya-hearing-01/submit-your-appeal/011-why-are-you-appealing')
   },
 
   deleteReasonForAppeal: function(req, res) {
@@ -340,7 +340,7 @@ var controller = {
     const reasonsForAppeal = req.session.reasonsForAppeal || [];
     reasonsForAppeal.push(reason);
     req.session.reasonsForAppeal = reasonsForAppeal;
-    res.redirect('/mya-hearing-01/submit-your-appeal/011-why-are-you-appealing')
+    res.redirect('mya-hearing-01/submit-your-appeal/011-why-are-you-appealing')
   },
 
 
