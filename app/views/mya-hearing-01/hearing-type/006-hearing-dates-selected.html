@@ -3,7 +3,7 @@
 Hearing availability - Appeal a benefit decision - GOV.UK
 {% endblock %}
 {% block proposition_header %}
-  {% include "includes/idam_signout_propositional_navigation_190117.html" %}
+{% include "includes/idam_signout_propositional_navigation_190117.html" %}
 {% endblock %}
 {% block content %}
 <main id="content" class="prototype-8" role="main">
@@ -18,45 +18,41 @@ Hearing availability - Appeal a benefit decision - GOV.UK
             <p>It’s important that you make yourself available for a hearing. If you don’t show up, the appeal could go ahead in your absence or be delayed by several months.</p>
             <p>Select dates you <span class="bold">can’t</span> go to a hearing.</p>
 
-                <div id="date-picker" class="datepicker"></div>
+            <div id="date-picker" class="datepicker"></div>
 
-                <h2 class="heading-medium">Dates you can’t go to a hearing</h2>
-                <dl id="dates-cant-attend-list" class="add-another-list">
-                    {% if datesCantAttend %}
-                        {% for date in datesCantAttend %}
-                        <div id="add-another-list-items-{{ loop.index0 }}">
-                            <dd class="add-another-list-item"><span data-index="{{ loop.index0 }}">{{ date }}</span></dd>
-                            <dd class="add-another-list-controls">
-                                <a href="/prototype-beta-190211/submit-your-appeal/011-why-are-you-appealing-fields/{{ loop.index0 }}" class="add-another-edit-link">Edit</a>
-                                <a href="/prototype-beta-190211/submit-your-appeal/011-why-are-you-appealing-fields/{{ loop.index0 }}/delete" class="add-another-delete-link">Remove</a>
-                            </dd>
-                        </div>
-                        {% endfor %}
-                    {% else %}
-                    <div>
-                        <dd class="add-another-list-item">
-                            <div id="items" class="noItems">[Previously selected hearing dates displayed in list and selected in calendar]</div>
-                        </dd>
-                    </div>
-                    {% endif %}
-                </dl>
+            <h2 class="heading-medium">Dates you can’t go to a hearing</h2>
+            <dl id="dates-cant-attend-list" class="add-another-list">
+                {% if datesCantAttend %}
+                {% for date in datesCantAttend %}
+                <div id="add-another-list-items-{{ loop.index0 }}">
+                    <dd class="add-another-list-item"><span data-index="{{ loop.index0 }}">{{ date }}</span></dd>
+                    <dd class="add-another-list-controls">
+                        <a href="/prototype-beta-190211/submit-your-appeal/011-why-are-you-appealing-fields/{{ loop.index0 }}" class="add-another-edit-link">Edit</a>
+                        <a href="/prototype-beta-190211/submit-your-appeal/011-why-are-you-appealing-fields/{{ loop.index0 }}/delete" class="add-another-delete-link">Remove</a>
+                    </dd>
+                </div>
+                {% endfor %}
+                {% else %}
+                <div>
+                    <dd class="add-another-list-item">
+                        <div id="items" class="noItems">[Previously selected hearing dates displayed in list and selected in calendar]</div>
+                    </dd>
+                </div>
+                {% endif %}
+            </dl>
 
-   <br/>
+            <br/>
 
-      
+            <div class="grid-row">
+              <div class="column-one-third">
+                <a class="button" href="https://sscs-cor.herokuapp.com/mya-hearing-001/appeal-hearing-dates-change">Continue</a>
+            </div>
 
-          <div class="grid-row">
-      <div class="column-one-third">
-        <a class="button" href="https://sscs-cor.herokuapp.com/mya-hearing-001/appeal-hearing-dates-change">Continue</a>
-      </div>
-
-    </div>
-
-
-       
-         {% include "includes/help-contact.html" %}
         </div>
 
+        {% include "includes/help-contact.html" %}
     </div>
+
+</div>
 </main>
 {% endblock %}
