@@ -280,7 +280,8 @@ var controller = {
 
 
   hearingDates: function(req, res) {
-    const datesCantAttend = req.session.datesCantAttend || [];
+    const datesCantAttend = req.session.datesCantAttend || ['06-04-2019', '06-17-2019', '06-18-2019', '06-19-2019'];
+    req.session.datesCantAttend = datesCantAttend;
     res.render('mya-hearing-01/submit-your-appeal/016-hearing-dates', { datesCantAttend });
   },
 
