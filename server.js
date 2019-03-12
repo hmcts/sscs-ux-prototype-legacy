@@ -114,7 +114,8 @@ app.use(function (req, res, next) {
   'submit-your-appeal/guidance/submit-appeal',
   'submit-your-appeal/guidance/after-submit-appeal',
   'submit-your-appeal/guidance/at-the-hearing',
-  'submit-your-appeal/guidance/unhappy-tribunals-decision'
+  'submit-your-appeal/guidance/unhappy-tribunals-decision',
+  'guidance-r2/'
   ];
 
   if(new RegExp(govUKWhiteList.join("|")).test(req.originalUrl)) {
