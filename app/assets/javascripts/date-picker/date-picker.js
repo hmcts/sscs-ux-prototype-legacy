@@ -95,7 +95,7 @@ var datePicker = {
       console.log(date);
       return date.value
     });
-    console.log(d);
+    d.push(new Date(2019, 5, 4), new Date(2019, 5, 17), new Date(2019, 5, 18), new Date(2019, 5, 19));
     datePicker.selector().datepicker('setDates', d);
   },
 
