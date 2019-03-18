@@ -41,6 +41,7 @@ var prototypeTwentyOneCtrl = require('./controllers/prototype-190117');
 var prototypeTwentyTwoCtrl = require('./controllers/prototype-190130');
 var prototypeTwentyThreeCtrl = require('./controllers/prototype-190211');
 var prototypeTwentyFourCtrl = require('./controllers/mya-hearing01');
+var prototypeTwentyFiveCtrl = require('./controllers/mya-hearing02');
 	
 router.get('/', home.index);
 router.get('/prototype-1/status', prototypeOneCtrl.status);
@@ -455,37 +456,37 @@ router.post('/prototype-190211/manageemail',   prototypeTwentyThreeCtrl.manageem
 
 
 // Prototype test - MYA-hearing-01
-router.post('/mya-hearing01/appointee',   prototypeTwentyFourCtrl.appointee);
-router.post('/mya-hearing01/representative',   prototypeTwentyFourCtrl.representative);
-router.post('/mya-hearing01/representative-app',   prototypeTwentyFourCtrl.representativeApp);
-router.post('/mya-hearing01/hearing',   prototypeTwentyFourCtrl.hearing);
-router.post('/mya-hearing01/hearing-app',   prototypeTwentyFourCtrl.hearingApp);
-router.post('/mya-hearing01/arrangements',   prototypeTwentyFourCtrl.arrangements);
-router.post('/mya-hearing01/arrangements-app',   prototypeTwentyFourCtrl.arrangementsApp);
-router.post('/mya-hearing01/mobile',   prototypeTwentyFourCtrl.mobile);
-router.post('/mya-hearing01/mobile-app',   prototypeTwentyFourCtrl.mobileApp);
-router.post('/mya-hearing01/mobileboth',   prototypeTwentyFourCtrl.mobileboth);
-router.post('/mya-hearing01/notifications',   prototypeTwentyFourCtrl.notifications);
-router.post('/mya-hearing01/notificationstype',   prototypeTwentyFourCtrl.notificationstype);
-router.post('/mya-hearing01/notificationsmobile',   prototypeTwentyFourCtrl.notificationsmobile);
-router.post('/mya-hearing01/mrnDate',   prototypeTwentyFourCtrl.mrnDate);
-router.post('/mya-hearing01/checkdate',   prototypeTwentyFourCtrl.checkdate);
-router.post('/mya-hearing01/availability',   prototypeTwentyFourCtrl.availability);
-router.post('/mya-hearing01/availability-app',   prototypeTwentyFourCtrl.availabilityApp);
-router.post('/mya-hearing01/address-app',   prototypeTwentyFourCtrl.addressApp);
-router.post('/mya-hearing01/mrnhave',   prototypeTwentyFourCtrl.mrnhave);
-router.post('/mya-hearing01/contactdwp',   prototypeTwentyFourCtrl.contactdwp);
-router.post('/mya-hearing01/evidenceoptions',   prototypeTwentyFourCtrl.evidenceoptions);
-router.post('/mya-hearing01/evidencechannel',   prototypeTwentyFourCtrl.evidencechannel);
-router.post('/mya-hearing01/evidenceprovide',   prototypeTwentyFourCtrl.evidenceprovide);
-router.post('/mya-hearing01/saveappeal',   prototypeTwentyFourCtrl.saveappeal);
-router.post('/mya-hearing01/uploadaccount',   prototypeTwentyFourCtrl.uploadaccount);
-router.post('/mya-hearing01/appealaccess',   prototypeTwentyFourCtrl.appealaccess);
-router.post('/mya-hearing01/emailsavedappeal',   prototypeTwentyFourCtrl.emailsavedappeal);
-router.post('/mya-hearing01/updateemail',   prototypeTwentyFourCtrl.updateemail);
-router.post('/mya-hearing01/smssignup',   prototypeTwentyFourCtrl.smssignup);
-router.post('/mya-hearing01/smssignupapp',   prototypeTwentyFourCtrl.smssignupapp);
-router.post('/mya-hearing01/manageemail',   prototypeTwentyFourCtrl.manageemail);
+router.post('/mya-hearing02/appointee',   prototypeTwentyFiveCtrl.appointee);
+router.post('/mya-hearing02/representative',   prototypeTwentyFiveCtrl.representative);
+router.post('/mya-hearing02/representative-app',   prototypeTwentyFiveCtrl.representativeApp);
+router.post('/mya-hearing02/hearing',   prototypeTwentyFiveCtrl.hearing);
+router.post('/mya-hearing02/hearing-app',   prototypeTwentyFiveCtrl.hearingApp);
+router.post('/mya-hearing02/arrangements',   prototypeTwentyFiveCtrl.arrangements);
+router.post('/mya-hearing02/arrangements-app',   prototypeTwentyFiveCtrl.arrangementsApp);
+router.post('/mya-hearing02/mobile',   prototypeTwentyFiveCtrl.mobile);
+router.post('/mya-hearing02/mobile-app',   prototypeTwentyFiveCtrl.mobileApp);
+router.post('/mya-hearing02/mobileboth',   prototypeTwentyFiveCtrl.mobileboth);
+router.post('/mya-hearing02/notifications',   prototypeTwentyFiveCtrl.notifications);
+router.post('/mya-hearing02/notificationstype',   prototypeTwentyFiveCtrl.notificationstype);
+router.post('/mya-hearing02/notificationsmobile',   prototypeTwentyFiveCtrl.notificationsmobile);
+router.post('/mya-hearing02/mrnDate',   prototypeTwentyFiveCtrl.mrnDate);
+router.post('/mya-hearing02/checkdate',   prototypeTwentyFiveCtrl.checkdate);
+router.post('/mya-hearing02/availability',   prototypeTwentyFiveCtrl.availability);
+router.post('/mya-hearing02/availability-app',   prototypeTwentyFiveCtrl.availabilityApp);
+router.post('/mya-hearing02/address-app',   prototypeTwentyFiveCtrl.addressApp);
+router.post('/mya-hearing02/mrnhave',   prototypeTwentyFiveCtrl.mrnhave);
+router.post('/mya-hearing02/contactdwp',   prototypeTwentyFiveCtrl.contactdwp);
+router.post('/mya-hearing02/evidenceoptions',   prototypeTwentyFiveCtrl.evidenceoptions);
+router.post('/mya-hearing02/evidencechannel',   prototypeTwentyFiveCtrl.evidencechannel);
+router.post('/mya-hearing02/evidenceprovide',   prototypeTwentyFiveCtrl.evidenceprovide);
+router.post('/mya-hearing02/saveappeal',   prototypeTwentyFiveCtrl.saveappeal);
+router.post('/mya-hearing02/uploadaccount',   prototypeTwentyFiveCtrl.uploadaccount);
+router.post('/mya-hearing02/appealaccess',   prototypeTwentyFiveCtrl.appealaccess);
+router.post('/mya-hearing02/emailsavedappeal',   prototypeTwentyFiveCtrl.emailsavedappeal);
+router.post('/mya-hearing02/updateemail',   prototypeTwentyFiveCtrl.updateemail);
+router.post('/mya-hearing02/smssignup',   prototypeTwentyFiveCtrl.smssignup);
+router.post('/mya-hearing02/smssignupapp',   prototypeTwentyFiveCtrl.smssignupapp);
+router.post('/mya-hearing02/manageemail',   prototypeTwentyFiveCtrl.manageemail);
 
 // Date Picker
 router.get('/prototype-beta-180522/submit-your-appeal/016-hearing-dates', prototypeTwentyCtrl.hearingDates);
@@ -507,7 +508,7 @@ router.get('/prototype-190211/016-hearing-dates/:item/delete', prototypeTwentyTh
 router.get('/mya-hearing01/submit-your-appeal/016-hearing-dates', prototypeTwentyFourCtrl.hearingDates);
 router.post('/mya-hearing01/016-hearing-dates/:item', prototypeTwentyFourCtrl.addDate);
 router.get('/mya-hearing01/016-hearing-dates/:item/delete', prototypeTwentyFourCtrl.removeDate);
-
+router.get('/mya-hearing02/016-hearing-dates/:item/delete', prototypeTwentyFiveCtrl.removeDate);
 
 //hearing-arrangements
 router.get('/prototype-beta-180522/submit-your-appeal/015-hearing-arrangements', prototypeTwentyCtrl.hearingArrangements);
@@ -515,6 +516,7 @@ router.get('/prototype-beta-190117/submit-your-appeal/015-hearing-arrangements',
 router.get('/prototype-beta-190130/submit-your-appeal/015-hearing-arrangements', prototypeTwentyTwoCtrl.hearingArrangements);
 router.get('/prototype-beta-190130/submit-your-appeal/015-hearing-arrangements', prototypeTwentyThreeCtrl.hearingArrangements);
 router.get('/mya-hearing01/submit-your-appeal/015-hearing-arrangements', prototypeTwentyFourCtrl.hearingArrangements);
+router.get('/mya-hearing02/submit-your-appeal/015-hearing-arrangements', prototypeTwentyFiveCtrl.hearingArrangements);
 
 // Reason for Appeal
 router.get('/prototype-beta-180517/submit-your-appeal/011-why-are-you-appealing', prototypeNineteenCtrl.reasonForAppeal);
@@ -566,6 +568,14 @@ router.post('/mya-hearing01/submit-your-appeal/reasonForAppeal', prototypeTwenty
 router.get('/mya-hearing01/submit-your-appeal/012-evidence-reminder', prototypeTwentyFourCtrl.evidenceReminder);
 router.get('/mya-hearing01/evidence-upload', prototypeTwentyFourCtrl.evidenceUpload);
 
+router.get('/mya-hearing02/submit-your-appeal/011-why-are-you-appealing', prototypeTwentyFiveCtrl.reasonForAppeal);
+router.get('/mya-hearing02/submit-your-appeal/011-why-are-you-appealing-fields/:fieldIndex', prototypeTwentyFiveCtrl.editReasonForAppeal);
+router.get('/mya-hearing02/submit-your-appeal/011-why-are-you-appealing-fields/:fieldIndex/delete', prototypeTwentyFiveCtrl.deleteReasonForAppeal);
+router.post('/mya-hearing02/submit-your-appeal/reasonForAppeal/:fieldIndex', prototypeTwentyFiveCtrl.updateEditedReasonForAppeal);
+router.post('/mya-hearing02/submit-your-appeal/reasonForAppeal', prototypeTwentyFiveCtrl.addReasonForAppeal);
+router.get('/mya-hearing02/submit-your-appeal/012-evidence-reminder', prototypeTwentyFiveCtrl.evidenceReminder);
+router.get('/mya-hearing02/evidence-upload', prototypeTwentyFiveCtrl.evidenceUpload);
+
 
 // File uploading for SYA and TYA
 router.post('/file-upload', upload.single('fileUpload'), prototypeSeventeenCtrl.fileUpload);
@@ -606,6 +616,11 @@ router.get('/file-get', prototypeTwentyThreeCtrl.getFiles);
 router.post('/file-upload', upload.single('fileUpload'), prototypeTwentyFourCtrl.fileUpload);
 router.post('/file-delete', prototypeTwentyFourCtrl.fileDelete);
 router.get('/file-get', prototypeTwentyFourCtrl.getFiles);
+
+// File uploading for SYA and TYA
+router.post('/file-upload', upload.single('fileUpload'), prototypeTwentyFiveCtrl.fileUpload);
+router.post('/file-delete', prototypeTwentyFiveCtrl.fileDelete);
+router.get('/file-get', prototypeTwentyFiveCtrl.getFiles);
 
 
 // IDAM Screens 180425
