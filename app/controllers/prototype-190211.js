@@ -118,6 +118,15 @@ var controller = {
     },
 
 
+        saveaccount: function(req, res) {
+        if (req.body.radioGroup === 'yesaccount') {
+            res.render('prototype-beta-190211/submit-your-appeal/idam-create-account');
+        } else if (req.body.radioGroup === 'noaccount') {
+            res.render('prototype-beta-190211/submit-your-appeal/004-appointee');
+        }
+    },
+
+
     notifications: function(req, res) {
         if (req.body.radioGroup === 'yesNotifications') {
             res.render('prototype-beta-190211/submit-your-appeal/016-notifications-how-receive');

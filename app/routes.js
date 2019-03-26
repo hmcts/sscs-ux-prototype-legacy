@@ -42,6 +42,7 @@ var prototypeTwentyTwoCtrl = require('./controllers/prototype-190130');
 var prototypeTwentyThreeCtrl = require('./controllers/prototype-190211');
 var prototypeTwentyFourCtrl = require('./controllers/mya-hearing01');
 var prototypeTwentyFiveCtrl = require('./controllers/mya-hearing02');
+var prototypeTwentySixCtrl = require('./controllers/srmvp');
 	
 router.get('/', home.index);
 router.get('/prototype-1/status', prototypeOneCtrl.status);
@@ -488,6 +489,43 @@ router.post('/mya-hearing02/smssignup',   prototypeTwentyFiveCtrl.smssignup);
 router.post('/mya-hearing02/smssignupapp',   prototypeTwentyFiveCtrl.smssignupapp);
 router.post('/mya-hearing02/manageemail',   prototypeTwentyFiveCtrl.manageemail);
 
+
+
+// Prototype test - MYA-hearing-01
+router.post('/srmvp/appointee',   prototypeTwentySixCtrl.appointee);
+router.post('/srmvp/representative',   prototypeTwentySixCtrl.representative);
+router.post('/srmvp/representative-app',   prototypeTwentySixCtrl.representativeApp);
+router.post('/srmvp/hearing',   prototypeTwentySixCtrl.hearing);
+router.post('/srmvp/hearing-app',   prototypeTwentySixCtrl.hearingApp);
+router.post('/srmvp/arrangements',   prototypeTwentySixCtrl.arrangements);
+router.post('/srmvp/arrangements-app',   prototypeTwentySixCtrl.arrangementsApp);
+router.post('/srmvp/mobile',   prototypeTwentySixCtrl.mobile);
+router.post('/srmvp/mobile-app',   prototypeTwentySixCtrl.mobileApp);
+router.post('/srmvp/mobileboth',   prototypeTwentySixCtrl.mobileboth);
+router.post('/srmvp/notifications',   prototypeTwentySixCtrl.notifications);
+router.post('/srmvp/notificationstype',   prototypeTwentySixCtrl.notificationstype);
+router.post('/srmvp/notificationsmobile',   prototypeTwentySixCtrl.notificationsmobile);
+router.post('/srmvp/mrnDate',   prototypeTwentySixCtrl.mrnDate);
+router.post('/srmvp/checkdate',   prototypeTwentySixCtrl.checkdate);
+router.post('/srmvp/availability',   prototypeTwentySixCtrl.availability);
+router.post('/srmvp/availability-app',   prototypeTwentySixCtrl.availabilityApp);
+router.post('/srmvp/address-app',   prototypeTwentySixCtrl.addressApp);
+router.post('/srmvp/mrnhave',   prototypeTwentySixCtrl.mrnhave);
+router.post('/srmvp/contactdwp',   prototypeTwentySixCtrl.contactdwp);
+router.post('/srmvp/evidenceoptions',   prototypeTwentySixCtrl.evidenceoptions);
+router.post('/srmvp/evidencechannel',   prototypeTwentySixCtrl.evidencechannel);
+router.post('/srmvp/evidenceprovide',   prototypeTwentySixCtrl.evidenceprovide);
+router.post('/srmvp/saveappeal',   prototypeTwentySixCtrl.saveappeal);
+router.post('/srmvp/uploadaccount',   prototypeTwentySixCtrl.uploadaccount);
+router.post('/srmvp/appealaccess',   prototypeTwentySixCtrl.appealaccess);
+router.post('/srmvp/emailsavedappeal',   prototypeTwentySixCtrl.emailsavedappeal);
+router.post('/srmvp/updateemail',   prototypeTwentySixCtrl.updateemail);
+router.post('/srmvp/smssignup',   prototypeTwentySixCtrl.smssignup);
+router.post('/srmvp/smssignupapp',   prototypeTwentySixCtrl.smssignupapp);
+router.post('/srmvp/manageemail',   prototypeTwentySixCtrl.manageemail);
+router.post('/srmvp/saveaccount',   prototypeTwentySixCtrl.saveaccount);
+
+
 // Date Picker
 router.get('/prototype-beta-180522/submit-your-appeal/016-hearing-dates', prototypeTwentyCtrl.hearingDates);
 router.post('/prototype-180522/016-hearing-dates/:item', prototypeTwentyCtrl.addDate);
@@ -576,6 +614,14 @@ router.post('/mya-hearing02/submit-your-appeal/reasonForAppeal', prototypeTwenty
 router.get('/mya-hearing02/submit-your-appeal/012-evidence-reminder', prototypeTwentyFiveCtrl.evidenceReminder);
 router.get('/mya-hearing02/evidence-upload', prototypeTwentyFiveCtrl.evidenceUpload);
 
+router.get('/srmvp/submit-your-appeal/011-why-are-you-appealing', prototypeTwentySixCtrl.reasonForAppeal);
+router.get('/srmvp/submit-your-appeal/011-why-are-you-appealing-fields/:fieldIndex', prototypeTwentySixCtrl.editReasonForAppeal);
+router.get('/srmvp/submit-your-appeal/011-why-are-you-appealing-fields/:fieldIndex/delete', prototypeTwentySixCtrl.deleteReasonForAppeal);
+router.post('/srmvp/submit-your-appeal/reasonForAppeal/:fieldIndex', prototypeTwentySixCtrl.updateEditedReasonForAppeal);
+router.post('/srmvp/submit-your-appeal/reasonForAppeal', prototypeTwentySixCtrl.addReasonForAppeal);
+router.get('/srmvp/submit-your-appeal/012-evidence-reminder', prototypeTwentySixCtrl.evidenceReminder);
+router.get('/srmvp/evidence-upload', prototypeTwentySixCtrl.evidenceUpload);
+
 
 // File uploading for SYA and TYA
 router.post('/file-upload', upload.single('fileUpload'), prototypeSeventeenCtrl.fileUpload);
@@ -621,6 +667,11 @@ router.get('/file-get', prototypeTwentyFourCtrl.getFiles);
 router.post('/file-upload', upload.single('fileUpload'), prototypeTwentyFiveCtrl.fileUpload);
 router.post('/file-delete', prototypeTwentyFiveCtrl.fileDelete);
 router.get('/file-get', prototypeTwentyFiveCtrl.getFiles);
+
+// File uploading for SYA and TYA
+router.post('/file-upload', upload.single('fileUpload'), prototypeTwentySixCtrl.fileUpload);
+router.post('/file-delete', prototypeTwentySixCtrl.fileDelete);
+router.get('/file-get', prototypeTwentySixCtrl.getFiles);
 
 
 // IDAM Screens 180425
