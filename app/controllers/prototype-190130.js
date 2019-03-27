@@ -71,7 +71,7 @@ var controller = {
         if (req.body.radioGroup === 'datesYes') {
             res.render('prototype-beta-190130/submit-your-appeal/016-hearing-dates');
         } else if (req.body.radioGroup === 'datesNo') {
-            res.render('prototype-beta-190130/submit-your-appeal/016-notifications-receive');
+            res.render('prototype-beta-190130/submit-your-appeal/017-check-your-answers');
         }
     },
 

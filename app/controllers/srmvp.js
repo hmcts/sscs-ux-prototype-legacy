@@ -36,25 +36,25 @@ var controller = {
 
     hearing: function(req, res) {
         if (req.body.radioGroup === 'attend') {
-            res.render('prototype-beta-srmvp/hearing-type/003-hearing-arrangements-needed');
+            res.render('prototype-beta-srmvp/submit-your-appeal/014-hearing-arrangements-needed');
         } else if (req.body.radioGroup === 'notAttend') {
-            res.render('prototype-beta-srmvp/hearing-type/002-hearing-not-attending');
+            res.render('prototype-beta-srmvp/submit-your-appeal/013-hearing-not-attending');
         }
     },
 
     hearingApp: function(req, res) {
         if (req.body.radioGroup === 'attendApp') {
-            res.render('prototype-beta-190211/submit-your-appeal/014-hearing-arrangements-needed-appointee');
+            res.render('prototype-beta-srmvp/submit-your-appeal/014-hearing-arrangements-needed-appointee');
         } else if (req.body.radioGroup === 'notAttendApp') {
-            res.render('prototype-beta-190211/submit-your-appeal/013-hearing-not-attending-appointee');
+            res.render('prototype-beta-srmvp/submit-your-appeal/013-hearing-not-attending-appointee');
         }
     },
 
     arrangements: function(req, res) {
         if (req.body.radioGroup === 'arrangementsRequired') {
-            res.redirect('/prototype-beta-srmvp/hearing-type/004-hearing-arrangements');
+            res.redirect('/prototype-beta-srmvp/submit-your-appeal/015-hearing-arrangements');
         } else if (req.body.radioGroup === 'arrangementsNotRequired') {
-            res.render('prototype-beta-srmvp/hearing-type/005-hearing-availability');
+            res.render('prototype-beta-srmvp/submit-your-appeal/016-hearing-availability');
         }
     },
 
@@ -69,9 +69,9 @@ var controller = {
 
     availability: function(req, res) {
         if (req.body.radioGroup === 'datesYes') {
-            res.render('prototype-beta-srmvp/hearing-type/006-hearing-dates');
+            res.render('prototype-beta-srmvp/submit-your-appeal/016-hearing-dates');
         } else if (req.body.radioGroup === 'datesNo') {
-            res.render('prototype-beta-srmvp/hearing-type/007-no-dates');
+            res.render('prototype-beta-srmvp/submit-your-appeal/017-check-your-answers');
         }
     },
 
