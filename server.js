@@ -110,6 +110,7 @@ app.use(function (req, res, next) {
   let govUKWhiteList = [
   'idam',
   'sign-in',
+  'saveaccount',
   'submit-your-appeal/guidance/overview',
   'submit-your-appeal/guidance/submit-appeal',
   'submit-your-appeal/guidance/after-submit-appeal',
