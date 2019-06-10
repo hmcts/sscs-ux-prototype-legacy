@@ -393,7 +393,7 @@ mrnDate: function(req, res) {
     var mDate = DateUtils.createMoment(day, month, year);
 
     if (DateUtils.isLessThanOrEqualToAMonth(mDate)) {
-        res.render('prototype-beta-uc-001/submit-your-appeal/002-dwp-office');
+        res.render('prototype-beta-uc-001/submit-your-appeal/004-appointee');
         return;
     }
 
