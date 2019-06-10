@@ -43,6 +43,7 @@ var prototypeTwentyThreeCtrl = require('./controllers/prototype-190211');
 var prototypeTwentyFourCtrl = require('./controllers/mya-hearing01');
 var prototypeTwentyFiveCtrl = require('./controllers/mya-hearing02');
 var prototypeTwentySixCtrl = require('./controllers/srmvp');
+var prototypeTwentySevenCtrl = require('./controllers/uc-001');
 	
 router.get('/', home.index);
 router.get('/prototype-1/status', prototypeOneCtrl.status);
@@ -526,6 +527,43 @@ router.post('/srmvp/manageemail',   prototypeTwentySixCtrl.manageemail);
 router.post('/srmvp/saveaccount',   prototypeTwentySixCtrl.saveaccount);
 
 
+// Prototype test - UC
+router.post('/uc-001/appointee',   prototypeTwentySevenCtrl.appointee);
+router.post('/uc-001/representative',   prototypeTwentySevenCtrl.representative);
+router.post('/uc-001/representative-app',   prototypeTwentySevenCtrl.representativeApp);
+router.post('/uc-001/hearing',   prototypeTwentySevenCtrl.hearing);
+router.post('/uc-001/hearing-app',   prototypeTwentySevenCtrl.hearingApp);
+router.post('/uc-001/arrangements',   prototypeTwentySevenCtrl.arrangements);
+router.post('/uc-001/arrangements-app',   prototypeTwentySevenCtrl.arrangementsApp);
+router.post('/uc-001/mobile',   prototypeTwentySevenCtrl.mobile);
+router.post('/uc-001/mobile-app',   prototypeTwentySevenCtrl.mobileApp);
+router.post('/uc-001/mobileboth',   prototypeTwentySevenCtrl.mobileboth);
+router.post('/uc-001/notifications',   prototypeTwentySevenCtrl.notifications);
+router.post('/uc-001/notificationstype',   prototypeTwentySevenCtrl.notificationstype);
+router.post('/uc-001/notificationsmobile',   prototypeTwentySevenCtrl.notificationsmobile);
+router.post('/uc-001/mrnDate',   prototypeTwentySevenCtrl.mrnDate);
+router.post('/uc-001/checkdate',   prototypeTwentySevenCtrl.checkdate);
+router.post('/uc-001/availability',   prototypeTwentySevenCtrl.availability);
+router.post('/uc-001/availability-app',   prototypeTwentySevenCtrl.availabilityApp);
+router.post('/uc-001/address-app',   prototypeTwentySevenCtrl.addressApp);
+router.post('/uc-001/mrnhave',   prototypeTwentySevenCtrl.mrnhave);
+router.post('/uc-001/contactdwp',   prototypeTwentySevenCtrl.contactdwp);
+router.post('/uc-001/evidenceoptions',   prototypeTwentySevenCtrl.evidenceoptions);
+router.post('/uc-001/evidencechannel',   prototypeTwentySevenCtrl.evidencechannel);
+router.post('/uc-001/evidenceprovide',   prototypeTwentySevenCtrl.evidenceprovide);
+router.post('/uc-001/saveappeal',   prototypeTwentySevenCtrl.saveappeal);
+router.post('/uc-001/uploadaccount',   prototypeTwentySevenCtrl.uploadaccount);
+router.post('/uc-001/appealaccess',   prototypeTwentySevenCtrl.appealaccess);
+router.post('/uc-001/emailsavedappeal',   prototypeTwentySevenCtrl.emailsavedappeal);
+router.post('/uc-001/updateemail',   prototypeTwentySevenCtrl.updateemail);
+router.post('/uc-001/smssignup',   prototypeTwentySevenCtrl.smssignup);
+router.post('/uc-001/smssignupapp',   prototypeTwentySevenCtrl.smssignupapp);
+router.post('/uc-001/manageemail',   prototypeTwentySevenCtrl.manageemail);
+router.post('/uc-001/saveaccount',   prototypeTwentySevenCtrl.saveaccount);
+router.post('/uc-001/uc-elements',   prototypeTwentySevenCtrl.ucelements);
+
+
+
 // Date Picker
 router.get('/prototype-beta-180522/submit-your-appeal/016-hearing-dates', prototypeTwentyCtrl.hearingDates);
 router.post('/prototype-180522/016-hearing-dates/:item', prototypeTwentyCtrl.addDate);
@@ -622,6 +660,14 @@ router.post('/srmvp/submit-your-appeal/reasonForAppeal', prototypeTwentySixCtrl.
 router.get('/srmvp/submit-your-appeal/012-evidence-reminder', prototypeTwentySixCtrl.evidenceReminder);
 router.get('/srmvp/evidence-upload', prototypeTwentySixCtrl.evidenceUpload);
 
+router.get('/uc-001/submit-your-appeal/011-why-are-you-appealing', prototypeTwentySevenCtrl.reasonForAppeal);
+router.get('/uc-001/submit-your-appeal/011-why-are-you-appealing-fields/:fieldIndex', prototypeTwentySevenCtrl.editReasonForAppeal);
+router.get('/uc-001/submit-your-appeal/011-why-are-you-appealing-fields/:fieldIndex/delete', prototypeTwentySevenCtrl.deleteReasonForAppeal);
+router.post('/uc-001/submit-your-appeal/reasonForAppeal/:fieldIndex', prototypeTwentySevenCtrl.updateEditedReasonForAppeal);
+router.post('/uc-001/submit-your-appeal/reasonForAppeal', prototypeTwentySevenCtrl.addReasonForAppeal);
+router.get('/uc-001/submit-your-appeal/012-evidence-reminder', prototypeTwentySevenCtrl.evidenceReminder);
+router.get('/uc-001/evidence-upload', prototypeTwentySevenCtrl.evidenceUpload);
+
 
 // File uploading for SYA and TYA
 router.post('/file-upload', upload.single('fileUpload'), prototypeSeventeenCtrl.fileUpload);
@@ -673,6 +719,11 @@ router.post('/file-upload', upload.single('fileUpload'), prototypeTwentySixCtrl.
 router.post('/file-delete', prototypeTwentySixCtrl.fileDelete);
 router.get('/file-get', prototypeTwentySixCtrl.getFiles);
 
+// File uploading for SYA and TYA
+router.post('/file-upload', upload.single('fileUpload'), prototypeTwentySevenCtrl.fileUpload);
+router.post('/file-delete', prototypeTwentySevenCtrl.fileDelete);
+router.get('/file-get', prototypeTwentySevenCtrl.getFiles);
+
 
 // IDAM Screens 180425
 router.get('/prototype-beta-180425/idam-account-activated', prototypeEightteenCtrl.idamAccountActivated);
@@ -692,7 +743,14 @@ router.get('/prototype-beta-180517/idam-sign-in-activated', prototypeNineteenCtr
 router.get('/prototype-beta-180517/idam-sign-in-error', prototypeNineteenCtrl.idamSignInError);
 router.get('/prototype-beta-180517/idam-verify-email', prototypeNineteenCtrl.idamVerifyEmail);
 
-
+// IDAM Screens uc-001
+router.get('/prototype-beta-uc-001/idam-account-activated', prototypeNineteenCtrl.idamAccountActivated);
+router.get('/prototype-beta-uc-001/idam-create-account', prototypeNineteenCtrl.idamCreateAccount);
+router.get('/prototype-beta-uc-001/idam-create-password', prototypeNineteenCtrl.idamCreatePassword);
+router.get('/prototype-beta-uc-001/idam-sign-in', prototypeNineteenCtrl.idamSignIn);
+router.get('/prototype-beta-uc-001/idam-sign-in-activated', prototypeNineteenCtrl.idamSignInActivated);
+router.get('/prototype-beta-uc-001/idam-sign-in-error', prototypeNineteenCtrl.idamSignInError);
+router.get('/prototype-beta-uc-001/idam-verify-email', prototypeNineteenCtrl.idamVerifyEmail);
 
 
 module.exports = router;
