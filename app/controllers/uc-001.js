@@ -180,7 +180,7 @@ var controller = {
 
 
 
-        evidencechannel: function(req, res) {
+    evidencechannel: function(req, res) {
         if (req.body.radioGroup === 'online') {
             res.render('prototype-beta-uc-001/idam-set-up');
         } else if (req.body.radioGroup === 'post') {
@@ -189,7 +189,7 @@ var controller = {
     },
 
 
-        evidenceoptions: function(req, res) {
+    evidenceoptions: function(req, res) {
         if (req.body.radioGroup === 'statement') {
             res.render('prototype-beta-uc-001/evidence-statement');
         } else if (req.body.radioGroup === 'upload') {
@@ -197,7 +197,7 @@ var controller = {
         }
     },
 
-        evidenceprovide: function(req, res) {
+    evidenceprovide: function(req, res) {
         if (req.body.radioGroup === 'yesupload') {
             res.render('prototype-beta-uc-001/submit-your-appeal/012-evidence-upload');
         } else if (req.body.radioGroup === 'noupload') {
@@ -207,7 +207,7 @@ var controller = {
 
 
 
-        saveappeal: function(req, res) {
+    saveappeal: function(req, res) {
         if (req.body.radioGroup === 'savesignin') {
             res.render('prototype-beta-uc-001/submit-your-appeal/idam-sign-in-activated');
         } else if (req.body.radioGroup === 'savecreate') {
@@ -215,7 +215,7 @@ var controller = {
         }
     },
 
-        uploadaccount: function(req, res) {
+    uploadaccount: function(req, res) {
         if (req.body.radioGroup === 'uploadsignin') {
             res.render('prototype-beta-uc-001/idam-sign-in-upload');
         } else if (req.body.radioGroup === 'uploadcreate') {
@@ -224,7 +224,7 @@ var controller = {
     },
 
 
-            appealaccess: function(req, res) {
+    appealaccess: function(req, res) {
         if (req.body.radioGroup === 'appealsignin') {
             res.render('prototype-beta-uc-001/idam-sign-in-access');
         } else if (req.body.radioGroup === 'appealcreate') {
@@ -233,7 +233,7 @@ var controller = {
     },
 
 
-            emailsavedappeal: function(req, res) {
+    emailsavedappeal: function(req, res) {
         if (req.body.radioGroup === 'useemail') {
             res.render('prototype-beta-uc-001/submit-your-appeal/saved-appeal-email-sent');
         } else if (req.body.radioGroup === 'newemail') {
@@ -242,7 +242,7 @@ var controller = {
     },
 
 
-            updateemail: function(req, res) {
+    updateemail: function(req, res) {
         if (req.body.radioGroup === 'yesupdateemail') {
             res.render('prototype-beta-uc-001/submit-your-appeal/saved-appeal-email-new');
         } else if (req.body.radioGroup === 'noupdateemail') {
@@ -251,7 +251,7 @@ var controller = {
     },
 
 
-            smssignup: function(req, res) {
+    smssignup: function(req, res) {
         if (req.body.radioGroup === 'smsyes') {
             res.render('prototype-beta-uc-001/submit-your-appeal/006-sms-mobile-number-provided');
         } else if (req.body.radioGroup === 'smsno') {
@@ -259,7 +259,7 @@ var controller = {
         }
     },
 
-                smssignupapp: function(req, res) {
+    smssignupapp: function(req, res) {
         if (req.body.radioGroup === 'smsyes') {
             res.render('prototype-beta-uc-001/submit-your-appeal/006-sms-mobile-number-provided-appointee');
         } else if (req.body.radioGroup === 'smsno') {
@@ -268,7 +268,7 @@ var controller = {
     },
 
 
-                manageemail: function(req, res) {
+    manageemail: function(req, res) {
         if (req.body.radioGroup === 'changeEmail') {
             res.render('prototype-beta-uc-001/manage/your-new-email-address');
         } else if (req.body.radioGroup === 'stopEmail') {
@@ -280,11 +280,11 @@ var controller = {
 
 
 
-        saveaccount: function(req, res) {
+    saveaccount: function(req, res) {
         if (req.body.radioGroup === 'yesaccount') {
             res.render('prototype-beta-uc-001/submit-your-appeal/idam-create-account');
         } else if (req.body.radioGroup === 'noaccount') {
-            res.render('prototype-beta-uc-001/submit-your-appeal/004-appointee');
+            res.render('prototype-beta-uc-001/submit-your-appeal/002-have-mrn');
         }
     },
 
@@ -314,35 +314,35 @@ var controller = {
 
 
 
-  hearingDates: function(req, res) {
-    const datesCantAttend = req.session.datesCantAttend || ['06-04-2019', '06-17-2019', '06-18-2019', '06-19-2019'];
-    req.session.datesCantAttend = datesCantAttend;
-    res.render('prototype-beta-uc-001/submit-your-appeal/016-hearing-dates', { datesCantAttend });
-  },
+    hearingDates: function(req, res) {
+        const datesCantAttend = req.session.datesCantAttend || ['06-04-2019', '06-17-2019', '06-18-2019', '06-19-2019'];
+        req.session.datesCantAttend = datesCantAttend;
+        res.render('prototype-beta-uc-001/submit-your-appeal/016-hearing-dates', { datesCantAttend });
+    },
 
-  addDate: function(req, res) {
-    const session = req.session.datesCantAttend || [];
-    const date = req.body;
-    const mDate = `${date['item.year']}-${date['item.month']}-${date['item.day']}`;
-    session.push(mDate);
-    req.session.datesCantAttend = session;
-    res.sendStatus(200);
-  },
+    addDate: function(req, res) {
+        const session = req.session.datesCantAttend || [];
+        const date = req.body;
+        const mDate = `${date['item.year']}-${date['item.month']}-${date['item.day']}`;
+        session.push(mDate);
+        req.session.datesCantAttend = session;
+        res.sendStatus(200);
+    },
 
-  removeDate: function(req, res) {
-    const session = req.session.datesCantAttend;
-    const index = req.params.item;
-    session.splice(index, 1);
-    req.session.datesCantAttend = session;
-    res.sendStatus(200);
-  },
+    removeDate: function(req, res) {
+        const session = req.session.datesCantAttend;
+        const index = req.params.item;
+        session.splice(index, 1);
+        req.session.datesCantAttend = session;
+        res.sendStatus(200);
+    },
 
-  hearingArrangements: function(req, res) {
-    res.render('prototype-beta-uc-001/submit-your-appeal/015-hearing-arrangements', { languageInterpreter, signLanguage })
-  },
+    hearingArrangements: function(req, res) {
+        res.render('prototype-beta-uc-001/submit-your-appeal/015-hearing-arrangements', { languageInterpreter, signLanguage })
+    },
 
 
-  reasonForAppeal: function(req, res) {
+    reasonForAppeal: function(req, res) {
       const reasonsForAppeal = req.session.reasonsForAppeal || null;
       res.render('prototype-beta-uc-001/submit-your-appeal/011-why-are-you-appealing', { reasonsForAppeal });
   },
@@ -361,23 +361,23 @@ var controller = {
     reasonsForAppeal[index] = reason;
     req.session.reasonsForAppeal = reasonsForAppeal;
     res.redirect('prototype-beta-uc-001/submit-your-appeal/011-why-are-you-appealing')
-  },
+},
 
-  deleteReasonForAppeal: function(req, res) {
+deleteReasonForAppeal: function(req, res) {
     const index = req.params.fieldIndex;
     const reasonsForAppeal = req.session.reasonsForAppeal;
     _.pullAt(reasonsForAppeal, [index]);
     req.session.reasonsForAppeal = reasonsForAppeal;
     res.render('prototype-beta-uc-001/submit-your-appeal/011-why-are-you-appealing', { reasonsForAppeal });
-  },
+},
 
-  addReasonForAppeal: function(req, res) {
+addReasonForAppeal: function(req, res) {
     const reason = req.body;
     const reasonsForAppeal = req.session.reasonsForAppeal || [];
     reasonsForAppeal.push(reason);
     req.session.reasonsForAppeal = reasonsForAppeal;
     res.redirect('prototype-beta-uc-001/submit-your-appeal/011-why-are-you-appealing')
-  },
+},
 
 
     // The class above has a dependency on moment.js which makes our life easier when dealing with dates.
@@ -615,15 +615,15 @@ validateSurname: function(req, res) {
     });
 },
 
-    evidenceReminder: function(req, res, next) {
-        res.render('prototype-beta-uc-001/submit-your-appeal/012-evidence-reminder');
-    },
+evidenceReminder: function(req, res, next) {
+    res.render('prototype-beta-uc-001/submit-your-appeal/012-evidence-reminder');
+},
 
-    evidenceUpload: function(req, res, next) {
-        res.render('prototype-beta-uc-001/evidence-upload');
-    },
+evidenceUpload: function(req, res, next) {
+    res.render('prototype-beta-uc-001/evidence-upload');
+},
 
-    fileUpload: function(req, res, next) {
+fileUpload: function(req, res, next) {
         // Add file data to session
         if (req.session.interactingFileUploads) {
             req.session.interactingFileUploads.push(req.file)
