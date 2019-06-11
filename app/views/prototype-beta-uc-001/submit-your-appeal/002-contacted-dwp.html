@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block page_title %}
-Have an MRN - Appeal a benefit decision - GOV.UK
+Did you ask DWP to reconsider - Appeal a benefit decision - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -12,7 +12,7 @@ Have an MRN - Appeal a benefit decision - GOV.UK
             <h1 class="heading-large">
                 Did you ask DWP to reconsider their decision about your entitlement to Universal Credit (UC)? 
             </h1>
-            <p>You can still appeal if you have contacted DWP about their decision but you don’t have the MRN letter. </p>
+            <!--<p>You can still appeal if you have contacted DWP about their decision but you don’t have the MRN letter. </p>-->
             <form  action="/uc-001/contactdwp" method="post">
                 <div class="form-group">
                     <fieldset>
@@ -27,13 +27,12 @@ Have an MRN - Appeal a benefit decision - GOV.UK
                     </div>
                 </fieldset>
             </div>
-            <input type="submit" class="button" value="Continue">
+            <input type="submit" class="button" value="Save and continue">
         </form>
 
          <!--<p class="timeout-note">If you do not do anything for 20 minutes then this service will time out.</p> -->
        
          {% include "includes/help-contact.html" %}
-     <!--   <p> <a href="saved-signed-out">Save and come back later</a></p> -->
 
         
 

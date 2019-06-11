@@ -21,7 +21,7 @@ Check benefit appeal answers (appointee) - Appeal a benefit decision - GOV.UK
             Benefit name
           </dt>
           <dd class="cya-answer">
-            Personal Independence Payment (PIP)
+            Universal Credit (UC)
           </dd>
           <dd class="cya-change">
             <a href="001-benefit-type">
@@ -214,6 +214,19 @@ York<br/>
     <!-- Reasons for appealing -->
     <h2 class="heading-medium">Reasons for appealing</h2>
     <dl class="govuk-check-your-answers cya-questions-short">
+            <div>
+        <dt class="cya-question">
+          <p class="pbold"> What is your appeal about?</p>
+        </dt>
+        <dd class="cya-answer">
+          <p>Ability to work</p>
+        </dd>
+        <dd class="cya-change">
+          <a href="uc-elements"> <!-- onPageLoad open the relevant accordion panel -->
+            Change<span class="visually-hidden"> what your appeal is about</span>
+          </a>
+        </dd>
+      </div>
       <div>
         <dt class="cya-question">
           <p class="pbold"> What you disagree with</p>
@@ -371,7 +384,7 @@ York<br/>
   </dl>
 
 
-  <br/>
+  
   <h2 class="heading-medium">Sign and submit </h2>
   <p>The information I have provided in this appeal is accurate, to the best of my knowledge. </p>
   <p><!--[if chosen rep]--> I give permission for the tribunal to correspond with my named representative about my appeal.</p>
@@ -384,13 +397,13 @@ York<br/>
     <input class="form-control form-control-2-4" id="form-control-3-4" type="text"> 
   </div>
 
-<br/>
+
       <div class="grid-row">
         <div class="column-one-third">
           <a class="button" href="018-confirmation-tya">Submit your appeal</a>
         </div>
         <div class="column-two-thirds save-for-later">
-          <a href="saved-signed-out">Save and come back later</a></p>  
+          <!--<a href="saved-signed-out">Save and come back later</a></p>-->  
         </div>
       </div>
 
