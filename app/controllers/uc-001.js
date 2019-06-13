@@ -21,7 +21,7 @@ var controller = {
         if (req.body.radioGroup === 'rep') {
             res.render('prototype-beta-uc-001/submit-your-appeal/009-reps-details');
         } else if (req.body.radioGroup === 'noRep') {
-            res.render('prototype-beta-uc-001/submit-your-appeal/011-why-are-you-appealling');
+            res.render('prototype-beta-uc-001/submit-your-appeal/011-why-are-you-appealing');
         }
     },
 
@@ -29,7 +29,7 @@ var controller = {
         if (req.body.radioGroup === 'repApp') {
             res.render('prototype-beta-uc-001/submit-your-appeal/009-reps-details');
         } else if (req.body.radioGroup === 'noRepApp') {
-            res.render('prototype-beta-uc-001/submit-your-appeal/011-why-are-you-appealling');
+            res.render('prototype-beta-uc-001/submit-your-appeal/011-why-are-you-appealing');
         }
     },
 
